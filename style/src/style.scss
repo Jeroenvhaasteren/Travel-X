@@ -4,19 +4,30 @@ $primaryColorLight: lighten($primaryColor, 20%);
 $secondaryColor: #FeE394;
 $secondaryColorDark: darken($secondaryColor, 20%);
 $secondaryColorLight: lighten($secondaryColor, 20%);
+$thirdColor: #F2Ae72;
+$thirdColorDark: darken($thirdColor, 20%);
+$thirdColorLight: lighten($thirdColor, 10%);
+$fourthColor: #D96459;
+$fourthColorDark: darken($fourthColor, 20%);
+$fourthColorLight: lighten($fourthColor, 20%);
+$fithColor: #8c4646;
+$fithColorDark: darken($fithColor, 20%);
+$fithColorLight: lighten($fithColor, 20%);
 
 $widthMainMenu: 100px;
 $paddingSize: 15px;
 $heightTools: 24px;
+$paperBorderRadius: 2px;
 
 $headerFontFamily:;
 $mainFontFamily:;
 
 @import "tripinspiration";
 @import "tripprofile";
+@import "tripBoard";
 
 body {
-	background-color: #eee;
+	background-color: $secondaryColor;
 	overflow: hidden;
 }
 
@@ -25,8 +36,14 @@ main {
 	padding: 0 2*$paddingSize;
 }
 
-.picker__input {
+.input-field.inline input, .input-field label, .chips .input {
 	cursor: pointer;
+	color: rgba(0,0,0,0.87);
+	border-bottom-color: rgba(0,0,0,0.87);
+}
+
+thead {
+	border-bottom-color: rgba(0,0,0,0.87);
 }
 
 .row .col {

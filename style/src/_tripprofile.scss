@@ -5,6 +5,8 @@
 	min-height: calc(100vh - 78px);
 	display: flex;
 	flex-direction: column;
+	background-color: $thirdColor;
+	border-radius: $paperBorderRadius;
 	.tripImageContainer {
 		margin-top: 2.1rem;
 		padding: 0 $paddingSize;
@@ -20,7 +22,7 @@
 	}
 	.sharing-tools {
 		display: flex;
-		background-color: $secondaryColor;
+		background-color: $fourthColor;
 		width: 100%;
 		.share-tool {
 			padding: $paddingSize;
@@ -31,7 +33,7 @@
 			font-size: $heightTools;
 			line-height: $heightTools;
 			&:hover {
-				background-color: $secondaryColorDark;
+				background-color: $fourthColorDark;
 			}
 			i {
 				font-size: $heightTools;
@@ -46,7 +48,7 @@
 		tbody tr {
 			cursor: pointer;
 			&:hover {
-				background-color: #eee;
+				background-color: $thirdColorDark;
 			}
 		}
 		.btn-floating {
@@ -66,9 +68,10 @@
 }
 
 #inspirationBlock {
+	border-radius: $paperBorderRadius;
 	margin-top: 15px;
-	margin-left: 15px;
-	background-color: white;
+	margin-left: 30px;
+	background-color: $thirdColorLight;
 	h1 {
 		margin: 0px
 	}

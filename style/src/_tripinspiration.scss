@@ -3,9 +3,10 @@
 	padding: $paddingSize;
 	display: flex;
 	cursor: pointer;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid $thirdColor;
 	&:hover {
 		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+		background-color: $thirdColor;
 	}
 	.right-container {
 		flex: 1;
@@ -18,8 +19,8 @@
 			padding: $paddingSize;
 			flex: 1;
 			img {
-				width: 150px;
-				height: 150px;
+				width: 140px;
+				height: 140px;
 				border-radius: 50%;
 				object-fit: cover;
 			}
