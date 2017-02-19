@@ -1,0 +1,75 @@
+//tabContent 1
+#tripBlock {
+	margin-top: $paddingSize;
+	background-color: white;
+	min-height: calc(100vh - 78px);
+	display: flex;
+	flex-direction: column;
+	.tripImageContainer {
+		margin-top: 2.1rem;
+		padding: 0 $paddingSize;
+		img{
+			width: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+			cursor: pointer;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+	.sharing-tools {
+		display: flex;
+		background-color: $secondaryColor;
+		width: 100%;
+		.share-tool {
+			padding: $paddingSize;
+			flex: 1;
+			text-align: center;
+			cursor: pointer;
+			height: $heightTools + 2*$paddingSize;
+			font-size: $heightTools;
+			line-height: $heightTools;
+			&:hover {
+				background-color: $secondaryColorDark;
+			}
+			i {
+				font-size: $heightTools;
+				line-height: $heightTools;
+			}
+		}
+	}
+	.members-container {
+		margin: 30px 0;
+		padding: $paddingSize;
+		flex: 1;
+		tbody tr {
+			cursor: pointer;
+			&:hover {
+				background-color: #eee;
+			}
+		}
+		.btn-floating {
+			background-color: $secondaryColor;
+			i {
+				color: rgba(0,0,0,0.87);
+			}
+		}
+	}
+	.tag-container {
+		padding: $paddingSize;
+		.chips.focus {
+			border-bottom: 1px solid $secondaryColor;
+			box-shadow: 0 1px 0 0 $secondaryColor;
+		}
+	}
+}
+
+#inspirationBlock {
+	margin-top: 15px;
+	margin-left: 15px;
+	background-color: white;
+	h1 {
+		margin: 0px
+	}
+}

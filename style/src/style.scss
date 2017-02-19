@@ -1,0 +1,124 @@
+$primaryColor: #588C7E;
+$primaryColorDark: darken($primaryColor, 20%);
+$primaryColorLight: lighten($primaryColor, 20%);
+$secondaryColor: #FeE394;
+$secondaryColorDark: darken($secondaryColor, 20%);
+$secondaryColorLight: lighten($secondaryColor, 20%);
+
+$widthMainMenu: 100px;
+$paddingSize: 15px;
+$heightTools: 24px;
+
+$headerFontFamily:;
+$mainFontFamily:;
+
+@import "tripinspiration";
+@import "tripprofile";
+
+body {
+	background-color: #eee;
+	overflow: hidden;
+}
+
+main {
+	margin-left: $widthMainMenu;
+	padding: 0 2*$paddingSize;
+}
+
+.picker__input {
+	cursor: pointer;
+}
+
+.row .col {
+	padding: 0;
+}
+
+.rowflex {
+	display: flex;
+	.col-50 {
+		flex:1;
+	}
+}
+
+aside#mainMenu {
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: $widthMainMenu;
+	display: flex;
+	flex-direction: column;
+	background-color: $primaryColor;
+	.menu-item-container {
+		flex: 1;
+	}
+	
+	.profile-container {
+		border-top: 1px solid darken($primaryColor,10%);
+	}
+	
+	
+	ul {
+		display:flex;
+		flex-direction: column;
+		li.menu-item {
+			position: relative;
+			width: $widthMainMenu;
+			padding: $paddingSize;
+			text-align: center;
+			cursor: pointer;
+			img {
+				height: $widthMainMenu - 2*$paddingSize;
+				width: $widthMainMenu - 2*$paddingSize;
+				border-radius: 50%;
+				background-color: white;
+			}
+			&.hover:hover {
+				background-color: $primaryColorDark;
+			}
+			
+			.smallIcon {
+				position: absolute;
+				bottom: 10px;
+				padding: 5px;
+				height: 34px;
+				width: 34px;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color: $primaryColorLight;
+				&:hover {
+					background-color: $primaryColorDark 
+				}
+			}
+			#profileSettings {
+				left: 10px;
+			}
+			#profileNotifications {
+				right: 10px;
+			}
+		}
+	}
+}
+
+//tabs
+.tabs {
+	background-color: transparent;
+}
+
+.tabs .tab a {
+	color: $primaryColor;
+}
+
+.tabs .indicator {
+	background-color: $primaryColorDark;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+	color: $primaryColorDark;
+}
+
+
+
+
+
