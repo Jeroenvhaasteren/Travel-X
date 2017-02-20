@@ -73,13 +73,13 @@
 			<div class="rowflex">
 				<div class="col-50">
 					<div class="z-depth-2" id="tripBlock">
-						<div class="row">
-							<div class="col s4">
+						<div class="trip-header">
+							<div class="trip-img">
 								<div class="tripImageContainer">
-									<img src="rescources/barcelona.jpg">
+									<img src="http://cosinfo.gatech.edu/images/park.jpg">
 								</div>
 							</div>
-							<div class="col s8">
+							<div class="trip-text">
 								<h1 contenteditable="true">Barcelona 2017</h1>
 								<p contenteditable="true">Our amazing trip to barcelona in 2017. We are planning to do a lot of outdoo activities, lik ehicking Mont-Serrat, sailing, surfing, Snowboarding pyrinees.</p>
 								<div class="input-field inline">
@@ -208,29 +208,30 @@
 					<i class="material-icons collapse">code</i>
 					<!-- Dropdown Structure -->
 				</div>
-				<article class="item z-depth-2" itemid="#">
-					<div class="summary">
-						<div class="item-img">
-							<img id="OGImag" src="rescources/houseGaudi.jpg">
+				<article class="item" itemid="#">
+					<div class="card horizontal">
+						<div class="card-image">
+							<img id="OGImag" src="http://lorempixel.com/100/190/nature/6">
 						</div>
-						<div class="item-text">
-							<h6 id="OGTitle">Casa Batlló | Antoni Gaudí Modernist Museum in Barcelona</h6>
-							<p id="OGDesc">Official website of Casa Batlló, modernist building designed by Gaudí in Barcelona. Information on Gaudí and the building, visits, prices, offers and events.</p>
+						<div class="card-stacked">
+							<div class="card-content">
+								<h6 id="OGTitle">Casa Batlló | Antoni Gaudí Modernist Museum in Barcelona</h6>
+								<p id="OGDesc">I am a very simple card. I am good at containing small bits of information.</p>
+							</div>
+							<div class="card-action">
+								<div class="toolbar">
+									<div class="toolbar-items">
+										<i class="material-icons">chat</i>
+										<i class="material-icons">playlist_add_check</i>
+										<i class="material-icons">attach_money</i>
+										<i class="material-icons">attach_file</i>
+									</div>
+									<div class="toolbar-vote">
+										4.5<i class="material-icons">stars</i>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="toolbar">
-						<div class="toolbar-items">
-							<i class="material-icons">chat</i>
-							<i class="material-icons">playlist_add_check</i>
-							<i class="material-icons">attach_money</i>
-							<i class="material-icons">attach_file</i>
-						</div>
-						<div class="toolbar-vote">
-							4.5<i class="material-icons">stars</i>
-						</div>
-					</div>
-					<div class="link">
-						https://www.casabatllo.es/en/
 					</div>
 				</article>
 				<a class="waves-effect waves-light btn" href="#addItem">Modal</a>
@@ -271,6 +272,56 @@
 		</div>
 	</section>
 </main>
+
+<div id="editModal">
+	<div class="card modal-views">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="http://all-that-is-interesting.com/wordpress/wp-content/uploads/2013/08/gaudi-house-park-guell.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><span id="itemTitle">Card Title</span><i class="material-icons right">more_vert</i></span>
+      <div class="rating-div">
+      	<fieldset class="rating">
+					<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+					<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+					<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+					<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+					<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+				</fieldset>
+      </div>
+      <p id="itemDesc">Here is some more information about this product that is only revealed once clicked on.</p>
+      <div class="card-tools">
+      	<p>
+					<input type="checkbox" id="itemCommit" />
+					<label for="itemCommit">Let's do this</label>
+				</p>
+				<p>
+					<input type="checkbox" id="itemBooked" checked="checked" />
+					<label for="itemBooked">Booked</label>
+				</p>
+				<p>
+					<input type="checkbox" id="itemPayed" checked="checked" />
+					<label for="itemPayed">Payed</label>
+				</p>
+      </div>
+      <div class="action-btn">
+      	<a class="waves-effect waves-light grey btn">Link</a>
+				<a class="waves-effect waves-light btn">Edit</a>
+				<a class="waves-effect waves-light red btn">Delete</a>
+      </div>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><span id="itemTitle">Card Title</span><i class="material-icons right">close</i></span>
+      <p id="itemDesc">Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+  <div class="modal-views z-depth-2" id="commentWindow">
+  	hi
+  </div>
+</div>
+<div class="overlay" onclick="hideEditModal();">
+	
+</div>
 	
 <aside>
 	

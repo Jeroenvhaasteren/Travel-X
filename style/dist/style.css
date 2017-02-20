@@ -1,51 +1,54 @@
+@charset "UTF-8";
 /* line 2, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary {
-  padding: 15px;
   display: flex;
   cursor: pointer;
-  border-bottom: 1px solid #F2Ae72;
+  border-bottom: 1px solid #cccccc;
 }
 
-/* line 7, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 6, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  background-color: #F2Ae72;
+  background-color: #fff;
 }
 
-/* line 11, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 10, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container {
   flex: 1;
 }
 
-/* line 14, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 13, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 17, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 16, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container .image {
   width: 100%;
-  padding: 15px;
   flex: 1;
 }
 
-/* line 21, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 19, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container .image img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
-/* line 29, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 25, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+.trSummary .left-container .icons {
+  padding: 5px 15px;
+}
+
+/* line 27, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul {
   display: flex;
   justify-content: space-between;
   margin: 0;
 }
 
-/* line 33, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 31, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul li {
   margin-right: 5px;
   color: rgba(0, 0, 0, 0.54);
@@ -55,37 +58,38 @@
   line-height: 24px;
 }
 
-/* line 40, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul li i {
   color: rgba(0, 0, 0, 0.54);
   font-size: 24px;
   line-height: 24px;
 }
 
-/* line 49, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 47, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container {
   display: flex;
   flex-direction: column;
+  padding: 5px 15px;
 }
 
-/* line 52, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 51, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container p {
   flex: 1;
 }
 
-/* line 55, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 54, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container div {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 59, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 58, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container .pic {
   width: 32px;
   height: 32px;
 }
 
-/* line 62, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
 .trSummary .right-container .pic img {
   background-color: #eee;
   border-radius: 50%;
@@ -100,37 +104,56 @@
   min-height: calc(100vh - 78px);
   display: flex;
   flex-direction: column;
-  background-color: #F2Ae72;
+  background-color: #fff;
   border-radius: 2px;
 }
 
 /* line 10, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
-#tripBlock .tripImageContainer {
-  margin-top: 2.1rem;
-  padding: 0 15px;
+#tripBlock .trip-header {
+  display: flex;
+  height: 270px;
 }
 
 /* line 13, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
-#tripBlock .tripImageContainer img {
+#tripBlock .trip-header .trip-img {
+  max-height: 100%;
+  max-width: 30%;
   width: 100%;
-  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 20, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+#tripBlock .trip-header .trip-text {
+  padding: 0 15px;
+  flex: 1;
+}
+
+/* line 27, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+#tripBlock .tripImageContainer {
+  height: 100%;
+}
+
+/* line 29, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+#tripBlock .tripImageContainer img {
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
 
-/* line 18, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 33, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .tripImageContainer img:hover {
   opacity: 0.6;
 }
 
-/* line 23, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools {
   display: flex;
-  background-color: #D96459;
+  background-color: #ddd;
   width: 100%;
 }
 
-/* line 27, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool {
   padding: 15px;
   flex: 1;
@@ -141,64 +164,63 @@
   line-height: 24px;
 }
 
-/* line 35, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 50, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool:hover {
-  background-color: #a63126;
+  background-color: #aaaaaa;
 }
 
-/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 53, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool i {
   font-size: 24px;
   line-height: 24px;
 }
 
-/* line 44, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 59, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .members-container {
   margin: 30px 0;
   padding: 15px;
   flex: 1;
 }
 
-/* line 48, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 63, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .members-container tbody tr {
   cursor: pointer;
 }
 
-/* line 50, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 65, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .members-container tbody tr:hover {
-  background-color: #e97815;
+  background-color: #cccccc;
 }
 
-/* line 54, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 69, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .members-container .btn-floating {
-  background-color: #FeE394;
+  background-color: #eee;
 }
 
-/* line 56, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 71, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .members-container .btn-floating i {
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 76, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .tag-container {
   padding: 15px;
 }
 
-/* line 63, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 78, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #tripBlock .tag-container .chips.focus {
-  border-bottom: 1px solid #FeE394;
-  box-shadow: 0 1px 0 0 #FeE394;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 0 #eee;
 }
 
-/* line 70, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 85, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #inspirationBlock {
-  border-radius: 2px;
   margin-top: 15px;
   margin-left: 30px;
-  background-color: #f6c9a1;
+  background-color: white;
 }
 
-/* line 75, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 89, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
 #inspirationBlock h1 {
   margin: 0px;
 }
@@ -234,59 +256,57 @@
 
 /* line 23, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .board-col .board-col-header .collapse:hover {
-  background-color: #fdc92f;
+  background-color: #bbbbbb;
 }
 
 /* line 30, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item {
   margin-bottom: 15px;
   width: 100%;
-  height: 200px;
-  background-color: #F2Ae72;
-  border-radius: 2px;
+}
+
+/* line 34, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal {
+  max-height: 180px;
 }
 
 /* line 36, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item:hover {
-  background-color: #e97815;
+article.item .card.horizontal .card-image {
+  max-width: 25%;
 }
 
-/* line 39, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .summary {
-  display: flex;
-  height: 150px;
-}
-
-/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .summary .item-img {
-  width: 150;
-  padding: 15px;
-}
-
-/* line 45, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .summary .item-img img {
-  width: 120px;
-  height: 120px;
+/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
 
-/* line 52, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .summary .item-text {
-  overflow: hidden;
-  padding: 15px 15px 0 0;
-}
-
-/* line 56, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .summary h6 {
-  font-weight: 600;
-  white-space: nowrap;
+/* line 46, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-content {
+  padding: 10px 15px 0 15px;
+  margin-bottom: 10px;
+  max-height: 139px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 63, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .toolbar {
+/* line 52, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-content h6 {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 58, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-action {
+  padding: 5px 5px;
+}
+
+/* line 60, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-action .toolbar {
   height: 30px;
   display: flex;
   justify-content: space-between;
@@ -295,26 +315,209 @@ article.item .toolbar {
   padding: 0px 15px;
 }
 
-/* line 70, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .toolbar i {
+/* line 67, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+article.item .card.horizontal .card-action .toolbar i {
   line-height: 30px;
   font-size: 20px;
   margin: 0 5px;
 }
 
-/* line 76, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
-article.item .link {
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
-  padding: 0px 15px;
-  background-color: #f6c9a1;
-  color: rgba(0, 0, 0, 0.54);
+/* line 77, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 900;
+}
+
+/* line 86, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.overlay.show {
+  display: block;
+}
+
+/* line 92, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal {
+  position: absolute;
+  display: none;
+  max-height: 800px;
+  max-width: 1080px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+}
+
+/* line 106, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal.show {
+  display: flex;
+}
+
+/* line 109, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .modal-views {
+  flex: 1;
+}
+
+/* line 112, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card {
+  border-radius: 2px 0 0 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 117, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-image {
+  max-height: 70%;
+}
+
+/* line 119, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-image img {
+  border-radius: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* line 128, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 132, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-content .rating-div {
+  height: 42px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* line 137, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-content #itemDesc {
+  margin-bottom: 15px;
+}
+
+/* line 140, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-content .card-tools {
+  flex: 1;
+}
+
+/* line 143, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal .card .card-content .action-btn {
+  text-align: right;
+}
+
+/* line 148, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+#editModal #commentWindow {
+  background-color: #efefef;
+  border-radius: 0 2px 2px 0;
+  margin: .5rem 0 1rem 0;
+}
+
+/* line 158, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating [type="radio"]:not(:checked) + label:before, .rating [type="radio"]:not(:checked) + label:after {
+  border: none;
+}
+
+/* line 161, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating [type="radio"] + label:before, .rating [type="radio"] + label:after {
+  content: normal;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transition: .15s ease;
+}
+
+/* line 172, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating [type="radio"]:not(:checked) + label, .rating [type="radio"]:checked + label {
+  height: auto;
+}
+
+/* line 177, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating {
+  float: left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+/* line 184, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* line 190, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0;
+  margin-right: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #999;
+}
+
+/* line 203, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+/* line 207, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating > input:checked ~ label {
+  color: #f70;
+}
+
+/* line 211, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+
+/* line 216, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+}
+
+/* line 224, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+.rating > label:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+/* line 230, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+fieldset {
+  border: none;
+  padding: 0;
 }
 
 /* line 29, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
 body {
-  background-color: #FeE394;
+  background-color: #eee;
   overflow: hidden;
 }
 

@@ -7,7 +7,7 @@ $(document).ready(function(){
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
 	
-	$('.tripImageContainer img').height($('.tripImageContainer img').width());
+//	$('.tripImageContainer img').height($('.tripImageContainer img').width());
 	
 	$('.chips').material_chip({
 		data: [{
@@ -32,8 +32,19 @@ $(document).ready(function(){
     }
 	});	
 	
-	
+	$('.item').click(function() {
+		var id = $(this).attr('itemid');
+		$('#editModal').toggleClass('show');
+		$('.overlay').toggleClass('show');
+		//editItem(id);
+	});
+
 });
+
+function hideEditModal() {
+	$('#editModal').removeClass('show');
+	$('.overlay').removeClass('show');
+}
 
 function setImgDimensions(imgel) {
 	_this = $(imgel);

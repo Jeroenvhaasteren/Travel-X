@@ -7,12 +7,27 @@
 	flex-direction: column;
 	background-color: $thirdColor;
 	border-radius: $paperBorderRadius;
-	.tripImageContainer {
-		margin-top: 2.1rem;
-		padding: 0 $paddingSize;
-		img{
+	.trip-header {
+		display: flex;
+		height: 270px;
+		.trip-img {
+			max-height: 100%;
+			max-width: 30%;
 			width: 100%;
-			border-radius: 50%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.trip-text {
+			padding: 0 15px;
+			flex: 1;
+		}
+	}
+	
+	
+	.tripImageContainer {
+		height: 100%;
+		img{
+			height: 100%;
 			object-fit: cover;
 			cursor: pointer;
 			&:hover {
@@ -68,7 +83,6 @@
 }
 
 #inspirationBlock {
-	border-radius: $paperBorderRadius;
 	margin-top: 15px;
 	margin-left: 30px;
 	background-color: $thirdColorLight;

@@ -30,55 +30,217 @@ $colWidth: 400px;
 article.item {
 	margin-bottom: 15px;
 	width: 100%;
-	height: 200px;
-	background-color: $thirdColor;
-	border-radius: $paperBorderRadius;
-	&:hover {
-	background-color: $thirdColorDark;	
-	}
-	.summary {
-		display: flex;
-		height: 150px;
-		.item-img {
-			width: 150;
-			padding: $paddingSize;
+	
+	.card.horizontal {
+		max-height: 180px;
+		.card-image {
+			max-width: 25%;
 			img {
-				width: 120px;
-				height: 120px;
-				object-fit: cover;
-				border-radius: 50%;
+				max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			}
 		}
-		.item-text {
-			overflow: hidden;
-			padding: 15px 15px 0 0;
-		}
-		h6 {
-			font-weight: 600;
-			white-space: nowrap;
+		.card-content {
+			padding: 10px 15px 0 15px;
+    	margin-bottom: 10px;
+			max-height: 139px;
 			overflow: hidden;
 			text-overflow: ellipsis;
-		}
-	}
-	.toolbar {
-			height: 30px;
-			display: flex;
-			justify-content: space-between;
-			line-height: 30px;
-			font-size: 20px;
-			padding: 0px $paddingSize; 
-			i {
-				line-height: 30px;
-				font-size: 20px;
-				margin: 0 5px;
+			h6 {
+				font-weight: 600;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
-		.link {
-			height: 20px;
-			line-height: 20px;
-			font-size: 14px;
-			padding: 0px $paddingSize;
-			background-color: $thirdColorLight;
-			color: rgba(0,0,0,0.54);
+		.card-action {
+			padding: 5px 5px;
+			.toolbar {
+				height: 30px;
+				display: flex;
+				justify-content: space-between;
+				line-height: 30px;
+				font-size: 20px;
+				padding: 0px $paddingSize; 
+				i {
+					line-height: 30px;
+					font-size: 20px;
+					margin: 0 5px;
+				}
+			}
 		}
+	}
 }
+
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: $widthMainMenu;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+	z-index: 900;
+	&.show {
+		display: block;
+	}
+}
+
+
+#editModal {
+	position: absolute;
+  display: none;
+  max-height: 800px;
+	max-width: 1080px;
+	height: 100%;
+	width: 100%;
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	right: auto;
+	bottom: auto;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+	&.show {
+		display: flex;
+	}
+	.modal-views {
+		flex: 1;
+	}
+	.card {
+		border-radius: 2px 0 0 2px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		.card-image {
+			max-height: 70%;
+			img {
+				border-radius: 0;
+				max-width: 100%;
+				max-height: 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.card-content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			.rating-div {
+				height: 42px;
+				width: 100%;
+				margin-bottom: 8px;
+			}
+			#itemDesc {
+				margin-bottom: 15px;
+			}
+			.card-tools {
+				flex: 1;
+			}
+			.action-btn {
+				text-align: right;
+			}
+		}
+	}
+	#commentWindow {
+		background-color: #efefef;
+		border-radius: 0 2px 2px 0;
+		margin: .5rem 0 1rem 0;
+	}
+	
+	
+}
+
+.rating {
+	[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+    border: none;
+	}
+	[type="radio"]+label:before, [type="radio"]+label:after {
+			content: normal;
+			position: relative;
+			left: 0;
+			top: 0;
+			margin: 0;
+			width: auto;
+			height: auto;
+			z-index: 0;
+			transition: .15s ease;
+	}
+	[type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+		height: auto;
+	}
+}
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0;
+		margin-right: 3px;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#999;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
