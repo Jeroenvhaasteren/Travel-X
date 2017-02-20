@@ -211,11 +211,11 @@
 				<article class="item z-depth-2" itemid="#">
 					<div class="summary">
 						<div class="item-img">
-							<img src="rescources/houseGaudi.jpg">
+							<img id="OGImag" src="rescources/houseGaudi.jpg">
 						</div>
 						<div class="item-text">
-							<h6>Casa Batlló | Antoni Gaudí Modernist Museum in Barcelona</h6>
-							<p>Official website of Casa Batlló, modernist building designed by Gaudí in Barcelona. Information on Gaudí and the building, visits, prices, offers and events.</p>
+							<h6 id="OGTitle">Casa Batlló | Antoni Gaudí Modernist Museum in Barcelona</h6>
+							<p id="OGDesc">Official website of Casa Batlló, modernist building designed by Gaudí in Barcelona. Information on Gaudí and the building, visits, prices, offers and events.</p>
 						</div>
 					</div>
 					<div class="toolbar">
@@ -233,9 +233,25 @@
 						https://www.casabatllo.es/en/
 					</div>
 				</article>
+				<a class="waves-effect waves-light btn" href="#addItem">Modal</a>
 			</section>
 			
-			
+			<!-- Modal Structure -->
+      <div id="addItem" class="modal bottom-sheet">
+        <div class="modal-content">
+          <h4>Add a new item</h4>
+          <p>A bunch of text</p>
+          <div class="input-field">
+            <input id="urlItem" type="url" class="validate">
+            <label for="urlItem">Url</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" onclick="getNewItemFromUrl();" class=" modal-action modal-close waves-effect btn-flat">Add item</a>
+          <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Add Manual</a>
+          <a class=" modal-action modal-close waves-effect btn-flat">Cancel</a>
+        </div>
+      </div>
 			
 			
 		</div>
