@@ -2,6 +2,7 @@
  * Created by Usuario on 01/03/2017.
  */
 
+/** General Vue Instance to share Event and data**/
 window.Event = new Vue();
 
 /** Board Component **/
@@ -92,7 +93,7 @@ Vue.component('itemCard', {
     }
 });
 
-
+/** Item Details Modal **/
 Vue.component('itemdetails', {
     data: function() {
         return {
@@ -149,20 +150,23 @@ Vue.component('itemdetails', {
         </div>
         
     `, created: function() {
-        _this = this
+        itemdetails = this;
         Event.$on('itemClicked', function(item) {
-            _this.item = item;
+            itemdetails.item = item;
+            itemdetails.itemDetailsActive = true;
             Event.$emit('showOverlay');
-            _this.itemDetailsActive = true;
         });
         Event.$on('closeModal', function() {
-            _this.itemDetailsActive = false;
+            itemdetails.itemDetailsActive = false;
         });
     }
 });
 
+/** Overlay Component can be toggeld by all components **/
+/** show: Event.$emit('showOverlay'); **/
+/** hide: Event.$emit('hideOverlay'); **/
 Vue.component('overlay', {
-    template: `<div class="overlay" @click="closeModal"></div>`,
+    template: `<div class="overlay" v-show="active" @click="closeModal"></div>`,
     data: function () {
         return {
             'active': false
@@ -171,26 +175,27 @@ Vue.component('overlay', {
     methods: {'closeModal': function() {
         Event.$emit('closeModal');
         Event.$emit('hideOverlay');
-    }}
+    }},
+    created: function() {
+        overlay = this;
+        Event.$on('showOverlay', function() {
+            overlay.active = true;
+        })
+        Event.$on('hideOverlay', function() {
+            overlay.active = false;
+        })
+    }
 });
 
 
-//
+/**
 // Vue Tab 2 Board Instance
-//
+**/
 var app = new Vue({
     el: '#tabContent2',
     data: {
         overlayShow: false,
         itemDetailsModal: false,
-    },
-    created: function() {
-        Event.$on('showOverlay', function() {
-            app.overlayShow = true;
-        })
-        Event.$on('hideOverlay', function() {
-            app.overlayShow = false;
-        })
     }
 })
 
