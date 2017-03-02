@@ -28,10 +28,18 @@ Vue.component('Board', {
                 <itemCard :items="category.items"></itemCard>
                 
             </section>
+            
+            <a class="btn-floating btn-large waves-effect waves-light" @click="add()"><i class="material-icons">add</i></a>
+            
        </div>
     `,
     data: function () {
         return {jsonimport: jsonFile}
+    },
+    methods: {
+        add: function() {
+            this.jsonimport.push({'categoryId': 2,'categoryName': 'Places to stay', 'items': []});
+        }
     }
 });
 
@@ -39,7 +47,7 @@ Vue.component('Board', {
 Vue.component('itemCard', {
     props: ['items'],
     template: `
-        <div>
+        <div style="text-align: center;">
             <article class="item" v-for="item in items" :data-item="item.itemId" @click="itemClicked(item)">
                 <div class="card horizontal">
                     <div class="card-image">
@@ -67,24 +75,14 @@ Vue.component('itemCard', {
                 </div>
             </article>
             
-            <a class="waves-effect waves-light btn" @click="add()" href="#addItem">Modal</a>
+            <a class="btn-floating btn-large waves-effect waves-light" @click="add()" ><i class="material-icons">add</i></a>
             
         </div>
         
     `,
     methods: {
         add: function () {
-            this.items.push({
-                'itemId': 3,
-                'itemCategory': 1,
-                'itemName': 'Casino Barcelona',
-                'itemDesc': 'American roulette, poker & slots, plus dining options & live concerts in a modern, relaxed casino.',
-                'itemImg': 'http://cdn02.visitbarcelona.com/files/5531-3996-imagenCAT/BarcelonaCasino-T24-e_O.jpg',
-                'itemRating': 2,
-                'itemComments': true,
-                'itemTasks': false,
-                'itemFinancials': false,
-                'itemAttachement': true});
+            Event.$emit('addItem', this.items );
         },
         itemClicked: function(item) {
             var itemId = event.currentTarget.getAttribute('data-item');
@@ -187,6 +185,110 @@ Vue.component('overlay', {
     }
 });
 
+
+/**Add Item Component
+ **
+ */
+Vue.component('additem', {
+    template: `
+          <div class="modal" id="addItemModal" v-show="active" style="display: block;">
+                <div class="modal-content">
+                    <div v-show="showUrl">
+                        <h4>Add an item</h4>
+                        <p>Paste the url of the website here</p>
+                        <div class="input-field">
+                            <input id="websiteUrl" v-model="itemUrl" type="text" class="validate">
+                            <label for="websiteUrl">Url</label>
+                        </div>
+                    </div>
+                    <div v-show="!showUrl">
+                        <div class="input-field">
+                            <input id="itemName" v-model="itemName" type="text" class="validate">
+                            <label for="itemName" class="active">Title</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="itemDesc" v-model="itemDesc" type="text" class="materialize-textarea"></textarea>
+                            <label for="itemDesc" class="active">Description</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="ImageUrl" v-model="itemImg" type="text" class="validate">
+                            <label for="ImageUrl" class="active">Image url</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="cancel">Cancel</a>
+                  <a class=" modal-action waves-effect waves-green btn-flat" @click="addUrl" v-show="showUrl">Add url</a>
+                  <a class=" modal-action waves-effect waves-green btn-flat" @click="showUrl = true" v-show="!showUrl">Previous</a>
+                  <a class=" modal-action waves-effect waves-green btn-flat" @click="showUrl = false"  v-show="showUrl">Manual add</a>
+                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="addItem" v-show="!showUrl">Add</a>
+                </div>
+          </div>
+    `,
+    data: function() {
+        return {
+            'active': false,
+            'itemUrl': '',
+            'itemName':'',
+            'itemDesc':'',
+            'itemImg':'',
+            'showUrl': true,
+            'items':{}
+        }
+    },
+    methods: {
+        'addUrl': function() {
+            console.log('fired');
+            var urlEncoded = encodeURIComponent(this.itemUrl);
+            var apiKey = '58aac6d3dd95e6b920d36457';
+            var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
+            _this = this;
+            $.getJSON(requestUrl, function( json ) {
+
+                _this.itemName = json.hybridGraph.title;
+                _this.itemDesc = json.hybridGraph.description;
+                _this.itemImg = json.hybridGraph.image;
+
+            });
+
+            this.showUrl = false;
+            Materialize.updateTextFields();
+        },
+        'addItem': function() {
+            this.items.push({
+                'itemId': 0,
+                'itemCategory': 0,
+                'itemName': this.itemName,
+                'itemDesc': this.itemDesc,
+                'itemImg': this.itemImg,
+                'itemRating': 0,
+                'itemComments': false,
+                'itemTasks': false,
+                'itemFinancials': false,
+                'itemAttachement': false
+            });
+        },
+        'cancel': function() {
+            this.active = false;
+            Event.$emit('hideOverlay');
+        }
+    },
+    created: function() {
+        $('.modal').modal();
+        itemAddModal = this;
+        Event.$on('addItem', function(items) {
+
+            itemAddModal.items = items;
+            $('#addItemModal').modal('open');
+            itemAddModal.active = true;
+        })
+        Event.$on('closeModal', function() {
+            itemAddModal.active = false;
+        })
+
+    }
+})
 
 /**
 // Vue Tab 2 Board Instance

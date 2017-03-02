@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('ul.tabs').tabs();
 	$('.tooltipped').tooltip({delay: 50});
-  $('.modal').modal();
+    $('.modal').modal();
 	$('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
@@ -55,39 +55,45 @@ function setImgDimensions(imgel) {
 	}
 }
 
-function getNewItemFromUrl() {
-  var urlEncoded = encodeURIComponent($('#urlItem').val());
+function getNewItemFromUrl(url) {
+  var urlEncoded = encodeURIComponent(url);
   var apiKey = '58aac6d3dd95e6b920d36457';
   var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
+  var tempItemObj = {};
   
   $.getJSON(requestUrl, function( json ) {
-   
-    // Throw the object in the console to see what it looks like!
-    console.log('json', json);
-           
-    // Update the HTML elements!
-    $('#OGTitle').text(json.hybridGraph.title);
-    $('#OGDesc').text(json.hybridGraph.description);
-    $('#OGImag').attr('src', json.hybridGraph.image);
- 
+
+      tempItemObj = {
+          'itemId': 0,
+          'itemCategory': 0,
+          'itemName': json.hybridGraph.title,
+          'itemDesc': json.hybridGraph.description,
+          'itemImg': json.hybridGraph.image,
+          'itemRating': 0,
+          'itemComments': false,
+          'itemTasks': false,
+          'itemFinancials': false,
+          'itemAttachement': false};
   });
+  console.log(tempItemObj);
+  return tempItemObj;
   
 }
 
  
-$('#loadOpenGraphData').click(function(){
-  $.getJSON(requestUrl, function( json ) {
-   
-    // Throw the object in the console to see what it looks like!
-    console.log('json', json);
-           
-    // Update the HTML elements!
-    $('#title').text(json.hybridGraph.title);
-    $('#description').text(json.hybridGraph.description);
-    $('#icon').attr('src', json.hybridGraph.image);
- 
-  });   
-});
+// $('#loadOpenGraphData').click(function(){
+//   $.getJSON(requestUrl, function( json ) {
+//
+//     // Throw the object in the console to see what it looks like!
+//     console.log('json', json);
+//
+//     // Update the HTML elements!
+//     $('#title').text(json.hybridGraph.title);
+//     $('#description').text(json.hybridGraph.description);
+//     $('#icon').attr('src', json.hybridGraph.image);
+//
+//   });
+// });
 
 
 

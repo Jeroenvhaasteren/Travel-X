@@ -33,25 +33,14 @@ var jsonFile = [
     'items': [{
         'itemId': 1,
         'itemCategory': 2,
-        'itemName': 'House of Gaudi',
-        'itemDesc': 'Here is some more information about this product that is only revealed once clicked on.',
-        'itemImg': 'http://lorempixel.com/100/190/nature/6',
+        'itemName': 'Indiecampers',
+        'itemDesc': 'Rent a Fully Equipped Campervan with 24h Service. WiFi Available!Flexible Delivery · 24 Hours Service · Best Price Guaranteed · Unlimited Kilometers Types: Sporty, Motorhome, Active S, Active M, Active Plus',
+        'itemImg': 'https://media.licdn.com/media/AAEAAQAAAAAAAAlOAAAAJDkxN2RhYTE1LWU3ZTUtNDg2Yy04MmZhLTExMzQ3MTkyMTM3Nw.png',
         'itemRating': 4,
         'itemComments': true,
         'itemTasks': true,
         'itemFinancials': true,
         'itemAttachement': true
-    },
-        {'itemId': 2,
-        'itemCategory': 2,
-        'itemName': 'Museum of Picasso',
-        'itemDesc': 'Official Picasso museum Barcelona website. The Picasso museum in Barcelona is a key reference for understanding the formative years of Pablo Picasso.',
-        'itemImg': 'http://l7.alamy.com/zooms/59d6ed0b49e140edb584acd051f9af2d/self-portrait-of-pablo-picasso-in-the-kunsthaus-zurich-fine-art-museum-frm2wr.jpg',
-        'itemRating': 2,
-        'itemComments': false,
-        'itemTasks': false,
-        'itemFinancials': false,
-        'itemAttachement': false
         }
     ]}
 ];

@@ -261,21 +261,22 @@
 
 /* line 30, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item {
+  text-align: left;
   margin-bottom: 15px;
   width: 100%;
 }
 
-/* line 34, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 35, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal {
   max-height: 180px;
 }
 
-/* line 36, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 37, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-image {
   max-width: 25%;
 }
 
-/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 39, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-image img {
   max-width: 100%;
   max-height: 100%;
@@ -284,7 +285,7 @@ article.item .card.horizontal .card-image img {
   object-fit: cover;
 }
 
-/* line 46, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 47, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-content {
   padding: 10px 15px 0 15px;
   margin-bottom: 10px;
@@ -293,19 +294,19 @@ article.item .card.horizontal .card-content {
   text-overflow: ellipsis;
 }
 
-/* line 52, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 53, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-content h6 {
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 58, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 59, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action {
   padding: 5px 5px;
 }
 
-/* line 60, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action .toolbar {
   height: 30px;
   display: flex;
@@ -315,14 +316,14 @@ article.item .card.horizontal .card-action .toolbar {
   padding: 0px 15px;
 }
 
-/* line 67, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 68, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action .toolbar i {
   line-height: 30px;
   font-size: 20px;
   margin: 0 5px;
 }
 
-/* line 77, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 78, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .overlay {
   width: 100vw;
   height: 100vh;
@@ -333,7 +334,7 @@ article.item .card.horizontal .card-action .toolbar i {
   z-index: 900;
 }
 
-/* line 88, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 89, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal {
   position: absolute;
   display: flex;
@@ -350,12 +351,12 @@ article.item .card.horizontal .card-action .toolbar i {
   z-index: 990;
 }
 
-/* line 102, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 103, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .modal-views {
   flex: 1;
 }
 
-/* line 105, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 106, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card {
   border-radius: 2px 0 0 2px;
   overflow: hidden;
@@ -363,12 +364,12 @@ article.item .card.horizontal .card-action .toolbar i {
   flex-direction: column;
 }
 
-/* line 110, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 111, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-image {
   max-height: 70%;
 }
 
-/* line 112, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 113, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-image img {
   border-radius: 0;
   max-width: 100%;
@@ -378,48 +379,48 @@ article.item .card.horizontal .card-action .toolbar i {
   object-fit: cover;
 }
 
-/* line 121, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 122, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* line 125, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 126, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-content .rating-div {
   height: 42px;
   width: 100%;
   margin-bottom: 8px;
 }
 
-/* line 130, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 131, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-content #itemDesc {
   margin-bottom: 15px;
 }
 
-/* line 133, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 134, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-content .card-tools {
   flex: 1;
 }
 
-/* line 136, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 137, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal .card .card-content .action-btn {
   text-align: right;
 }
 
-/* line 141, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 142, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 #editModal #commentWindow {
   background-color: #efefef;
   border-radius: 0 2px 2px 0;
   margin: .5rem 0 1rem 0;
 }
 
-/* line 151, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 152, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating [type="radio"]:not(:checked) + label:before, .rating [type="radio"]:not(:checked) + label:after {
   border: none;
 }
 
-/* line 154, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 155, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating [type="radio"] + label:before, .rating [type="radio"] + label:after {
   content: normal;
   position: relative;
@@ -432,12 +433,12 @@ article.item .card.horizontal .card-action .toolbar i {
   transition: .15s ease;
 }
 
-/* line 165, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 166, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating [type="radio"]:not(:checked) + label, .rating [type="radio"]:checked + label {
   height: auto;
 }
 
-/* line 170, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 171, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating {
   float: left;
 }
@@ -445,14 +446,14 @@ article.item .card.horizontal .card-action .toolbar i {
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
 	   follow these rules. Every browser that supports :checked also supports :not(), so
 	   it doesn’t make the test unnecessarily selective */
-/* line 177, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 178, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating:not(:checked) > input {
   position: absolute;
   top: -9999px;
   clip: rect(0, 0, 0, 0);
 }
 
-/* line 183, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 184, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label {
   float: right;
   width: 1em;
@@ -466,23 +467,23 @@ article.item .card.horizontal .card-action .toolbar i {
   color: #999;
 }
 
-/* line 196, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 197, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label:before {
   content: '★ ';
 }
 
-/* line 200, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 201, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating > input:checked ~ label {
   color: #f70;
 }
 
-/* line 204, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 205, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
   color: gold;
 }
 
-/* line 209, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 210, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating > input:checked + label:hover,
 .rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
@@ -491,14 +492,14 @@ article.item .card.horizontal .card-action .toolbar i {
   color: #ea0;
 }
 
-/* line 217, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 218, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 .rating > label:active {
   position: relative;
   top: 2px;
   left: 2px;
 }
 
-/* line 223, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 224, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
 fieldset {
   border: none;
   padding: 0;
