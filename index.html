@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	
-	<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="style/dist/style.css" rel="stylesheet" >
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="js/main.js"></script>
-	
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="style/dist/style.css" rel="stylesheet" >
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
+
 </head>
 <body>
 
@@ -54,12 +54,12 @@
 				<span id="profileNotifications" class="smallIcon"><i class="material-icons">inbox</i></span>
 			</li>
 		</ul>
-	</div>	
+	</div>
 </aside>
-	
+
 <main>
-	
-	<section id="topNavBar"> 
+
+	<section id="topNavBar">
 		<ul class="tabs">
 			<li class="tab"><a class="active" href="#tabContent1">Our Trip</a></li>
 			<li class="tab"><a class="" href="#tabContent2">Board</a></li>
@@ -67,7 +67,7 @@
 			<li class="tab"><a class="" href="#tabContent4">Financials</a></li>
 		</ul>
 	</section>
-	
+
 	<section id="appsSpace">
 		<div id="tabContent1">
 			<div class="rowflex">
@@ -236,97 +236,55 @@
 				</article>
 				<a class="waves-effect waves-light btn" href="#addItem">Modal</a>
 			</section>
-			
+
 			<!-- Modal Structure -->
-      <div id="addItem" class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4>Add a new item</h4>
-          <p>A bunch of text</p>
-          <div class="input-field">
-            <input id="urlItem" type="url" class="validate">
-            <label for="urlItem">Url</label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" onclick="getNewItemFromUrl();" class=" modal-action modal-close waves-effect btn-flat">Add item</a>
-          <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Add Manual</a>
-          <a class=" modal-action modal-close waves-effect btn-flat">Cancel</a>
-        </div>
-      </div>
-			
-			
+	  <div id="addItem" class="modal bottom-sheet">
+			<div class="modal-content">
+			  <h4>Add a new item</h4>
+			  <p>A bunch of text</p>
+			  <div class="input-field">
+				<input id="urlItem" type="url" class="validate">
+				<label for="urlItem">Url</label>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <a href="#!" onclick="getNewItemFromUrl();" class=" modal-action modal-close waves-effect btn-flat">Add item</a>
+			  <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Add Manual</a>
+			  <a class=" modal-action modal-close waves-effect btn-flat">Cancel</a>
+			</div>
+	  </div>
+
+
 		</div>
 		<div id="tabContent3">
-			
-			
-			
-			
-			
+
+
+
+
+
 		</div>
 		<div id="tabContent4">
-			
-			
-			
-			
-			
+
+
+
+
+
 		</div>
 	</section>
 </main>
 
-<div id="editModal">
-	<div class="card modal-views">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://all-that-is-interesting.com/wordpress/wp-content/uploads/2013/08/gaudi-house-park-guell.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><span id="itemTitle">Card Title</span><i class="material-icons right">more_vert</i></span>
-      <div class="rating-div">
-      	<fieldset class="rating">
-					<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-					<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-					<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-					<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-					<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
-				</fieldset>
-      </div>
-      <p id="itemDesc">Here is some more information about this product that is only revealed once clicked on.</p>
-      <div class="card-tools">
-      	<p>
-					<input type="checkbox" id="itemCommit" />
-					<label for="itemCommit">Let's do this</label>
-				</p>
-				<p>
-					<input type="checkbox" id="itemBooked" checked="checked" />
-					<label for="itemBooked">Booked</label>
-				</p>
-				<p>
-					<input type="checkbox" id="itemPayed" checked="checked" />
-					<label for="itemPayed">Payed</label>
-				</p>
-      </div>
-      <div class="action-btn">
-      	<a class="waves-effect waves-light grey btn">Link</a>
-				<a class="waves-effect waves-light btn">Edit</a>
-				<a class="waves-effect waves-light red btn">Delete</a>
-      </div>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4"><span id="itemTitle">Card Title</span><i class="material-icons right">close</i></span>
-      <p id="itemDesc">Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
-  <div class="modal-views z-depth-2" id="commentWindow">
-  	hi
-  </div>
-</div>
+<!-- Vue Item Details Component -->
+<itemDetails></itemDetails>
+
+
 <div class="overlay" onclick="hideEditModal();">
-	
+
 </div>
-	
+
 <aside>
-	
+
 </aside>
 
-	
+
 </body>
 </html>
