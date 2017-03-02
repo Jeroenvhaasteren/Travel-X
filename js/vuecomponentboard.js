@@ -29,7 +29,7 @@ Vue.component('Board', {
                 
             </section>
             
-            <a class="btn-floating btn-large waves-effect waves-light" @click="add()"><i class="material-icons">add</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light grey" @click="add()"><i class="material-icons">add</i></a>
             
        </div>
     `,
@@ -203,15 +203,15 @@ Vue.component('additem', {
                     </div>
                     <div v-show="!showUrl">
                         <div class="input-field">
-                            <input id="itemName" v-model="itemName" type="text" class="validate">
+                            <input placeholder=" " id="itemName" v-model="itemName" type="text" class="validate">
                             <label for="itemName" class="active">Title</label>
                         </div>
                         <div class="input-field">
-                            <textarea id="itemDesc" v-model="itemDesc" type="text" class="materialize-textarea"></textarea>
+                            <textarea placeholder=" " id="itemDesc" v-model="itemDesc" type="text" class="materialize-textarea"></textarea>
                             <label for="itemDesc" class="active">Description</label>
                         </div>
                         <div class="input-field">
-                            <input id="ImageUrl" v-model="itemImg" type="text" class="validate">
+                            <input placeholder=" " id="ImageUrl" v-model="itemImg" type="text" class="validate">
                             <label for="ImageUrl" class="active">Image url</label>
                         </div>
                     </div>
@@ -251,9 +251,8 @@ Vue.component('additem', {
                 _this.itemImg = json.hybridGraph.image;
 
             });
-
             this.showUrl = false;
-            Materialize.updateTextFields();
+
         },
         'addItem': function() {
             this.items.push({
@@ -268,9 +267,20 @@ Vue.component('additem', {
                 'itemFinancials': false,
                 'itemAttachement': false
             });
+            this.showUrl = true;
+            this.itemName = '';
+            this.itemDesc = '';
+            this.itemImg = '';
+            this.itemUrl = '';
         },
         'cancel': function() {
             this.active = false;
+            this.showUrl = true;
+            this.itemName = '';
+            this.itemDesc = '';
+            this.itemImg = '';
+            this.itemUrl = '';
+
             Event.$emit('hideOverlay');
         }
     },
