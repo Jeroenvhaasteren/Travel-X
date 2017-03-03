@@ -1,20 +1,26 @@
 	$colWidth: 400px;
 
-	.board-col {
-		width: $colWidth + 2*$paddingSize;
+.board-container{
+  display: flex;
+  overflow-x: auto;
+  .board-col {
+		min-width: $colWidth + 2*$paddingSize;
+    max-width: $colWidth + 2*$paddingSize;
 		padding: $paddingSize;
 		max-height: calc(100% - 100px);
 		cursor: pointer;
 		border-radius: $paperBorderRadius;
 		.board-col-header {
 			padding: $paddingSize 0;
-			position: relative;
-			.collapse {
-				z-index: 2;
-				transition: 0.3 all ease-in;
-				position: absolute;
-				top: $paddingSize;
-				right: 45px;
+			display: flex;
+      min-width: 0;
+      div.column-title {
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+			.tools {
 				width: 30px;
 				height: 30px;
 				border-radius: 50%;
@@ -25,7 +31,8 @@
 				}
 			}
 		}
-	}
+	} 
+}
 
 	article.item {
 		text-align: left;
@@ -73,6 +80,19 @@
 				}
 			}
 		}
+    &.add-new {
+      text-align: center;
+      .tools {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				line-height: 30px;
+				text-align: center;
+				&:hover {
+					background-color: $secondaryColorDark;
+				}
+			}
+    }
 	}
 
 	.overlay {

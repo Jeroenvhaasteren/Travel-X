@@ -2,35 +2,36 @@
  * Created by Usuario on 01/03/2017.
  */
 
-/** General Vue Instance to share Event and data**/
+/** General Vue Instance to share Events and data between components **/
 window.Event = new Vue();
 
 /** Board Component **/
 Vue.component('Board', {
     template: `
-        <div style="display: flex;">
-            <section class="board-col" v-for="category in jsonimport" :data-category="category.categoryId">
-                <ul id='dropdownCol1' class='dropdown-content'>
-                    <li><a>Collapse Column</a></li>
-                    <li><a>Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a>Settings</a></li>
-                </ul>
+        <div class="board-container">
+            <section class="board-col" v-for="(category,index ) in jsonimport" :data-category="category.categoryId" :data-category-index="index">
                 <div class="board-col-header">
-                    <i class="material-icons hide">local_activity</i>
-                    <h6>{{category.categoryName}}</h6>
-                    <i class="material-icons collapse dropdown-button" style="right:0px;" data-activates='dropdownCol1'>more_vert</i>
-                    <i class="material-icons collapse">code</i>
-                    <!-- Dropdown Structure -->
+                    <div class="column-title">
+                      <h6>{{category.categoryName}}</h6>
+                    </div>
+                    <div class="column-tools">
+                      <i class="material-icons tools">code</i>
+                      <i class="material-icons tools" @click="deleteCol(index)">delete</i>
+                      <i class="material-icons tools">more_vert</i>
+                    </div>
                 </div>
                 
                 <!-- Vue itemCard Component -->
                 <itemCard :items="category.items"></itemCard>
                 
             </section>
-            
-            <a class="btn-floating btn-large waves-effect waves-light grey" @click="add()"><i class="material-icons">add</i></a>
-            
+            <section class="board-col">
+                <div class="board-col-header">
+                    <div class="column-title">
+                      <i class="material-icons tools" @click="add()">add</i>
+                    </div>
+                </div>
+            </section>
        </div>
     `,
     data: function () {
@@ -38,7 +39,12 @@ Vue.component('Board', {
     },
     methods: {
         add: function() {
+            //Event.$emit('addCategory', this.jsonimport);
             this.jsonimport.push({'categoryId': 2,'categoryName': 'Places to stay', 'items': []});
+        },
+        deleteCol: function(index) {
+            this.jsonimport.splice(index, 1);
+            $('.dropdown-button').dropdown();
         }
     }
 });
@@ -48,7 +54,7 @@ Vue.component('itemCard', {
     props: ['items'],
     template: `
         <div style="text-align: center;">
-            <article class="item" v-for="item in items" :data-item="item.itemId" @click="itemClicked(item)">
+            <article class="item" v-for="(item, index) in items" :data-item="item.itemId" :data-item-index="index" @click="itemClicked(item)">
                 <div class="card horizontal">
                     <div class="card-image">
                         <img id="OGImag" :src="item.itemImg">
@@ -74,9 +80,9 @@ Vue.component('itemCard', {
                     </div>
                 </div>
             </article>
-            
-            <a class="btn-floating btn-large waves-effect waves-light" @click="add()" ><i class="material-icons">add</i></a>
-            
+            <article class="item add-new">
+                <i class="material-icons tools" @click="add()">add</i>
+            </article>            
         </div>
         
     `,
@@ -218,7 +224,7 @@ Vue.component('additem', {
                     
                 </div>
                 <div class="modal-footer">
-                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="cancel">Cancel</a>
+                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="closeForm">Cancel</a>
                   <a class=" modal-action waves-effect waves-green btn-flat" @click="addUrl" v-show="showUrl">Add url</a>
                   <a class=" modal-action waves-effect waves-green btn-flat" @click="showUrl = true" v-show="!showUrl">Previous</a>
                   <a class=" modal-action waves-effect waves-green btn-flat" @click="showUrl = false"  v-show="showUrl">Manual add</a>
@@ -267,34 +273,110 @@ Vue.component('additem', {
                 'itemFinancials': false,
                 'itemAttachement': false
             });
-            this.showUrl = true;
-            this.itemName = '';
-            this.itemDesc = '';
-            this.itemImg = '';
-            this.itemUrl = '';
+            this.closeForm();
         },
-        'cancel': function() {
+        'closeForm': function() {
+            $('#addItemModal').modal('close');
             this.active = false;
+            this.resetFrom();
+            Event.$emit('hideOverlay');
+        },
+        'resetFrom': function() {
             this.showUrl = true;
             this.itemName = '';
             this.itemDesc = '';
             this.itemImg = '';
             this.itemUrl = '';
-
-            Event.$emit('hideOverlay');
         }
     },
     created: function() {
         $('.modal').modal();
         itemAddModal = this;
         Event.$on('addItem', function(items) {
-
             itemAddModal.items = items;
             $('#addItemModal').modal('open');
             itemAddModal.active = true;
         })
         Event.$on('closeModal', function() {
+            $('#addItemModal').modal('close');
             itemAddModal.active = false;
+        })
+
+    }
+});
+
+/**Add Item Component
+ **
+ */
+Vue.component('addCategory', {
+    template: `
+          <div class="modal" id="addCategoryModal" v-show="active" style="display: block;">
+                <div class="modal-content">
+                    <div>
+                        <div class="input-field">
+                            <input placeholder=" " id="categoryName" v-model="categoryName" type="text" class="validate">
+                            <label for="categoryName" class="active">Title</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea placeholder=" " id="categoryDesc" v-model="categoryDesc" type="text" class="materialize-textarea"></textarea>
+                            <label for="categoryDesc" class="active">Description</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="checkbox" id="categoryCollapse" checked="checked" />
+                            <label for="categoryCollapse">Collapse Column</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                  <a class=" modal-action modal-close waves-effect waves-red red btn-flat" @click="addItem" v-show="!showUrl">Save</a>
+                  <a class=" modal-action modal-close waves-effect waves-grey grey btn-flat" @click="closeForm">Cancel</a>
+                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="addItem" v-show="!showUrl">Save</a>
+                </div>
+          </div>
+    `,
+    data: function() {
+        return {
+            'active': false,
+            'categoryName': '',
+            'categoryDesc':'',
+            'categoryCollapse':'false',
+            'categories':{}
+        }
+    },
+    methods: {
+        'addCategory': function() {
+            this.categories.push({
+                'categoryName': '',
+                'categoryDesc':'',
+                'categoryCollapse':'false',
+            });
+            this.closeForm();
+        },
+        'closeForm': function() {
+            $('#addCategoryModal').modal('close');
+            this.active = false;
+            this.resetFrom();
+            Event.$emit('hideOverlay');
+        },
+        'resetFrom': function() {
+            this.showUrl = true;
+            this.categoryName = '';
+            this.categoryDesc = '';
+            this.categoryCollapse = false;
+        }
+    },
+    created: function() {
+        $('.modal').modal();
+        categoryAddModal = this;
+        Event.$on('addCategory', function(categories) {
+            categoryAddModal.categories = categories;
+            $('#addCategoryModal').modal('open');
+            categoryAddModal.active = true;
+        })
+        Event.$on('closeModal', function() {
+            $('#addCategoryModal').modal('close');
+            categoryAddModal.active = false;
         })
 
     }

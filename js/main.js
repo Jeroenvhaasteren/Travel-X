@@ -41,10 +41,10 @@ $(document).ready(function(){
 
 });
 
-function hideEditModal() {
-	$('#editModal').removeClass('show');
-	$('.overlay').removeClass('show');
-}
+//function hideEditModal() {
+//	$('#editModal').removeClass('show');
+//	$('.overlay').removeClass('show');
+//}
 
 function setImgDimensions(imgel) {
 	_this = $(imgel);
@@ -55,30 +55,30 @@ function setImgDimensions(imgel) {
 	}
 }
 
-function getNewItemFromUrl(url) {
-  var urlEncoded = encodeURIComponent(url);
-  var apiKey = '58aac6d3dd95e6b920d36457';
-  var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
-  var tempItemObj = {};
-  
-  $.getJSON(requestUrl, function( json ) {
-
-      tempItemObj = {
-          'itemId': 0,
-          'itemCategory': 0,
-          'itemName': json.hybridGraph.title,
-          'itemDesc': json.hybridGraph.description,
-          'itemImg': json.hybridGraph.image,
-          'itemRating': 0,
-          'itemComments': false,
-          'itemTasks': false,
-          'itemFinancials': false,
-          'itemAttachement': false};
-  });
-  console.log(tempItemObj);
-  return tempItemObj;
-  
-}
+//function getNewItemFromUrl(url) {
+//  var urlEncoded = encodeURIComponent(url);
+//  var apiKey = '58aac6d3dd95e6b920d36457';
+//  var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
+//  var tempItemObj = {};
+//  
+//  $.getJSON(requestUrl, function( json ) {
+//
+//      tempItemObj = {
+//          'itemId': 0,
+//          'itemCategory': 0,
+//          'itemName': json.hybridGraph.title,
+//          'itemDesc': json.hybridGraph.description,
+//          'itemImg': json.hybridGraph.image,
+//          'itemRating': 0,
+//          'itemComments': false,
+//          'itemTasks': false,
+//          'itemFinancials': false,
+//          'itemAttachement': false};
+//  });
+//  console.log(tempItemObj);
+//  return tempItemObj;
+//  
+//}
 
  
 // $('#loadOpenGraphData').click(function(){
