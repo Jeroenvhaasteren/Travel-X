@@ -39,8 +39,8 @@ Vue.component('Board', {
     },
     methods: {
         add: function() {
-            //Event.$emit('addCategory', this.jsonimport);
-            this.jsonimport.push({'categoryId': 2,'categoryName': 'Places to stay', 'items': []});
+            Event.$emit('addCategory', this.jsonimport);
+            //this.jsonimport.push({'categoryId': 2,'categoryName': 'Places to stay', 'items': []});
         },
         deleteCol: function(index) {
             this.jsonimport.splice(index, 1);
@@ -305,10 +305,10 @@ Vue.component('additem', {
     }
 });
 
-/**Add Item Component
+/**Add Category Component
  **
  */
-Vue.component('addCategory', {
+Vue.component('addcategorymodal', {
     template: `
           <div class="modal" id="addCategoryModal" v-show="active" style="display: block;">
                 <div class="modal-content">
@@ -322,16 +322,16 @@ Vue.component('addCategory', {
                             <label for="categoryDesc" class="active">Description</label>
                         </div>
                         <div class="input-field">
-                            <input type="checkbox" id="categoryCollapse" checked="checked" />
+                            <input type="checkbox" id="categoryCollapse" v-model="categoryCollapse" />
                             <label for="categoryCollapse">Collapse Column</label>
                         </div>
                     </div>
                     
                 </div>
                 <div class="modal-footer">
-                  <a class=" modal-action modal-close waves-effect waves-red red btn-flat" @click="addItem" v-show="!showUrl">Save</a>
-                  <a class=" modal-action modal-close waves-effect waves-grey grey btn-flat" @click="closeForm">Cancel</a>
-                  <a class=" modal-action modal-close waves-effect waves-green btn-flat" @click="addItem" v-show="!showUrl">Save</a>
+                    <a class=" modal-action modal-close waves-effect waves-green green btn-flat" @click="addCategory">Save</a>
+                    <a class=" modal-action modal-close waves-effect waves-red red btn-flat">Delete</a>
+                    <a class=" modal-action modal-close waves-effect waves-grey grey btn-flat" @click="closeForm">Cancel</a>
                 </div>
           </div>
     `,
@@ -340,16 +340,16 @@ Vue.component('addCategory', {
             'active': false,
             'categoryName': '',
             'categoryDesc':'',
-            'categoryCollapse':'false',
+            'categoryCollapse': false,
             'categories':{}
         }
     },
     methods: {
         'addCategory': function() {
             this.categories.push({
-                'categoryName': '',
-                'categoryDesc':'',
-                'categoryCollapse':'false',
+                'categoryName': this.categoryName,
+                'categoryDesc': this.categoryDesc,
+                'categoryCollapse': this.categoryCollapse,
             });
             this.closeForm();
         },
@@ -360,7 +360,6 @@ Vue.component('addCategory', {
             Event.$emit('hideOverlay');
         },
         'resetFrom': function() {
-            this.showUrl = true;
             this.categoryName = '';
             this.categoryDesc = '';
             this.categoryCollapse = false;
@@ -373,14 +372,14 @@ Vue.component('addCategory', {
             categoryAddModal.categories = categories;
             $('#addCategoryModal').modal('open');
             categoryAddModal.active = true;
-        })
+        });
         Event.$on('closeModal', function() {
             $('#addCategoryModal').modal('close');
             categoryAddModal.active = false;
-        })
+        });
 
     }
-})
+});
 
 /**
 // Vue Tab 2 Board Instance
