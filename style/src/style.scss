@@ -19,16 +19,23 @@ $paddingSize: 15px;
 $heightTools: 24px;
 $paperBorderRadius: 2px;
 
-$headerFontFamily:;
-$mainFontFamily:;
+/*Components*/
+@import "components/buttons";
+
+/*Pages*/
+@import "pages/index";
+
 
 @import "tripinspiration";
 @import "tripprofile";
 @import "tripBoard";
 
+
 body {
 	background-color: $secondaryColor;
 	overflow: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 main {

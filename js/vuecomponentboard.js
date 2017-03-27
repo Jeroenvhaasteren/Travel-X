@@ -329,9 +329,9 @@ Vue.component('addcategorymodal', {
                     
                 </div>
                 <div class="modal-footer">
-                    <a class=" modal-action modal-close waves-effect waves-green green btn-flat" @click="addCategory">Save</a>
-                    <a class=" modal-action modal-close waves-effect waves-red red btn-flat">Delete</a>
-                    <a class=" modal-action modal-close waves-effect waves-grey grey btn-flat" @click="closeForm">Cancel</a>
+                    <a class=" modal-action modal-close waves-effect waves-green green btn btn-flat" @click="addCategory">Save</a>
+                    <a class=" modal-action modal-close waves-effect waves-red red btn btn-flat">Delete</a>
+                    <a class=" modal-action modal-close waves-effect waves-grey grey btn btn-flat" @click="closeForm">Cancel</a>
                 </div>
           </div>
     `,
