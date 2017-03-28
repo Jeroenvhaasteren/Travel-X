@@ -1,0 +1,19 @@
+#loginComponent {
+  .form {
+    >div {
+      margin: 15px 0;
+    }
+  }
+  .login-form {
+    display: flex;
+    >div {
+      flex: 1;
+    }
+  }
+  &.top-menu-active {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0 15px;
+    background-color: white;
+  }
+}

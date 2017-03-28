@@ -11,10 +11,10 @@ $paddingTopNavBar: 5px;
     left: 0;
     z-index: 100;
     width: 100%;
-    height: $heightTopNavBar;
     display: flex;
     justify-content: space-between;
     div.logo-container {
+      height: $heightTopNavBar;
       margin: 0 30px;
       padding: $paddingTopNavBar;
       img {
@@ -29,9 +29,6 @@ $paddingTopNavBar: 5px;
         li {
           list-style: none;
           margin: 0 $paddingTopNavBar;
-          a {
-            line-height: $heightTopNavBar;
-          }
         }
       }
     }

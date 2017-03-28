@@ -12,29 +12,16 @@
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="js/main.js"></script>
+<script src="js/Components/help-login.js"></script>
 
 </head>
-<body id="HomePage">
-
+<body>
+<div id="HomePage">
 	<nav class="top-nav-bar">
 		<div class="logo-container">
 			<img src="rescources/trip_quest_logo.png">
 		</div>
-		<div class="menu-btn-container">
-			<ul>
-				<li>
-					<a class="btn">
-						Help
-					</a>
-				</li>
-				<li>
-					<a class="btn">
-						Login
-					</a>
-				</li>
-			</ul>
-		</div>
+		<help-login></help-login>
 	</nav>
 
 	<header class="main-header">
@@ -64,11 +51,15 @@
 		</div>
 	</section>
 
-
+</div>
 </body>
 
 <script>
-	/* VUE Script */
+	/* VUE instance Script */
+    var app = new Vue({
+        el: '#HomePage',
+    })
+
 
 </script>
 
