@@ -19,9 +19,18 @@ $paddingSize: 15px;
 $heightTools: 24px;
 $paperBorderRadius: 2px;
 
+/* Functions */
+@function set-text-color($color) {
+	@if (lightness($color) > 50) {
+		@return rgba(0,0,0,0.8); // Lighter backgorund, return dark color
+	} @else {
+		@return rgba(255,255,255,0.8); // Darker background, return light color
+	}
+}
+
 /*Components*/
 @import "components/buttons";
-@import "components/help-login";
+@import "components/top-nav";
 @import "components/side-nav";
 
 /*Pages*/
@@ -31,7 +40,6 @@ $paperBorderRadius: 2px;
 @import "tripinspiration";
 @import "tripprofile";
 @import "tripBoard";
-
 
 body {
 	background-color: $secondaryColor;

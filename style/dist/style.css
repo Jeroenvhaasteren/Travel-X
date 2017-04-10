@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/* Functions */
 /*Components*/
-/* line 1, C:/Users/Usuario/Documents/Travel X/style/src/components/_buttons.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_buttons.scss */
 a.btn {
   border: none;
   border-radius: 2px;
@@ -20,84 +21,156 @@ a.btn {
   cursor: pointer;
 }
 
-/* line 18, C:/Users/Usuario/Documents/Travel X/style/src/components/_buttons.scss */
+/* line 18, /Users/Jeroen/Documents/Travel-X/style/src/components/_buttons.scss */
 a.btn:hover {
   text-decoration: none;
   background-color: #666;
 }
 
-/* line 22, C:/Users/Usuario/Documents/Travel X/style/src/components/_buttons.scss */
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/components/_buttons.scss */
 a.btn i {
   font-size: 1.3rem;
   line-height: inherit;
 }
 
-/* line 3, C:/Users/Usuario/Documents/Travel X/style/src/components/_help-login.scss */
-#loginComponent .form > div {
-  margin: 15px 0;
+/* line 5, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBarContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-/* line 7, C:/Users/Usuario/Documents/Travel X/style/src/components/_help-login.scss */
-#loginComponent .login-form {
+/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar {
+  height: 70px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 150;
+}
+
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .left-container {
+  padding: 5px 15px;
+}
+
+/* line 24, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .left-container img {
+  height: 100%;
+}
+
+/* line 28, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .middle-container {
+  flex-grow: 1;
+}
+
+/* line 31, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .right-container {
+  padding: 0 15px;
+}
+
+/* line 33, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .right-container ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 37, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .right-container ul li {
+  list-style: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/* line 41, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .right-container ul li:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 44, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavBar .right-container ul li a {
+  line-height: 70px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 54, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavDropDown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 120;
+  background-color: white;
+}
+
+/* line 61, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavDropDown .cont {
+  margin-top: 70px;
+  padding: 15px;
+  position: relative;
+}
+
+/* line 65, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavDropDown .cont .close-containter {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  padding: 5px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+}
+
+/* line 74, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#TopNavDropDown .cont .close-containter:hover {
+  background-color: #ddd;
+}
+
+/* line 81, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#LogInComp {
   display: flex;
 }
 
-/* line 9, C:/Users/Usuario/Documents/Travel X/style/src/components/_help-login.scss */
-#loginComponent .login-form > div {
+/* line 83, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#LogInComp .info {
+  flex: 0;
+  display: none;
+}
+
+@media (min-width: 1080px) {
+  /* line 83, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+  #LogInComp .info {
+    flex: 1;
+    display: block;
+  }
+}
+
+/* line 91, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+#LogInComp .form {
   flex: 1;
 }
 
-/* line 13, C:/Users/Usuario/Documents/Travel X/style/src/components/_help-login.scss */
-#loginComponent.top-menu-active {
-  max-width: 100vw;
-  max-height: 100vh;
-  padding: 0 15px;
-  background-color: white;
+/* line 96, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+/* line 99, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 /*Pages*/
 /*Variables*/
-/* line 8, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* line 16, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar div.logo-container {
-  height: 60px;
-  margin: 0 30px;
-  padding: 5px;
-}
-
-/* line 20, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar div.logo-container img {
-  height: 100%;
-}
-
-/* line 24, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar div.menu-btn-container {
-  margin: 0 30px;
-}
-
-/* line 26, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar div.menu-btn-container ul {
-  display: flex;
-  margin: 0;
-}
-
-/* line 29, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
-#HomePage nav.top-nav-bar div.menu-btn-container ul li {
-  list-style: none;
-  margin: 0 5px;
-}
-
-/* line 37, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 8, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header {
   height: 75vh;
   width: 100%;
@@ -105,7 +178,7 @@ a.btn i {
   position: relative;
 }
 
-/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .background-container {
   position: absolute;
   top: 0;
@@ -116,7 +189,7 @@ a.btn i {
   height: 100%;
 }
 
-/* line 51, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .content-container {
   position: absolute;
   top: 0;
@@ -129,7 +202,7 @@ a.btn i {
   justify-content: center;
 }
 
-/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 32, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .content-container .text-container {
   width: 100%;
   max-width: 1080px;
@@ -137,69 +210,69 @@ a.btn i {
   text-align: center;
 }
 
-/* line 70, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 41, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .call-to-action {
   width: 100%;
   padding: 30px;
   display: flex;
 }
 
-/* line 74, C:/Users/Usuario/Documents/Travel X/style/src/pages/_index.scss */
+/* line 45, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .call-to-action .col {
   text-align: center;
   flex: 1;
 }
 
-/* line 2, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 2, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary {
   display: flex;
   cursor: pointer;
   border-bottom: 1px solid #cccccc;
 }
 
-/* line 6, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 6, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
-/* line 10, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 10, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container {
   flex: 1;
 }
 
-/* line 13, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 16, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 16, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .image {
   width: 100%;
   flex: 1;
 }
 
-/* line 19, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 19, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .image img {
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
 
-/* line 25, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 25, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons {
   padding: 5px 15px;
 }
 
-/* line 27, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul {
   display: flex;
   justify-content: space-between;
   margin: 0;
 }
 
-/* line 31, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 31, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul li {
   margin-right: 5px;
   color: rgba(0, 0, 0, 0.54);
@@ -209,38 +282,38 @@ a.btn i {
   line-height: 24px;
 }
 
-/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 38, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .left-container .icons ul li i {
   color: rgba(0, 0, 0, 0.54);
   font-size: 24px;
   line-height: 24px;
 }
 
-/* line 47, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 47, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container {
   display: flex;
   flex-direction: column;
   padding: 5px 15px;
 }
 
-/* line 51, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 51, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container p {
   flex: 1;
 }
 
-/* line 54, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 54, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container div {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 58, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 58, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container .pic {
   width: 32px;
   height: 32px;
 }
 
-/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/_tripinspiration.scss */
+/* line 61, /Users/Jeroen/Documents/Travel-X/style/src/_tripinspiration.scss */
 .trSummary .right-container .pic img {
   background-color: #eee;
   border-radius: 50%;
@@ -248,7 +321,7 @@ a.btn i {
   width: 100%;
 }
 
-/* line 2, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 2, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock {
   margin-top: 15px;
   background-color: white;
@@ -259,13 +332,13 @@ a.btn i {
   border-radius: 2px;
 }
 
-/* line 10, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 10, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .trip-header {
   display: flex;
   height: 270px;
 }
 
-/* line 13, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .trip-header .trip-img {
   max-height: 100%;
   max-width: 30%;
@@ -274,37 +347,37 @@ a.btn i {
   overflow: hidden;
 }
 
-/* line 20, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 20, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .trip-header .trip-text {
   padding: 0 15px;
   flex: 1;
 }
 
-/* line 27, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .tripImageContainer {
   height: 100%;
 }
 
-/* line 29, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 29, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .tripImageContainer img {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
 
-/* line 33, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 33, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .tripImageContainer img:hover {
   opacity: 0.6;
 }
 
-/* line 38, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 38, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools {
   display: flex;
   background-color: #ddd;
   width: 100%;
 }
 
-/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 42, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool {
   padding: 15px;
   flex: 1;
@@ -315,74 +388,74 @@ a.btn i {
   line-height: 24px;
 }
 
-/* line 50, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 50, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool:hover {
   background-color: #aaaaaa;
 }
 
-/* line 53, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 53, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .sharing-tools .share-tool i {
   font-size: 24px;
   line-height: 24px;
 }
 
-/* line 59, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 59, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .members-container {
   margin: 30px 0;
   padding: 15px;
   flex: 1;
 }
 
-/* line 63, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 63, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .members-container tbody tr {
   cursor: pointer;
 }
 
-/* line 65, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 65, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .members-container tbody tr:hover {
   background-color: #cccccc;
 }
 
-/* line 69, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 69, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .members-container .btn-floating {
   background-color: #eee;
 }
 
-/* line 71, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 71, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .members-container .btn-floating i {
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 76, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 76, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .tag-container {
   padding: 15px;
 }
 
-/* line 78, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 78, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #tripBlock .tag-container .chips.focus {
   border-bottom: 1px solid #eee;
   box-shadow: 0 1px 0 0 #eee;
 }
 
-/* line 85, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 85, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #inspirationBlock {
   margin-top: 15px;
   margin-left: 30px;
   background-color: white;
 }
 
-/* line 89, C:/Users/Usuario/Documents/Travel X/style/src/_tripprofile.scss */
+/* line 89, /Users/Jeroen/Documents/Travel-X/style/src/_tripprofile.scss */
 #inspirationBlock h1 {
   margin: 0px;
 }
 
-/* line 3, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 3, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container {
   display: flex;
   overflow-x: auto;
 }
 
-/* line 6, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 6, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container .board-col {
   min-width: 430px;
   max-width: 430px;
@@ -392,14 +465,14 @@ a.btn i {
   border-radius: 2px;
 }
 
-/* line 13, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container .board-col .board-col-header {
   padding: 15px 0;
   display: flex;
   min-width: 0;
 }
 
-/* line 17, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 17, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container .board-col .board-col-header div.column-title {
   flex-grow: 1;
   white-space: nowrap;
@@ -407,7 +480,7 @@ a.btn i {
   text-overflow: ellipsis;
 }
 
-/* line 23, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 23, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container .board-col .board-col-header .tools {
   width: 30px;
   height: 30px;
@@ -416,29 +489,29 @@ a.btn i {
   text-align: center;
 }
 
-/* line 29, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 29, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .board-container .board-col .board-col-header .tools:hover {
   background-color: #bbbbbb;
 }
 
-/* line 37, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 37, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item {
   text-align: left;
   margin-bottom: 15px;
   width: 100%;
 }
 
-/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 42, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal {
   max-height: 180px;
 }
 
-/* line 44, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 44, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-image {
   max-width: 25%;
 }
 
-/* line 46, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 46, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-image img {
   max-width: 100%;
   max-height: 100%;
@@ -447,7 +520,7 @@ article.item .card.horizontal .card-image img {
   object-fit: cover;
 }
 
-/* line 54, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 54, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-content {
   padding: 10px 15px 0 15px;
   margin-bottom: 10px;
@@ -456,19 +529,19 @@ article.item .card.horizontal .card-content {
   text-overflow: ellipsis;
 }
 
-/* line 60, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 60, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-content h6 {
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 66, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 66, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action {
   padding: 5px 5px;
 }
 
-/* line 68, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 68, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action .toolbar {
   height: 30px;
   display: flex;
@@ -478,19 +551,19 @@ article.item .card.horizontal .card-action .toolbar {
   padding: 0px 15px;
 }
 
-/* line 75, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 75, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item .card.horizontal .card-action .toolbar i {
   line-height: 30px;
   font-size: 20px;
   margin: 0 5px;
 }
 
-/* line 83, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 83, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item.add-new {
   text-align: center;
 }
 
-/* line 85, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 85, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item.add-new .tools {
   width: 30px;
   height: 30px;
@@ -499,12 +572,12 @@ article.item.add-new .tools {
   text-align: center;
 }
 
-/* line 91, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 91, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 article.item.add-new .tools:hover {
   background-color: #bbbbbb;
 }
 
-/* line 98, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 98, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .overlay {
   width: 100vw;
   height: 100vh;
@@ -515,7 +588,7 @@ article.item.add-new .tools:hover {
   z-index: 900;
 }
 
-/* line 109, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 109, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal {
   position: absolute;
   display: flex;
@@ -532,12 +605,12 @@ article.item.add-new .tools:hover {
   z-index: 990;
 }
 
-/* line 123, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 123, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .modal-views {
   flex: 1;
 }
 
-/* line 126, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 126, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card {
   border-radius: 2px 0 0 2px;
   overflow: hidden;
@@ -545,12 +618,12 @@ article.item.add-new .tools:hover {
   flex-direction: column;
 }
 
-/* line 131, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 131, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-image {
   max-height: 70%;
 }
 
-/* line 133, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 133, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-image img {
   border-radius: 0;
   max-width: 100%;
@@ -560,48 +633,48 @@ article.item.add-new .tools:hover {
   object-fit: cover;
 }
 
-/* line 142, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 142, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* line 146, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 146, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-content .rating-div {
   height: 42px;
   width: 100%;
   margin-bottom: 8px;
 }
 
-/* line 151, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 151, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-content #itemDesc {
   margin-bottom: 15px;
 }
 
-/* line 154, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 154, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-content .card-tools {
   flex: 1;
 }
 
-/* line 157, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 157, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal .card .card-content .action-btn {
   text-align: right;
 }
 
-/* line 162, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 162, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 #editModal #commentWindow {
   background-color: #efefef;
   border-radius: 0 2px 2px 0;
   margin: .5rem 0 1rem 0;
 }
 
-/* line 172, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 172, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating [type="radio"]:not(:checked) + label:before, .rating [type="radio"]:not(:checked) + label:after {
   border: none;
 }
 
-/* line 175, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 175, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating [type="radio"] + label:before, .rating [type="radio"] + label:after {
   content: normal;
   position: relative;
@@ -614,12 +687,12 @@ article.item.add-new .tools:hover {
   transition: .15s ease;
 }
 
-/* line 186, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 186, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating [type="radio"]:not(:checked) + label, .rating [type="radio"]:checked + label {
   height: auto;
 }
 
-/* line 191, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 191, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating {
   float: left;
 }
@@ -627,14 +700,14 @@ article.item.add-new .tools:hover {
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
 	   follow these rules. Every browser that supports :checked also supports :not(), so
 	   it doesn’t make the test unnecessarily selective */
-/* line 198, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 198, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating:not(:checked) > input {
   position: absolute;
   top: -9999px;
   clip: rect(0, 0, 0, 0);
 }
 
-/* line 204, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 204, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label {
   float: right;
   width: 1em;
@@ -648,23 +721,23 @@ article.item.add-new .tools:hover {
   color: #999;
 }
 
-/* line 217, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 217, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label:before {
   content: '★ ';
 }
 
-/* line 221, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 221, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating > input:checked ~ label {
   color: #f70;
 }
 
-/* line 225, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 225, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
   color: gold;
 }
 
-/* line 230, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 230, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating > input:checked + label:hover,
 .rating > input:checked + label:hover ~ label,
 .rating > input:checked ~ label:hover,
@@ -673,20 +746,20 @@ article.item.add-new .tools:hover {
   color: #ea0;
 }
 
-/* line 238, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 238, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 .rating > label:active {
   position: relative;
   top: 2px;
   left: 2px;
 }
 
-/* line 244, C:/Users/Usuario/Documents/Travel X/style/src/_tripBoard.scss */
+/* line 244, /Users/Jeroen/Documents/Travel-X/style/src/_tripBoard.scss */
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* line 35, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 44, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 body {
   background-color: #eee;
   overflow: hidden;
@@ -694,40 +767,40 @@ body {
   padding: 0;
 }
 
-/* line 42, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 51, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 main {
   margin-left: 100px;
   padding: 0 30px;
 }
 
-/* line 47, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 56, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .input-field.inline input, .input-field label, .chips .input {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.87);
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 53, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 62, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 thead {
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 57, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 66, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .row .col {
   padding: 0;
 }
 
-/* line 61, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 70, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex {
   display: flex;
 }
 
-/* line 63, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 72, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex .col-50 {
   flex: 1;
 }
 
-/* line 68, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 77, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu {
   position: fixed;
   z-index: 9;
@@ -740,23 +813,23 @@ aside#mainMenu {
   background-color: #588C7E;
 }
 
-/* line 78, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 87, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu .menu-item-container {
   flex: 1;
 }
 
-/* line 82, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 91, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu .profile-container {
   border-top: 1px solid #446d62;
 }
 
-/* line 87, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 96, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul {
   display: flex;
   flex-direction: column;
 }
 
-/* line 90, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 99, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item {
   position: relative;
   width: 100px;
@@ -765,7 +838,7 @@ aside#mainMenu ul li.menu-item {
   cursor: pointer;
 }
 
-/* line 96, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 105, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item img {
   height: 70px;
   width: 70px;
@@ -773,12 +846,12 @@ aside#mainMenu ul li.menu-item img {
   background-color: white;
 }
 
-/* line 102, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 111, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item.hover:hover {
   background-color: #314d46;
 }
 
-/* line 106, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 115, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item .smallIcon {
   position: absolute;
   bottom: 10px;
@@ -790,37 +863,37 @@ aside#mainMenu ul li.menu-item .smallIcon {
   background-color: #90baae;
 }
 
-/* line 115, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 124, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item .smallIcon:hover {
   background-color: #314d46;
 }
 
-/* line 119, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 128, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item #profileSettings {
   left: 10px;
 }
 
-/* line 122, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 131, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item #profileNotifications {
   right: 10px;
 }
 
-/* line 130, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 139, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs {
   background-color: transparent;
 }
 
-/* line 134, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 143, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a {
   color: #588C7E;
 }
 
-/* line 138, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 147, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .indicator {
   background-color: #314d46;
 }
 
-/* line 142, C:/Users/Usuario/Documents/Travel X/style/src/style.scss */
+/* line 151, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a:hover, .tabs .tab a.active {
   color: #314d46;
 }

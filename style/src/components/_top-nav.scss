@@ -1,0 +1,101 @@
+$topNavBarHeight: 70px;
+$topNavBarBackground: rgba(0,0,0,0.6);
+$topNavDropDownBackground: white;
+
+#TopNavBarContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#TopNavBar {
+  height:$topNavBarHeight;
+  background: $topNavBarBackground;
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 150;
+  .left-container {
+    padding: 5px 15px;
+    img {
+      height: 100%;
+    }
+  }
+  .middle-container {
+    flex-grow: 1;
+  }
+  .right-container {
+    padding: 0 15px;
+    ul {
+      display: flex;
+      margin:0;
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 0 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: darken($topNavBarBackground, 10%);
+        }
+        a {
+          line-height: $topNavBarHeight;
+          text-decoration: none;
+          color: set-text-color($topNavBarBackground);
+        }
+      }
+    }
+  }
+}
+
+#TopNavDropDown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 120;
+  background-color: $topNavDropDownBackground;
+  .cont {
+    margin-top: $topNavBarHeight;
+    padding: 15px;
+    position: relative;
+    .close-containter {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      padding: 5px;
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+#LogInComp {
+  display: flex;
+  .info {
+    flex:0;
+    display: none;
+    @media (min-width: 1080px) {
+      flex:1;
+      display: block;
+    }
+  }
+  .form {
+    flex:1;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}

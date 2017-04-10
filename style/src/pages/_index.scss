@@ -5,35 +5,6 @@ $paddingTopNavBar: 5px;
 
 
 #HomePage {
-  nav.top-nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    div.logo-container {
-      height: $heightTopNavBar;
-      margin: 0 30px;
-      padding: $paddingTopNavBar;
-      img {
-        height: 100%;
-      }
-    }
-    div.menu-btn-container {
-      margin: 0 30px;
-      ul {
-        display: flex;
-        margin: 0;
-        li {
-          list-style: none;
-          margin: 0 $paddingTopNavBar;
-        }
-      }
-    }
-  }
-
   .main-header {
     height: 75vh;
     width: 100%;

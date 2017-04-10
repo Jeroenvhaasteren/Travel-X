@@ -5,6 +5,7 @@
 	<title>TripQuest</title>
 
 	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="style/dist/style.css" rel="stylesheet" >
 
@@ -12,17 +13,12 @@
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="js/Components/help-login.js"></script>
+<script src="js/Components/top-nav.js"></script>
 
 </head>
 <body>
 <div id="HomePage">
-	<nav class="top-nav-bar">
-		<div class="logo-container">
-			<img src="rescources/trip_quest_logo.png">
-		</div>
-		<help-login></help-login>
-	</nav>
+	<top-nav-bar></top-nav-bar>
 
 	<header class="main-header">
 		<div class="background-container">
@@ -52,6 +48,14 @@
 	</section>
 
 </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=733245323520980";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 <script>
