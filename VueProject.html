@@ -18,185 +18,18 @@
 
 </head>
 <body>
-
-<!-- SideMenu -->
-<aside id="mainMenu" class="z-depth-3">
-    <div class="logo-container">
-        <ul>
-            <li class="menu-item">
-                <img src="rescources/cross-grey.png">
-            </li>
-        </ul>
-    </div>
-    <div class="menu-item-container">
-        <ul>
-            <li class="menu-item hover">
-                <img src="rescources/cross-grey.png">
-                My trips
-            </li>
-            <li class="menu-item hover">
-                <img src="rescources/cross-grey.png">
-                Barcelona 2017
-            </li>
-            <li class="menu-item hover">
-                <img src="rescources/cross-grey.png">
-                Favorites
-            </li>
-            <li class="menu-item hover">
-                <img src="rescources/cross-grey.png">
-                Inspiration
-            </li>
-        </ul>
-    </div>
-    <div class="profile-container">
-        <ul>
-            <li class="menu-item">
-                <img src="rescources/cross-grey.png">
-                <span id="profileSettings" class="smallIcon"><i class="material-icons">settings</i></span>
-                <span id="profileNotifications" class="smallIcon"><i class="material-icons">inbox</i></span>
-            </li>
-        </ul>
-    </div>
-</aside>
+<div id="app">
+<side-nav></side-nav>
 
 <!-- Application window -->
 <main>
     <!-- TopTabs -->
-    <section id="topNavBar">
-        <ul class="tabs">
-            <li class="tab"><a class="" href="#tabContent1">Our Trip</a></li>
-            <li class="tab"><a class="active" href="#tabContent2">Board</a></li>
-            <li class="tab"><a class="" href="#tabContent3">To Do</a></li>
-            <li class="tab"><a class="" href="#tabContent4">Financials</a></li>
-        </ul>
+    <section id="appheader">
+
+
     </section>
 
     <section id="appsSpace">
-        <!-- Tab 1 My Trip information -->
-        <div id="tabContent1">
-            <div class="rowflex">
-                <div class="col-50">
-                    <div class="z-depth-2" id="tripBlock">
-                        <div class="trip-header">
-                            <div class="trip-img">
-                                <div class="tripImageContainer">
-                                    <img src="http://cosinfo.gatech.edu/images/park.jpg">
-                                </div>
-                            </div>
-                            <div class="trip-text">
-                                <h1 contenteditable="true">Barcelona 2017</h1>
-                                <p contenteditable="true">Our amazing trip to barcelona in 2017. We are planning to do a lot of outdoo activities, lik ehicking Mont-Serrat, sailing, surfing, Snowboarding pyrinees.</p>
-                                <div class="input-field inline">
-                                    <input id="from" type="date" class="datepicker">
-                                    <label for="from" data-error="wrong" data-success="right">From</label>
-                                </div>
-                                <div class="input-field inline">
-                                    <input id="till" type="date" class="datepicker">
-                                    <label for="till" data-error="wrong" data-success="right">Till</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sharing-tools">
-                            <div class="share-tool waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Your trip i being favorited by 10 people">
-                                10 <i class="material-icons">favorite_border</i>
-                            </div>
-                            <div class="share-tool waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Share your trip">
-                                <i class="material-icons">share</i>
-                            </div>
-                            <div class="share-tool waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Who can see your trip">
-                                <i class="material-icons">public</i>
-                            </div>
-                            <div class="share-tool waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="How may people are in your trip">
-                                3<i class="material-icons">person</i>
-                            </div>
-                        </div>
-                        <div class="members-container" style="position:relative;">
-                            <h6 style="font-weight: 600;">Trip Members</h6>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th data-field="id">Name</th>
-                                    <th data-field="name">Email</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Jeroen</td>
-                                    <td>jeroenvhaasteren@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Hilda</td>
-                                    <td>HildaBTS@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Pedro</td>
-                                    <td>PedroBTS@gmail.com</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="tag-container">
-                            <h6 style="font-weight: 600;">Add some tags</h6>
-                            <div class="chips"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-50">
-                    <h4 style="margin-left: 30px;">Find some inspiration</h4>
-                    <div class="z-depth-2" id="inspirationBlock" style="height: calc(100vh - 100px); overflow-y:scroll;">
-                        <section class="tripSummaryContainer">
-                            <article class="trSummary">
-                                <div class="left-container">
-                                    <div class="image">
-                                        <img src="rescources/barcelonaSport.jpg">
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li class="trip-facts tooltipped" data-position="top" data-delay="50" data-tooltip="Trip is favorited by 1 person">
-                                                1 <i class="material-icons">favorite</i>
-                                            </li>
-                                            <li class="trip-facts tooltipped" data-position="top" data-delay="50" data-tooltip="Trip was made in 4 days">
-                                                4 <i class="material-icons">today</i>
-                                            </li>
-                                            <li class="trip-facts tooltipped" data-position="top" data-delay="50" data-tooltip="Trip was done by 6 persons">
-                                                6 <i class="material-icons">person</i>
-                                            </li>
-                                            <li class="trip-facts tooltipped" data-position="top" data-delay="50" data-tooltip="Trip was done in the sumer">
-                                                <i class="material-icons">wb_sunny</i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="right-container">
-                                    <h5>Barcelona Sports</h5>
-                                    <p>We where visiting Barcelona for the ultimate sports experiance, including the Olympic village, a game from FC Barcelona, Ice Hockey, Handball, BasketBal. And ofcourse the erotic Museum</p>
-                                    <div>
-                                        <div class="tags">
-                                            <div class="chip">
-                                                Sports
-                                                <i class="close material-icons">close</i>
-                                            </div>
-                                            <div class="chip">
-                                                City
-                                                <i class="close material-icons">close</i>
-                                            </div>
-                                        </div>
-                                        <div class="members">
-                                            By:
-                                            <span id="profiles">
-												<div class="pic">
-													<img src="rescources/cross-grey.png" alt="Contact Person">
-												</div>
-											</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Tab 2 My Trip Board -->
         <div id="tabContent2">
             <!-- Vue board component -->
@@ -210,20 +43,7 @@
             <!-- Vue add category component -->
             <addcategorymodal></addcategorymodal>
         </div>
-        <div id="tabContent3">
 
-
-
-
-
-        </div>
-        <div id="tabContent4">
-
-
-
-
-
-        </div>
         <!-- Modal Structure -->
         <div id="addItem" class="modal bottom-sheet">
             <div class="modal-content">
@@ -242,10 +62,13 @@
         </div>
     </section>
 </main>
+</div>
 
 <!-- Vue Files and Components -->
 <script src="js/jsonFile.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/Components/side-nav.js"></script>
+<script src="js/Components/top-nav.js"></script>
 <script src="js/vuecomponentboard.js"></script>
 </body>
 </html>

@@ -4,34 +4,43 @@
 
 Vue.component('side-nav', {
     template: `
-        <aside id="sideNav">
+        <!-- SideMenu -->
+        <aside id="mainMenu" class="z-depth-3">
             <div class="logo-container">
-                <img src="respources/trip_quest_logo_sm.png" alt="TripQuest">
-            </div>
-            <div class="menu-items-container">
                 <ul>
-                    <li>
-                        <a>
-                            <img src="resources/my-trips.svg">
-                            <span>My trips</span>
-                        </a>
+                    <li class="menu-item">
+                        <img src="rescources/cross-grey.png">
                     </li>
-                    <li>
-                        <a>
-                            <img id="tripImage" src="">
-                            <span>{{currentTrip}}</span>
-                        </a>
+                </ul>
+            </div>
+            <div class="menu-item-container">
+                <ul>
+                    <li class="menu-item hover">
+                        <img src="rescources/cross-grey.png">
+                        My trips
                     </li>
-                    <li>
-                        <a>
-                            <img src="resources/inspiration.svg">
-                            <span>Inspiration</span>
-                        </a>
+                    <li class="menu-item hover">
+                        <img src="rescources/cross-grey.png">
+                        Barcelona 2017
+                    </li>
+                    <li class="menu-item hover">
+                        <img src="rescources/cross-grey.png">
+                        Favorites
+                    </li>
+                    <li class="menu-item hover">
+                        <img src="rescources/cross-grey.png">
+                        Inspiration
                     </li>
                 </ul>
             </div>
             <div class="profile-container">
-                
+                <ul>
+                    <li class="menu-item">
+                        <img src="rescources/cross-grey.png">
+                        <span id="profileSettings" class="smallIcon"><i class="material-icons">settings</i></span>
+                        <span id="profileNotifications" class="smallIcon"><i class="material-icons">inbox</i></span>
+                    </li>
+                </ul>
             </div>
         </aside>
     `

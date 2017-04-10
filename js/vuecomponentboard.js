@@ -385,7 +385,7 @@ Vue.component('addcategorymodal', {
 // Vue Tab 2 Board Instance
 **/
 var app = new Vue({
-    el: '#tabContent2',
+    el: '#app',
     data: {
         overlayShow: false,
         itemDetailsModal: false,
