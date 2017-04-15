@@ -1,0 +1,33 @@
+#trip-item {
+  padding-top: 30px;
+
+}
+
+#comments {
+  h5 {
+    border-bottom: 1px solid #333;
+  }
+  .message {
+    width: 80%;
+    &.right {
+      margin-left: auto;
+      text-align: right;
+      .bubble {
+        text-align: left;
+      }
+    }
+    .bubble {
+      background-color: white;
+      border-radius: 2px;
+      padding: 15px;
+      p {
+        margin: 0;
+      }
+    }
+    .sender {
+      color: #666;
+      font-size: 0.8rem;
+    }
+    margin-bottom: 30px;
+  }
+}

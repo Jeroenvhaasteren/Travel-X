@@ -32,6 +32,10 @@ $paperBorderRadius: 2px;
 @import "components/buttons";
 @import "components/top-nav";
 @import "components/side-nav";
+@import "components/trip-header";
+@import "components/trip-info";
+@import "components/trip-board";
+@import "components/trip-item";
 
 /*Pages*/
 @import "pages/index";
@@ -46,6 +50,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+	font-family: nowayregular;
 }
 
 main {

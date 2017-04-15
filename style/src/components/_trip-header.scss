@@ -1,0 +1,58 @@
+$appHeaderHeight: 300px;
+
+
+#appheader {
+  height: $appHeaderHeight;
+  margin-left: $widthMainMenu;
+  padding: 0 30px;
+  padding-top: 70px;
+  display: flex;
+
+  &:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('/Travel-X/rescources/barcelona.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: $appHeaderHeight;
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+    opacity: 0.7;
+  }
+
+  .trip-image {
+    padding: 15px;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+  }
+
+  .trip-info {
+    display: flex;
+    flex-direction: column;
+    .trip-details {
+      flex-grow: 1;
+      h1 {
+        font-size: 3.2rem;
+        margin: 1.1rem 0 0.68rem 0;
+      }
+      .capitalized {
+        text-transform: capitalize;
+      }
+    }
+    .tabs .tab{cursor: pointer;}
+  }
+}

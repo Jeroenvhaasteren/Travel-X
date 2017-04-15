@@ -7,6 +7,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
     <link href="style/dist/style.css" rel="stylesheet" >
 
     <!-- Compiled and minified JavaScript -->
@@ -21,14 +22,28 @@
 <div id="app">
 <side-nav></side-nav>
 
+<section id="appheader">
+    <div class="trip-image">
+        <img src="rescources/barcelona.jpg">
+    </div>
+    <div class="trip-info">
+        <div class="trip-details">
+            <h1>Culture trip Barcelona 2017</h1>
+            <h5>Barcelona</h5>
+            <p><span class="capitalized">created by: </span>TripQuest team</p>
+        </div>
+        <div>
+            <ul class="tabs">
+                <li class="tab"><a>Trip information</a></li>
+                <li class="tab"><a>Board</a></li>
+                <li class="tab"><a>Financials</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <!-- Application window -->
 <main>
-    <!-- TopTabs -->
-    <section id="appheader">
-
-
-    </section>
-
     <section id="appsSpace">
         <!-- Tab 2 My Trip Board -->
         <div id="tabContent2">
@@ -63,6 +78,12 @@
     </section>
 </main>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
+</script>
 
 <!-- Vue Files and Components -->
 <script src="js/jsonFile.js"></script>
