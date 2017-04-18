@@ -2,14 +2,9 @@
  * Created by Jeroen on 15/04/2017.
  */
 Vue.component('trip-item', {
-    data: function() {
-        return {
-            active: false
-        }
-    },
     template: `
         <!-- trip-item -->
-        <div id="trip-item" v-show="active">
+        <div id="trip-item">
             <div class="row">
                 <div class="col s8" id="Details">
                     <h5>Details</h5>
