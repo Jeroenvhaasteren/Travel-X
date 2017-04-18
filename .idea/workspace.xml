@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a531cd4-0db2-484d-906d-f241d597a0a5" name="Default" comment="Add Manual Category name Modal">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTrip.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Components/trip-board.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Components/trip-info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style/src/components/_trip-board.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style/src/components/_trip-info.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style/src/components/_trip-item.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/VueProject.html" afterPath="$PROJECT_DIR$/VueProject(OLD).html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Components/trip-item.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style/src/components/_trip-financials.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Components/trip-header.js" afterPath="$PROJECT_DIR$/js/Components/trip-header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTrip.html" afterPath="$PROJECT_DIR$/MyTrip.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/dist/style.css" afterPath="$PROJECT_DIR$/style/dist/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/dist/style.map" afterPath="$PROJECT_DIR$/style/dist/style.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/src/components/_trip-header.scss" afterPath="$PROJECT_DIR$/style/src/components/_trip-header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/src/components/_trip-item.scss" afterPath="$PROJECT_DIR$/style/src/components/_trip-item.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/src/style.scss" afterPath="$PROJECT_DIR$/style/src/style.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,16 +26,31 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40457666">
+    <splitter split-orientation="horizontal" split-proportion="0.48504445">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="MyTrip.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MyTrip.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="960">
-                  <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+                <state relative-caret-position="437">
+                  <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
                   <folding>
-                    <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#1;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#table#0;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="trip-item.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="false" />
+                    <marker date="1492488134000" expanded="true" signature="4796:4819" ph="..." />
+                    <marker date="1492488134000" expanded="true" signature="4796:4838" ph="..." />
+                    <marker date="1492488134000" expanded="true" signature="4796:4853" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -49,8 +59,8 @@
           <file leaf-file-name="trip-board.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/Components/trip-board.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="25" />
+                <state relative-caret-position="90">
+                  <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
                     <marker date="1492259250000" expanded="true" signature="141:1101" ph="..." />
@@ -67,8 +77,8 @@
           <file leaf-file-name="trip-info.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/Components/trip-info.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="22" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="3" />
+                <state relative-caret-position="180">
+                  <caret line="14" column="45" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
                     <marker date="1492256630000" expanded="true" signature="142:2670" ph="..." />
@@ -215,11 +225,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="_trip-item.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_trip-financials.scss" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/style/src/components/_trip-financials.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_trip-item.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
@@ -228,28 +248,8 @@
           <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/style/src/style.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="795">
-                  <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_trip-header.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/style/src/components/_trip-header.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_trip-info.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/style/src/components/_trip-info.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+                <state relative-caret-position="570">
+                  <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
@@ -319,11 +319,13 @@
         <option value="$PROJECT_DIR$/VueProject.html" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-board.scss" />
         <option value="$PROJECT_DIR$/js/Components/trip-board.js" />
-        <option value="$PROJECT_DIR$/style/src/style.scss" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-header.scss" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-info.scss" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-item.scss" />
+        <option value="$PROJECT_DIR$/js/Components/trip-item.js" />
+        <option value="$PROJECT_DIR$/style/src/style.scss" />
         <option value="$PROJECT_DIR$/MyTrip.html" />
+        <option value="$PROJECT_DIR$/style/src/components/_trip-financials.scss" />
       </list>
     </option>
   </component>
@@ -334,9 +336,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2951" />
-    <option name="width" value="1769" />
-    <option name="height" value="1440" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -591,18 +592,18 @@
       <workItem from="1490720898085" duration="14000" />
       <workItem from="1490720935768" duration="1591000" />
       <workItem from="1491835590114" duration="6133000" />
-      <workItem from="1491929417183" duration="10567000" />
+      <workItem from="1491929417183" duration="13795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61316000" />
+    <option name="totallyTimeSpent" value="64544000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2951" y="0" width="1769" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14016019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12825933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -638,20 +639,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/style/src/_tripBoard.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jsonFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1039,8 +1026,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/trip-info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="3" />
+        <state relative-caret-position="180">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="3" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
             <marker date="1492256630000" expanded="true" signature="142:2670" ph="..." />
@@ -1068,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/trip-board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="90">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="47" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
             <marker date="1492259250000" expanded="true" signature="141:1101" ph="..." />
@@ -1082,10 +1069,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-board.scss">
+    <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+            <marker date="1492488134000" expanded="true" signature="4796:4819" ph="..." />
+            <marker date="1492488134000" expanded="true" signature="4796:4838" ph="..." />
+            <marker date="1492488134000" expanded="true" signature="4796:4853" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1098,37 +1098,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/src/components/_trip-info.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
+    <entry file="file://$PROJECT_DIR$/style/src/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="570">
+          <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyTrip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+        <state relative-caret-position="437">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#1;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#table#0;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-financials.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

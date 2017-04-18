@@ -341,44 +341,133 @@ a.btn i {
   padding-top: 30px;
 }
 
+/* line 3, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#trip-item h5 {
+  border-bottom: 1px solid #333;
+  display: block;
+}
+
 /* line 7, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#trip-item .row .col.s6, #trip-item .row .col.s12.padding, #trip-item .row .col.m6 {
+  padding: 0 15px;
+}
+
+/* line 10, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#trip-item #Details {
+  height: calc(100vh - 315px);
+  overflow: auto;
+}
+
+/* line 17, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#comments {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 315px);
+}
+
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments h5 {
   border-bottom: 1px solid #333;
 }
 
-/* line 10, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 25, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#comments .messages {
+  overflow: auto;
+}
+
+/* line 29, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message {
   width: 80%;
   margin-bottom: 30px;
 }
 
-/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 31, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message.right {
   margin-left: auto;
   text-align: right;
 }
 
-/* line 15, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 34, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message.right .bubble {
   text-align: left;
 }
 
-/* line 19, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 38, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message .bubble {
   background-color: white;
   border-radius: 2px;
   padding: 15px;
 }
 
-/* line 23, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 42, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message .bubble p {
   margin: 0;
 }
 
-/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+/* line 46, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #comments .message .sender {
   color: #666;
   font-size: 0.8rem;
+}
+
+/* line 52, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
+#comments > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials {
+  background-color: white;
+  padding: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* line 6, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials .tools {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right: 15px;
+}
+
+/* line 11, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials .tools ul {
+  display: flex;
+}
+
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials .tools ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+/* line 16, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials .tools ul li a {
+  cursor: pointer;
+  color: #666;
+}
+
+/* line 19, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials .tools ul li a :hover {
+  color: #333;
+}
+
+/* line 28, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials table tr.balance {
+  border-bottom: 1px solid #efefef;
+}
+
+/* line 30, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials table tr.balance .positive {
+  color: green;
+}
+
+/* line 33, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
+#Financials table tr.balance .negative {
+  color: red;
 }
 
 /*Pages*/
@@ -972,7 +1061,7 @@ fieldset {
   padding: 0;
 }
 
-/* line 48, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 49, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 body {
   background-color: #eee;
   overflow: hidden;
@@ -981,40 +1070,40 @@ body {
   font-family: nowayregular;
 }
 
-/* line 56, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 57, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 main {
   margin-left: 100px;
   padding: 0 30px;
 }
 
-/* line 61, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 62, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .input-field.inline input, .input-field label, .chips .input {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.87);
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 67, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 68, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 thead {
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 71, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 72, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .row .col {
   padding: 0;
 }
 
-/* line 75, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 76, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex {
   display: flex;
 }
 
-/* line 77, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 78, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex .col-50 {
   flex: 1;
 }
 
-/* line 82, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 83, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu {
   position: fixed;
   z-index: 9;
@@ -1027,23 +1116,23 @@ aside#mainMenu {
   background-color: #588C7E;
 }
 
-/* line 92, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 93, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu .menu-item-container {
   flex: 1;
 }
 
-/* line 96, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 97, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu .profile-container {
   border-top: 1px solid #446d62;
 }
 
-/* line 101, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 102, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul {
   display: flex;
   flex-direction: column;
 }
 
-/* line 104, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 105, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item {
   position: relative;
   width: 100px;
@@ -1052,7 +1141,7 @@ aside#mainMenu ul li.menu-item {
   cursor: pointer;
 }
 
-/* line 110, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 111, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item img {
   height: 70px;
   width: 70px;
@@ -1060,12 +1149,12 @@ aside#mainMenu ul li.menu-item img {
   background-color: white;
 }
 
-/* line 116, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 117, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item.hover:hover {
   background-color: #314d46;
 }
 
-/* line 120, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 121, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item .smallIcon {
   position: absolute;
   bottom: 10px;
@@ -1077,37 +1166,37 @@ aside#mainMenu ul li.menu-item .smallIcon {
   background-color: #90baae;
 }
 
-/* line 129, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 130, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item .smallIcon:hover {
   background-color: #314d46;
 }
 
-/* line 133, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 134, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item #profileSettings {
   left: 10px;
 }
 
-/* line 136, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 137, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 aside#mainMenu ul li.menu-item #profileNotifications {
   right: 10px;
 }
 
-/* line 144, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 145, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs {
   background-color: transparent;
 }
 
-/* line 148, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 149, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a {
   color: #588C7E;
 }
 
-/* line 152, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 153, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .indicator {
   background-color: #314d46;
 }
 
-/* line 156, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+/* line 157, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a:hover, .tabs .tab a.active {
   color: #314d46;
 }

@@ -1,0 +1,42 @@
+#Financials {
+  background-color: white;
+  padding: 15px;
+  margin-top: 30px;
+  position: relative;
+  .tools {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 15px;
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin-left: 10px;
+        a {
+          cursor: pointer;
+          color: #666;
+          :hover {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  table {
+    tr {
+      &.balance {
+        border-bottom: 1px solid #efefef;
+        .positive {
+          color: green;
+        }
+        .negative {
+          color: red;
+        }
+      }
+      td {
+
+      }
+    }
+  }
+}

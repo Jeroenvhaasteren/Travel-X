@@ -1,12 +1,31 @@
 #trip-item {
   padding-top: 30px;
+  h5 {
+    border-bottom: 1px solid #333;
+    display: block;
+  }
+  .row .col.s6, .row .col.s12.padding, .row .col.m6 {
+    padding: 0 15px;
+  }
+  #Details {
+    height: calc(100vh - 315px);
+    overflow: auto;
+  }
 
 }
 
 #comments {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 315px);
   h5 {
     border-bottom: 1px solid #333;
   }
+  .messages {
+    overflow: auto;
+  }
+
   .message {
     width: 80%;
     &.right {
@@ -29,5 +48,9 @@
       font-size: 0.8rem;
     }
     margin-bottom: 30px;
+  }
+  >.row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
