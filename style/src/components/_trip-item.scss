@@ -1,56 +1,69 @@
-#trip-item {
-  padding-top: 30px;
-  h5 {
-    border-bottom: 1px solid #333;
-    display: block;
-  }
-  .row .col.s6, .row .col.s12.padding, .row .col.m6 {
-    padding: 0 15px;
-  }
-  #Details {
-    height: calc(100vh - 315px);
-    overflow: auto;
-  }
-
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1b;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 500;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+.overlay-modal {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto auto;
+  height: 90%;
+  border-radius: 2px;
+  max-height: 860px;
+  background-color: white;
+  position: fixed;
+  z-index: 600;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-#comments {
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 315px);
-  h5 {
-    border-bottom: 1px solid #333;
-  }
-  .messages {
-    overflow: auto;
-  }
 
-  .message {
-    width: 80%;
-    &.right {
-      margin-left: auto;
-      text-align: right;
-      .bubble {
-        text-align: left;
-      }
-    }
-    .bubble {
-      background-color: white;
-      border-radius: 2px;
-      padding: 15px;
-      p {
-        margin: 0;
-      }
-    }
-    .sender {
-      color: #666;
-      font-size: 0.8rem;
-    }
-    margin-bottom: 30px;
+#trip-item {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  .comments {
+    background-color: $secondaryColor;
+    flex-grow: 1;
+    height: 100%;
   }
-  >.row {
-    margin-left: 0;
-    margin-right: 0;
+  .details {
+    width: 40%;
+    min-width: 400px;
+    .title {
+      display: flex;
+      padding: 15px;
+      padding-bottom: 0;
+      img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+    .toolbar {
+      background-color: $secondaryColor;
+      display: flex;
+      .tools {
+        flex-grow: 1;
+        text-align: center;
+        cursor: pointer;
+        i {
+          height: 30px;
+          line-height: 30px;
+        }
+        &:hover {
+          background-color: $secondaryColorDark;
+        }
+      }
+    }
   }
 }

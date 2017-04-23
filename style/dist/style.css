@@ -1,35 +1,6 @@
-@charset "UTF-8";
 /* Functions */
 /*Components*/
-a.btn {
-  border: none;
-  border-radius: 2px;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  color: #fff;
-  background-color: #26a69a;
-  text-align: center;
-  letter-spacing: .5px;
-  cursor: pointer;
-}
-
-a.btn:hover {
-  text-decoration: none;
-  background-color: #666;
-}
-
-a.btn i {
-  font-size: 1.3rem;
-  line-height: inherit;
-}
-
+/* line 5, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBarContainer {
   position: absolute;
   top: 0;
@@ -37,6 +8,7 @@ a.btn i {
   z-index: 100;
 }
 
+/* line 12, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar {
   height: 70px;
   background: rgba(0, 0, 0, 0.6);
@@ -49,44 +21,53 @@ a.btn i {
   z-index: 150;
 }
 
+/* line 22, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .left-container {
   padding: 5px 15px;
 }
 
+/* line 24, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .left-container img {
   height: 100%;
 }
 
+/* line 28, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .middle-container {
   flex-grow: 1;
 }
 
+/* line 31, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .right-container {
   padding: 0 15px;
 }
 
+/* line 33, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
+/* line 37, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li {
   list-style: none;
   padding: 0 10px;
   cursor: pointer;
 }
 
+/* line 41, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* line 44, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li a {
   line-height: 70px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* line 54, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavDropDown {
   position: absolute;
   top: 0;
@@ -96,12 +77,14 @@ a.btn i {
   background-color: white;
 }
 
+/* line 61, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont {
   margin-top: 70px;
   padding: 15px;
   position: relative;
 }
 
+/* line 65, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont .close-containter {
   position: absolute;
   top: 15px;
@@ -113,38 +96,124 @@ a.btn i {
   border-radius: 50%;
 }
 
+/* line 74, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont .close-containter:hover {
   background-color: #ddd;
 }
 
+/* line 81, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #LogInComp {
   display: flex;
 }
 
+/* line 83, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #LogInComp .info {
   flex: 0;
   display: none;
 }
 
 @media (min-width: 1080px) {
+  /* line 83, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
   #LogInComp .info {
     flex: 1;
     display: block;
   }
 }
 
+/* line 91, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 #LogInComp .form {
   flex: 1;
 }
 
+/* line 96, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
 
+/* line 99, C:/Users/Usuario/Documents/TripQuest/style/src/components/_top-nav.scss */
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
+/* line 1, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ededed;
+}
+
+/* line 11, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu .menu-item-container {
+  flex: 1;
+}
+
+/* line 15, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu .profile-container {
+  border-top: 1px solid #d4d4d4;
+}
+
+/* line 20, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 23, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item {
+  position: relative;
+  width: 100px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 29, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* line 35, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item.hover:hover {
+  background-color: #bababa;
+}
+
+/* line 39, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item .smallIcon {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  height: 34px;
+  width: 34px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* line 48, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item .smallIcon:hover {
+  background-color: #bababa;
+}
+
+/* line 52, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item #profileSettings {
+  left: 10px;
+}
+
+/* line 55, C:/Users/Usuario/Documents/TripQuest/style/src/components/_side-nav.scss */
+aside#mainMenu ul li.menu-item #profileNotifications {
+  right: 10px;
+}
+
+/* line 4, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader {
   height: 300px;
   margin-left: 100px;
@@ -153,6 +222,7 @@ a.btn i {
   display: flex;
 }
 
+/* line 11, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader:before {
   content: "";
   position: fixed;
@@ -173,12 +243,15 @@ a.btn i {
   -ms-filter: blur(30px);
   filter: blur(30px);
   opacity: 0.7;
+  overflow: hidden;
 }
 
+/* line 34, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-image {
   padding: 15px;
 }
 
+/* line 36, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-image img {
   width: 200px;
   height: 200px;
@@ -186,40 +259,49 @@ a.btn i {
   border: 1px solid #ddd;
 }
 
+/* line 44, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-info {
   display: flex;
   flex-direction: column;
 }
 
+/* line 47, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details {
   flex-grow: 1;
 }
 
+/* line 49, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details h1 {
   font-size: 3.2rem;
   margin: 1.1rem 0 0.68rem 0;
 }
 
+/* line 53, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details .capitalized {
   text-transform: capitalize;
 }
 
+/* line 57, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-header.scss */
 #appheader .trip-info .tabs .tab {
   cursor: pointer;
 }
 
+/* line 1, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-info.scss */
 #TripInfo {
   padding-top: 15px;
 }
 
+/* line 3, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-info.scss */
 #TripInfo .row .col.s6, #TripInfo .row .col.s12.padding {
   padding: 0 15px;
 }
 
+/* line 1, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board {
   padding-top: 30px;
 }
 
+/* line 4, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item {
   height: 200px;
   width: 500px;
@@ -227,15 +309,18 @@ a.btn i {
   background-color: white;
 }
 
+/* line 10, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons {
   width: 50px;
 }
 
+/* line 12, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul {
   margin: 0;
   padding: 0;
 }
 
+/* line 15, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li {
   list-style: none;
   width: 50px;
@@ -246,115 +331,147 @@ a.btn i {
   cursor: pointer;
 }
 
+/* line 23, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li:hover {
   background-color: #efefef;
 }
 
+/* line 26, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled {
   cursor: auto;
 }
 
+/* line 28, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled:hover {
   background-color: white;
 }
 
+/* line 29, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled a i {
   color: #999;
 }
 
+/* line 34, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li a i {
   color: #333;
 }
 
+/* line 41, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-img {
   height: 100%;
   width: 175px;
 }
 
+/* line 44, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* line 50, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-details {
   flex-grow: 1;
   padding: 15px;
   width: 325px;
 }
 
+/* line 54, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-details h3 {
   margin-top: 0;
   font-size: 2.5rem;
 }
 
-#trip-item {
-  padding-top: 30px;
+/* line 1, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1b;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 500;
+  cursor: pointer;
+  top: 0;
+  left: 0;
 }
 
-#trip-item h5 {
-  border-bottom: 1px solid #333;
-  display: block;
-}
-
-#trip-item .row .col.s6, #trip-item .row .col.s12.padding, #trip-item .row .col.m6 {
-  padding: 0 15px;
-}
-
-#trip-item #Details {
-  height: calc(100vh - 315px);
-  overflow: auto;
-}
-
-#comments {
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 315px);
-}
-
-#comments h5 {
-  border-bottom: 1px solid #333;
-}
-
-#comments .messages {
-  overflow: auto;
-}
-
-#comments .message {
-  width: 80%;
-  margin-bottom: 30px;
-}
-
-#comments .message.right {
-  margin-left: auto;
-  text-align: right;
-}
-
-#comments .message.right .bubble {
-  text-align: left;
-}
-
-#comments .message .bubble {
-  background-color: white;
+/* line 12, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+.overlay-modal {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto auto;
+  height: 90%;
   border-radius: 2px;
+  max-height: 860px;
+  background-color: white;
+  position: fixed;
+  z-index: 600;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+/* line 30, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 34, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .comments {
+  background-color: #ededed;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* line 39, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details {
+  width: 40%;
+  min-width: 400px;
+}
+
+/* line 42, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .title {
+  display: flex;
   padding: 15px;
+  padding-bottom: 0;
 }
 
-#comments .message .bubble p {
-  margin: 0;
+/* line 46, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .title img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
 }
 
-#comments .message .sender {
-  color: #666;
-  font-size: 0.8rem;
+/* line 52, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .toolbar {
+  background-color: #ededed;
+  display: flex;
 }
 
-#comments > .row {
-  margin-left: 0;
-  margin-right: 0;
+/* line 55, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .toolbar .tools {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
 }
 
+/* line 59, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .toolbar .tools i {
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 63, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
+#trip-item .details .toolbar .tools:hover {
+  background-color: #bababa;
+}
+
+/* line 1, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials {
   background-color: white;
   padding: 15px;
@@ -362,6 +479,7 @@ a.btn i {
   position: relative;
 }
 
+/* line 6, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials .tools {
   position: absolute;
   z-index: 10;
@@ -369,38 +487,46 @@ a.btn i {
   right: 15px;
 }
 
+/* line 11, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials .tools ul {
   display: flex;
 }
 
+/* line 13, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials .tools ul li {
   list-style: none;
   margin-left: 10px;
 }
 
+/* line 16, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials .tools ul li a {
   cursor: pointer;
   color: #666;
 }
 
+/* line 19, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials .tools ul li a :hover {
   color: #333;
 }
 
+/* line 28, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials table tr.balance {
   border-bottom: 1px solid #efefef;
 }
 
+/* line 30, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials table tr.balance .positive {
   color: green;
 }
 
+/* line 33, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-financials.scss */
 #Financials table tr.balance .negative {
   color: red;
 }
 
 /*Pages*/
 /*Variables*/
+/* line 8, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .main-header {
   height: 75vh;
   width: 100%;
@@ -408,6 +534,7 @@ a.btn i {
   position: relative;
 }
 
+/* line 13, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .main-header .background-container {
   position: absolute;
   top: 0;
@@ -418,6 +545,7 @@ a.btn i {
   height: 100%;
 }
 
+/* line 22, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .main-header .content-container {
   position: absolute;
   top: 0;
@@ -430,6 +558,7 @@ a.btn i {
   justify-content: center;
 }
 
+/* line 32, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .main-header .content-container .text-container {
   width: 100%;
   max-width: 1080px;
@@ -437,590 +566,80 @@ a.btn i {
   text-align: center;
 }
 
+/* line 41, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .call-to-action {
   width: 100%;
   padding: 30px;
   display: flex;
 }
 
+/* line 45, C:/Users/Usuario/Documents/TripQuest/style/src/pages/_index.scss */
 #HomePage .call-to-action .col {
   text-align: center;
   flex: 1;
 }
 
-.trSummary {
-  display: flex;
-  cursor: pointer;
-  border-bottom: 1px solid #cccccc;
-}
-
-.trSummary:hover {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-}
-
-.trSummary .right-container {
-  flex: 1;
-}
-
-.trSummary .left-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.trSummary .left-container .image {
-  width: 100%;
-  flex: 1;
-}
-
-.trSummary .left-container .image img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.trSummary .left-container .icons {
-  padding: 5px 15px;
-}
-
-.trSummary .left-container .icons ul {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.trSummary .left-container .icons ul li {
-  margin-right: 5px;
-  color: rgba(0, 0, 0, 0.54);
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.trSummary .left-container .icons ul li i {
-  color: rgba(0, 0, 0, 0.54);
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.trSummary .right-container {
-  display: flex;
-  flex-direction: column;
-  padding: 5px 15px;
-}
-
-.trSummary .right-container p {
-  flex: 1;
-}
-
-.trSummary .right-container div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.trSummary .right-container .pic {
-  width: 32px;
-  height: 32px;
-}
-
-.trSummary .right-container .pic img {
-  background-color: #eee;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-}
-
-#tripBlock {
-  margin-top: 15px;
-  background-color: white;
-  min-height: calc(100vh - 78px);
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-#tripBlock .trip-header {
-  display: flex;
-  height: 270px;
-}
-
-#tripBlock .trip-header .trip-img {
-  max-height: 100%;
-  max-width: 30%;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#tripBlock .trip-header .trip-text {
-  padding: 0 15px;
-  flex: 1;
-}
-
-#tripBlock .tripImageContainer {
-  height: 100%;
-}
-
-#tripBlock .tripImageContainer img {
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-#tripBlock .tripImageContainer img:hover {
-  opacity: 0.6;
-}
-
-#tripBlock .sharing-tools {
-  display: flex;
-  background-color: #ddd;
-  width: 100%;
-}
-
-#tripBlock .sharing-tools .share-tool {
-  padding: 15px;
-  flex: 1;
-  text-align: center;
-  cursor: pointer;
-  height: 54px;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-#tripBlock .sharing-tools .share-tool:hover {
-  background-color: #aaaaaa;
-}
-
-#tripBlock .sharing-tools .share-tool i {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-#tripBlock .members-container {
-  margin: 30px 0;
-  padding: 15px;
-  flex: 1;
-}
-
-#tripBlock .members-container tbody tr {
-  cursor: pointer;
-}
-
-#tripBlock .members-container tbody tr:hover {
-  background-color: #cccccc;
-}
-
-#tripBlock .members-container .btn-floating {
-  background-color: #eee;
-}
-
-#tripBlock .members-container .btn-floating i {
-  color: rgba(0, 0, 0, 0.87);
-}
-
-#tripBlock .tag-container {
-  padding: 15px;
-}
-
-#tripBlock .tag-container .chips.focus {
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 1px 0 0 #eee;
-}
-
-#inspirationBlock {
-  margin-top: 15px;
-  margin-left: 30px;
-  background-color: white;
-}
-
-#inspirationBlock h1 {
-  margin: 0px;
-}
-
-.board-container {
-  display: flex;
-  overflow-x: auto;
-}
-
-.board-container .board-col {
-  min-width: 430px;
-  max-width: 430px;
-  padding: 15px;
-  max-height: calc(100% - 100px);
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-.board-container .board-col .board-col-header {
-  padding: 15px 0;
-  display: flex;
-  min-width: 0;
-}
-
-.board-container .board-col .board-col-header div.column-title {
-  flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.board-container .board-col .board-col-header .tools {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  line-height: 30px;
-  text-align: center;
-}
-
-.board-container .board-col .board-col-header .tools:hover {
-  background-color: #bbbbbb;
-}
-
-article.item {
-  text-align: left;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-article.item .card.horizontal {
-  max-height: 180px;
-}
-
-article.item .card.horizontal .card-image {
-  max-width: 25%;
-}
-
-article.item .card.horizontal .card-image img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-article.item .card.horizontal .card-content {
-  padding: 10px 15px 0 15px;
-  margin-bottom: 10px;
-  max-height: 139px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-article.item .card.horizontal .card-content h6 {
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-article.item .card.horizontal .card-action {
-  padding: 5px 5px;
-}
-
-article.item .card.horizontal .card-action .toolbar {
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  line-height: 30px;
-  font-size: 20px;
-  padding: 0px 15px;
-}
-
-article.item .card.horizontal .card-action .toolbar i {
-  line-height: 30px;
-  font-size: 20px;
-  margin: 0 5px;
-}
-
-article.item.add-new {
-  text-align: center;
-}
-
-article.item.add-new .tools {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  line-height: 30px;
-  text-align: center;
-}
-
-article.item.add-new .tools:hover {
-  background-color: #bbbbbb;
-}
-
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 100px;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 900;
-}
-
-#editModal {
-  position: absolute;
-  display: flex;
-  max-height: 800px;
-  max-width: 1080px;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  transform: translate(-50%, -50%);
-  z-index: 990;
-}
-
-#editModal .modal-views {
-  flex: 1;
-}
-
-#editModal .card {
-  border-radius: 2px 0 0 2px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-#editModal .card .card-image {
-  max-height: 70%;
-}
-
-#editModal .card .card-image img {
-  border-radius: 0;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#editModal .card .card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-#editModal .card .card-content .rating-div {
-  height: 42px;
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-#editModal .card .card-content #itemDesc {
-  margin-bottom: 15px;
-}
-
-#editModal .card .card-content .card-tools {
-  flex: 1;
-}
-
-#editModal .card .card-content .action-btn {
-  text-align: right;
-}
-
-#editModal #commentWindow {
-  background-color: #efefef;
-  border-radius: 0 2px 2px 0;
-  margin: .5rem 0 1rem 0;
-}
-
-.rating [type="radio"]:not(:checked) + label:before, .rating [type="radio"]:not(:checked) + label:after {
-  border: none;
-}
-
-.rating [type="radio"] + label:before, .rating [type="radio"] + label:after {
-  content: normal;
-  position: relative;
-  left: 0;
-  top: 0;
-  margin: 0;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  transition: .15s ease;
-}
-
-.rating [type="radio"]:not(:checked) + label, .rating [type="radio"]:checked + label {
-  height: auto;
-}
-
-.rating {
-  float: left;
-}
-
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
-	   follow these rules. Every browser that supports :checked also supports :not(), so
-	   it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
-  clip: rect(0, 0, 0, 0);
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  width: 1em;
-  padding: 0;
-  margin-right: 3px;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 200%;
-  line-height: 1.2;
-  color: #999;
-}
-
-.rating:not(:checked) > label:before {
-  content: '★ ';
-}
-
-.rating > input:checked ~ label {
-  color: #f70;
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: gold;
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: #ea0;
-}
-
-.rating > label:active {
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-}
-
+/* line 49, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 body {
-  background-color: #eee;
+  background-color: #ededed;
+  color: #1d1d1b;
   overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: nowayregular;
 }
 
+/* line 58, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 main {
   margin-left: 100px;
   padding: 0 30px;
 }
 
+/* line 63, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .input-field.inline input, .input-field label, .chips .input {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.87);
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
+/* line 69, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 thead {
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
+/* line 73, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .row .col {
   padding: 0;
 }
 
+/* line 77, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .rowflex {
   display: flex;
 }
 
+/* line 79, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .rowflex .col-50 {
   flex: 1;
 }
 
-aside#mainMenu {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  background-color: #588C7E;
-}
-
-aside#mainMenu .menu-item-container {
-  flex: 1;
-}
-
-aside#mainMenu .profile-container {
-  border-top: 1px solid #446d62;
-}
-
-aside#mainMenu ul {
-  display: flex;
-  flex-direction: column;
-}
-
-aside#mainMenu ul li.menu-item {
-  position: relative;
-  width: 100px;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-aside#mainMenu ul li.menu-item img {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  background-color: white;
-}
-
-aside#mainMenu ul li.menu-item.hover:hover {
-  background-color: #314d46;
-}
-
-aside#mainMenu ul li.menu-item .smallIcon {
-  position: absolute;
-  bottom: 10px;
-  padding: 5px;
-  height: 34px;
-  width: 34px;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: #90baae;
-}
-
-aside#mainMenu ul li.menu-item .smallIcon:hover {
-  background-color: #314d46;
-}
-
-aside#mainMenu ul li.menu-item #profileSettings {
-  left: 10px;
-}
-
-aside#mainMenu ul li.menu-item #profileNotifications {
-  right: 10px;
-}
-
+/* line 85, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .tabs {
   background-color: transparent;
 }
 
+/* line 89, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .tabs .tab a {
-  color: #588C7E;
+  color: #ea541d;
 }
 
+/* line 93, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .tabs .indicator {
-  background-color: #314d46;
+  background-color: #93320e;
 }
 
+/* line 97, C:/Users/Usuario/Documents/TripQuest/style/src/style.scss */
 .tabs .tab a:hover, .tabs .tab a.active {
-  color: #314d46;
+  color: #93320e;
 }
+
+/*# sourceMappingURL=../dist/style.map */

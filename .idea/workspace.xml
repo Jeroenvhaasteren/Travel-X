@@ -23,9 +23,12 @@
           <file leaf-file-name="MyTrip.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MyTrip.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="569">
-                  <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
-                  <folding />
+                <state relative-caret-position="629">
+                  <caret line="64" column="61" lean-forward="false" selection-start-line="64" selection-start-column="61" selection-end-line="64" selection-end-column="61" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -33,11 +36,10 @@
           <file leaf-file-name="trip-item.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+                <state relative-caret-position="823">
+                  <caret line="87" column="14" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="87" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
-                    <marker date="1492551223291" expanded="true" signature="71:4763" ph="{&quot;template&quot;: `&#10;        &lt;!-- trip-item --&gt;&#10;        &lt;div id=&quot;trip-item&quot;&gt;&#10;            &lt;div class=&quot;row&quot;&gt;&#10;                &lt;div class=&quot;col s8&quot; id=&quot;Details&quot;&gt;&#10;                    &lt;h5&gt;Details&lt;/h5&gt;&#10;                    &lt;form class=&quot;col s12&quot;&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input id=&quot;tripTitle&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;tripTitle&quot;&gt;Item title&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input id=&quot;Location&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;Location&quot;&gt;Price&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s12 padding&quot;&gt;&#10;                                &lt;textarea id=&quot;Description&quot; class=&quot;materialize-textarea&quot;&gt;&lt;/textarea&gt;&#10;                                &lt;label for=&quot;Description&quot;&gt;Description&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input type=&quot;date&quot; id=&quot;formDate&quot; class=&quot;datepicker&quot;&gt;&#10;                                &lt;label for=&quot;formDate&quot;&gt;Date&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input type=&quot;date&quot; id=&quot;tillDate&quot; class=&quot;datepicker&quot;&gt;&#10;                                &lt;label for=&quot;tillDate&quot;&gt;Time&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col m6&quot;&gt;&#10;                                &lt;input id=&quot;tripTitle&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;tripTitle&quot;&gt;Location&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col m6&quot;&gt;&#10;                                Google maps&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/form&gt;&#10;                &lt;/div&gt;&#10;                &lt;div class=&quot;col s4&quot; id=&quot;comments&quot;&gt;&#10;                    &lt;h5&gt;Comments&lt;/h5&gt;&#10;                    &lt;div class=&quot;messages&quot;&gt;&#10;                        &lt;div class=&quot;message right&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message left&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message left&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message right&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/div&gt;&#10;                    &lt;div class=&quot;row&quot;&gt;&#10;                        &lt;div class=&quot;input-field col s12&quot;&gt;&#10;                            &lt;textarea id=&quot;textarea1&quot; class=&quot;materialize-textarea&quot;&gt;&lt;/textarea&gt;&#10;                            &lt;label for=&quot;textarea1&quot;&gt;Type Message&lt;/label&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div style=&quot;text-align: right&quot;&gt;&#10;                            &lt;a class=&quot;waves-effect waves-light btn&quot;&gt;&lt;i class=&quot;material-icons left&quot;&gt;send&lt;/i&gt;Send&lt;/a&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/div&gt;&#10;                &lt;/div&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;    `...}" />
                   </folding>
                 </state>
               </provider>
@@ -46,10 +48,21 @@
           <file leaf-file-name="side-nav.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/Components/side-nav.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+                <state relative-caret-position="442">
+                  <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#44#0" expanded="false" />
+                    <marker date="1492543515131" expanded="true" signature="203:396" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="224:377" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="267:355" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="442:1194" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="463:1175" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="512:633" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="682:809" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="858:980" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="1029:1153" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="1259:1644" ph="..." />
+                    <marker date="1492543515131" expanded="true" signature="1302:1622" ph="..." />
                     <marker date="1492543515131" expanded="true" signature="1645:1689" ph="{&quot;template&quot;: `&#10;        &lt;aside id=&quot;sideNav&quot;&gt;&#10;            &lt;div class=&quot;logo-container&quot;&gt;&#10;                &lt;img src=&quot;resources/trip_quest_logo_sm.png&quot; alt=&quot;TripQuest&quot;&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;menu-items-container&quot;&gt;&#10;                &lt;ul&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Zoeken&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img id=&quot;tripImage&quot; src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Barcelona 2016&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/inspiration.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Inspiration&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                &lt;/ul&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;profile-container&quot;&gt;&#10;                &#10;            &lt;/div&gt;&#10;        &lt;/aside&gt;&#10;    `...}" />
                   </folding>
                 </state>
@@ -107,7 +120,7 @@
           <file leaf-file-name="vuecomponentboard.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/vuecomponentboard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1499">
+                <state relative-caret-position="6494">
                   <caret line="384" column="27" lean-forward="false" selection-start-line="384" selection-start-column="27" selection-end-line="384" selection-end-column="27" />
                   <folding>
                     <marker date="1492551395601" expanded="true" signature="247:1355" ph="..." />
@@ -180,21 +193,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_trip-header.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_trip-header.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/style/src/components/_trip-header.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_trip-item.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="_trip-item.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+                <state relative-caret-position="660">
+                  <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_trip-board.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style/src/components/_trip-board.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -203,8 +226,38 @@
           <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/style/src/style.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="867">
-                  <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+                <state relative-caret-position="408">
+                  <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_side-nav.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style/src/components/_side-nav.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="603">
+                  <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style/materialize-src/components/_variables.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="561">
+                  <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="materialize.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style/materialize-src/materialize.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -249,8 +302,6 @@
         <option value="$PROJECT_DIR$/style/src/components/_help-login.js" />
         <option value="$PROJECT_DIR$/style/src/components/help-login.scss" />
         <option value="$PROJECT_DIR$/js/Components/help-login.js" />
-        <option value="$PROJECT_DIR$/style/src/components/_buttons.scss" />
-        <option value="$PROJECT_DIR$/style/src/components/_side-nav.scss" />
         <option value="$PROJECT_DIR$/style/src/components/_help-login.scss" />
         <option value="$PROJECT_DIR$/style/src/pages/_index.scss" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -264,13 +315,16 @@
         <option value="$PROJECT_DIR$/style/src/components/_trip-board.scss" />
         <option value="$PROJECT_DIR$/js/Components/trip-board.js" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-info.scss" />
-        <option value="$PROJECT_DIR$/style/src/components/_trip-item.scss" />
-        <option value="$PROJECT_DIR$/style/src/style.scss" />
         <option value="$PROJECT_DIR$/style/src/components/_trip-financials.scss" />
-        <option value="$PROJECT_DIR$/style/src/components/_trip-header.scss" />
         <option value="$PROJECT_DIR$/js/Components/trip-item.js" />
         <option value="$PROJECT_DIR$/js/vuecomponentboard.js" />
         <option value="$PROJECT_DIR$/TripQuest/js/Components/trip-financials.js" />
+        <option value="$PROJECT_DIR$/style/src/components/_trip-header.scss" />
+        <option value="$PROJECT_DIR$/style/materialize-src/components/_variables.scss" />
+        <option value="$PROJECT_DIR$/style/src/components/_buttons.scss" />
+        <option value="$PROJECT_DIR$/style/src/components/_side-nav.scss" />
+        <option value="$PROJECT_DIR$/style/src/style.scss" />
+        <option value="$PROJECT_DIR$/style/src/components/_trip-item.scss" />
         <option value="$PROJECT_DIR$/MyTrip.html" />
       </list>
     </option>
@@ -302,7 +356,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,6 +365,82 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TripQuest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialize-src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TripQuest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -349,6 +478,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -474,34 +604,37 @@
       <workItem from="1491835590114" duration="6133000" />
       <workItem from="1491929417183" duration="13795000" />
       <workItem from="1492545270487" duration="838000" />
-      <workItem from="1492551074614" duration="752000" />
+      <workItem from="1492551074614" duration="860000" />
+      <workItem from="1492623110814" duration="1197000" />
+      <workItem from="1492715124575" duration="646000" />
+      <workItem from="1492943691776" duration="9156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66134000" />
+    <option name="totallyTimeSpent" value="77241000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925835" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925835" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -540,20 +673,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyTrip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3638">
-          <caret line="214" column="0" lean-forward="true" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vuecomponentboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
@@ -723,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_side-nav.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/help-login.js" />
     <entry file="file://$PROJECT_DIR$/style/src/pages/_index.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -783,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/top-nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1045">
@@ -818,33 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/src/components/_trip-info.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-board.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -856,17 +938,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vuecomponentboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1499">
+        <state relative-caret-position="6494">
           <caret line="384" column="27" lean-forward="false" selection-start-line="384" selection-start-column="27" selection-end-line="384" selection-end-column="27" />
           <folding>
             <marker date="1492551395601" expanded="true" signature="247:1355" ph="..." />
@@ -924,28 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Components/side-nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-            <marker date="1492543515131" expanded="true" signature="1645:1689" ph="{&quot;template&quot;: `&#10;        &lt;aside id=&quot;sideNav&quot;&gt;&#10;            &lt;div class=&quot;logo-container&quot;&gt;&#10;                &lt;img src=&quot;resources/trip_quest_logo_sm.png&quot; alt=&quot;TripQuest&quot;&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;menu-items-container&quot;&gt;&#10;                &lt;ul&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Zoeken&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img id=&quot;tripImage&quot; src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Barcelona 2016&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/inspiration.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Inspiration&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                &lt;/ul&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;profile-container&quot;&gt;&#10;                &#10;            &lt;/div&gt;&#10;        &lt;/aside&gt;&#10;    `...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <marker date="1492551223291" expanded="true" signature="71:4763" ph="{&quot;template&quot;: `&#10;        &lt;!-- trip-item --&gt;&#10;        &lt;div id=&quot;trip-item&quot;&gt;&#10;            &lt;div class=&quot;row&quot;&gt;&#10;                &lt;div class=&quot;col s8&quot; id=&quot;Details&quot;&gt;&#10;                    &lt;h5&gt;Details&lt;/h5&gt;&#10;                    &lt;form class=&quot;col s12&quot;&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input id=&quot;tripTitle&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;tripTitle&quot;&gt;Item title&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input id=&quot;Location&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;Location&quot;&gt;Price&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s12 padding&quot;&gt;&#10;                                &lt;textarea id=&quot;Description&quot; class=&quot;materialize-textarea&quot;&gt;&lt;/textarea&gt;&#10;                                &lt;label for=&quot;Description&quot;&gt;Description&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input type=&quot;date&quot; id=&quot;formDate&quot; class=&quot;datepicker&quot;&gt;&#10;                                &lt;label for=&quot;formDate&quot;&gt;Date&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col s6&quot;&gt;&#10;                                &lt;input type=&quot;date&quot; id=&quot;tillDate&quot; class=&quot;datepicker&quot;&gt;&#10;                                &lt;label for=&quot;tillDate&quot;&gt;Time&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;row&quot;&gt;&#10;                            &lt;div class=&quot;input-field col m6&quot;&gt;&#10;                                &lt;input id=&quot;tripTitle&quot; type=&quot;text&quot; class=&quot;validate&quot;&gt;&#10;                                &lt;label for=&quot;tripTitle&quot;&gt;Location&lt;/label&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;div class=&quot;input-field col m6&quot;&gt;&#10;                                Google maps&#10;                            &lt;/div&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/form&gt;&#10;                &lt;/div&gt;&#10;                &lt;div class=&quot;col s4&quot; id=&quot;comments&quot;&gt;&#10;                    &lt;h5&gt;Comments&lt;/h5&gt;&#10;                    &lt;div class=&quot;messages&quot;&gt;&#10;                        &lt;div class=&quot;message right&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message left&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message left&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div class=&quot;message right&quot;&gt;&#10;                            &lt;div class=&quot;bubble z-depth-1&quot;&gt;&#10;                                &lt;p&gt;Hello i have a message about this item i think we could better buy tickets before hand if we want to go there&lt;/p&gt;&#10;                            &lt;/div&gt;&#10;                            &lt;span class=&quot;sender&quot;&gt;Jeroen van Haasteren - 16:56 15 april 2017&lt;/span&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/div&gt;&#10;                    &lt;div class=&quot;row&quot;&gt;&#10;                        &lt;div class=&quot;input-field col s12&quot;&gt;&#10;                            &lt;textarea id=&quot;textarea1&quot; class=&quot;materialize-textarea&quot;&gt;&lt;/textarea&gt;&#10;                            &lt;label for=&quot;textarea1&quot;&gt;Type Message&lt;/label&gt;&#10;                        &lt;/div&gt;&#10;                        &lt;div style=&quot;text-align: right&quot;&gt;&#10;                            &lt;a class=&quot;waves-effect waves-light btn&quot;&gt;&lt;i class=&quot;material-icons left&quot;&gt;send&lt;/i&gt;Send&lt;/a&gt;&#10;                        &lt;/div&gt;&#10;                    &lt;/div&gt;&#10;                &lt;/div&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;    `...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/trip-financials.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -992,11 +1044,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/materialize-src/materialize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_buttons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/materialize-src/components/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_side-nav.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Components/side-nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+            <marker date="1492543515131" expanded="true" signature="203:396" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="224:377" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="267:355" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="442:1194" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="463:1175" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="512:633" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="682:809" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="858:980" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="1029:1153" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="1259:1644" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="1302:1622" ph="..." />
+            <marker date="1492543515131" expanded="true" signature="1645:1689" ph="{&quot;template&quot;: `&#10;        &lt;aside id=&quot;sideNav&quot;&gt;&#10;            &lt;div class=&quot;logo-container&quot;&gt;&#10;                &lt;img src=&quot;resources/trip_quest_logo_sm.png&quot; alt=&quot;TripQuest&quot;&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;menu-items-container&quot;&gt;&#10;                &lt;ul&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Zoeken&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img id=&quot;tripImage&quot; src=&quot;resources/my-trips.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Barcelona 2016&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                    &lt;li&gt;&#10;                        &lt;a&gt;&#10;                            &lt;img src=&quot;resources/inspiration.svg&quot;&gt;&#10;                            &lt;span class=&quot;nav-text&quot;&gt;Inspiration&lt;/span&gt;&#10;                        &lt;/a&gt;&#10;                    &lt;/li&gt;&#10;                &lt;/ul&gt;&#10;            &lt;/div&gt;&#10;            &lt;div class=&quot;profile-container&quot;&gt;&#10;                &#10;            &lt;/div&gt;&#10;        &lt;/aside&gt;&#10;    `...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="87" column="14" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="87" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/src/components/_trip-item.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTrip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="64" column="61" lean-forward="false" selection-start-line="64" selection-start-column="61" selection-end-line="64" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -5,10 +5,11 @@
     <title>Title</title>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
+    <link href="style/dist/materialize.css" rel="stylesheet" >
     <link href="style/dist/style.css" rel="stylesheet" >
+
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
@@ -29,9 +30,46 @@
         <trip-info></trip-info>
         <trip-board></trip-board>
         <trip-financials></trip-financials>
-
-        <trip-item v-show="itemDetails"></trip-item>
     </section>
+
+    <div class="overlay" id="overlay" onclick="$('.overlay-modal, .overlay').hide()"></div>
+    <section class="overlay-modal z-depth-2">
+            <div id="trip-item">
+                <div class="comments">
+                    Comments
+                </div>
+                <div class="details">
+                    <div class="title">
+                        <img src="rescources/houseGaudi.jpg" class="z-depth-1">
+                        <div style="width: 100%; padding: 0 10px">
+                            <div class="input-field">
+                                <input id="Title" type="text" value="Casa Batllo Barcelona">
+                                <label for="Title">Title</label>
+                            </div>
+                            <div class="input-field">
+                                <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;"> Web oficial del edificio modernista de Antoni Gaudí en Barcelona Casa Batlló. Información sobre Gaudí y el edificio, visitas, precios, ofertas y eventos."</textarea>
+                                <label for="Desc">Description</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toolbar">
+                        <div class="tools" title="Likes">
+                            3 <i class="material-icons">favorite_border</i>
+                        </div>
+                        <div class="tools" title="Website">
+                            <i class="material-icons">link</i>
+                        </div>
+                        <div class="tools" title="Share">
+                            <i class="material-icons">share</i>
+                        </div>
+                        <div class="tools" title="Add payment">
+                            <i class="material-icons">attach_money</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 </main>
 </div>
 

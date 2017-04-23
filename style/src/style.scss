@@ -1,10 +1,10 @@
-$primaryColor: #588C7E;
+$primaryColor: #ea541d;
 $primaryColorDark: darken($primaryColor, 20%);
 $primaryColorLight: lighten($primaryColor, 20%);
-$secondaryColor: #eee;
+$secondaryColor: #ededed;
 $secondaryColorDark: darken($secondaryColor, 20%);
 $secondaryColorLight: lighten($secondaryColor, 20%);
-$thirdColor: #fff;
+$thirdColor: #2c2c2c;
 $thirdColorDark: darken($thirdColor, 20%);
 $thirdColorLight: lighten($thirdColor, 10%);
 $fourthColor: #ddd;
@@ -42,12 +42,13 @@ $paperBorderRadius: 2px;
 @import "pages/index";
 
 
-@import "tripinspiration";
-@import "tripprofile";
-@import "tripBoard";
+//@import "tripinspiration";
+//@import "tripprofile";
+//@import "tripBoard";
 
 body {
 	background-color: $secondaryColor;
+	color: #1d1d1b;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -77,67 +78,6 @@ thead {
 	display: flex;
 	.col-50 {
 		flex:1;
-	}
-}
-
-aside#mainMenu {
-	position: fixed;
-	z-index: 9;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: $widthMainMenu;
-	display: flex;
-	flex-direction: column;
-	background-color: $primaryColor;
-	.menu-item-container {
-		flex: 1;
-	}
-	
-	.profile-container {
-		border-top: 1px solid darken($primaryColor,10%);
-	}
-	
-	
-	ul {
-		display:flex;
-		flex-direction: column;
-		li.menu-item {
-			position: relative;
-			width: $widthMainMenu;
-			padding: $paddingSize;
-			text-align: center;
-			cursor: pointer;
-			img {
-				height: $widthMainMenu - 2*$paddingSize;
-				width: $widthMainMenu - 2*$paddingSize;
-				border-radius: 50%;
-				background-color: white;
-			}
-			&.hover:hover {
-				background-color: $primaryColorDark;
-			}
-			
-			.smallIcon {
-				position: absolute;
-				bottom: 10px;
-				padding: 5px;
-				height: 34px;
-				width: 34px;
-				overflow: hidden;
-				border-radius: 50%;
-				background-color: $primaryColorLight;
-				&:hover {
-					background-color: $primaryColorDark 
-				}
-			}
-			#profileSettings {
-				left: 10px;
-			}
-			#profileNotifications {
-				right: 10px;
-			}
-		}
 	}
 }
 
