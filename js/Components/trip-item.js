@@ -9,59 +9,47 @@ Vue.component('trip-item', {
             <div class="comments">
                 <div class="message-field">
                     
-                    
-                    
-                    <div class="message left z-depth-1">
-                        <div class="title">
-                            Pedro
+                    <div :class="message.hasOwnProperty('sender') ? 'message left z-depth-1' : 'message right z-depth-1'" v-for="message in m_Messages">
+                        <div class="title" v-show="message.hasOwnProperty('sender')">
+                            {{message.sender}}
                         </div>
                         <div class="text">
-                            Lorem ipsum and more way more bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                            {{message.message}}
                         </div>
                         <div class="Stamp">
-                            05/03/17
+                            {{message.date}}
                         </div>
                     </div>
-        
-                    <div class="message right z-depth-1">
-                        <div class="text">
-                            Lorem ipsum and more way more bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                        </div>
-                        <div class="Stamp">
-                            05/03/17
-                        </div>
-                    </div>
-        
                 </div>
                 <div class="type-container">
                     <div class="input-container">
-                        <textarea></textarea>
+                        <textarea v-model="m_NewMessage"></textarea>
                     </div>
                     <div class="send-container">
-                        <a class="waves-effect waves-light btn"><i class="material-icons">send</i></a>
+                        <a class="waves-effect waves-light btn" @click="addMessage"><i class="material-icons">send</i></a>
                     </div>
                 </div>
             </div>
             <div class="details">
                 <div class="title">
-                    <img src="rescources/houseGaudi.jpg" class="z-depth-1">
+                    <img :src="m_Item.img" class="z-depth-1">
                     <div style="width: 100%; padding: 0 10px">
                         <div class="input-field">
-                            <input id="Title" type="text" value="Casa Batllo Barcelona">
-                            <label for="Title">Title</label>
+                            <input id="Title" type="text" v-model="m_Item.title">
+                            <label for="Title" class='active'>Title</label>
                         </div>
                         <div class="input-field">
-                            <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;"> Web oficial del edificio modernista de Antoni Gaudí en Barcelona Casa Batlló. Información sobre Gaudí y el edificio, visitas, precios, ofertas y eventos."</textarea>
-                            <label for="Desc">Description</label>
+                            <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;" v-model="m_Item.desc"></textarea>
+                            <label for="Desc" class='active'>Description</label>
                         </div>
                     </div>
                 </div>
                 <div class="toolbar">
                     <div class="tools" title="Likes">
-                        3 <i class="material-icons">favorite_border</i>
+                        {{m_Item.likes}} <i class="material-icons" v-if="m_Item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i>
                     </div>
                     <div class="tools" title="Website">
-                        <i class="material-icons">link</i>
+                        <a :href="m_Item.url"><i class="material-icons" style="color: #1d1d1b">link</i></a>
                     </div>
                     <div class="tools" title="Share">
                         <i class="material-icons">share</i>
@@ -73,13 +61,13 @@ Vue.component('trip-item', {
                 <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="input-field">
-                            <input id="Price" type="text">
-                            <label for="Price">Price</label>
+                            <input id="Price" type="text" v-model="m_Item.price">
+                            <label for="Price" class='active'>Price</label>
                         </div>
                     </div>
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="input-field">
-                            <input type="checkbox" class="filled-in" id="Payed" checked="checked" />
+                            <input type="checkbox" class="filled-in" id="Payed" v-model="m_Item.financials" />
                             <label for="Payed">Payed</label>
                         </div>
                     </div>
@@ -87,23 +75,23 @@ Vue.component('trip-item', {
                 <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="input-field">
-                            <input type="date" id="StartDate" class="datepicker">
-                            <label for="StartDate">Start date</label>
+                            <input type="date" id="StartDate" class="datepicker" v-model="m_Item.f_date">
+                            <label for="StartDate" class='active'>Start date</label>
                         </div>
                     </div>
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="input-field">
-                            <input type="date" id="EndDate" class="datepicker">
-                            <label for="EndDate">End date</label>
+                            <input type="date" id="EndDate" class="datepicker" v-model="m_Item.t_date">
+                            <label for="EndDate" class='active'>End date</label>
                         </div>
                     </div>
                 </div>
                 <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="switch">
-                            <label>
+                            <label class='active'>
                                 Single day
-                                <input type="checkbox">
+                                <input type="checkbox" v-model="m_Item.multipleDays">
                                 <span class="lever"></span>
                                 Multiple days
                             </label>
@@ -113,14 +101,14 @@ Vue.component('trip-item', {
                 <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px; padding-top: 10px;">
                         Tags:
-                        <div class="chips chips-autocomplete"></div>
+                        <div id="itemDetailsTags" class="chips chips-autocomplete"></div>
                     </div>
                 </div>
                 <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px; padding-top: 10px;">
                         <div class="input-field">
-                            <input id="Location" type="text" class="">
-                            <label for="Location">Location</label>
+                            <input id="Location" type="text" class="" v-model="m_Item.location">
+                            <label for="Location" class='active'>Location</label>
                         </div>
                     </div>
                 </div>
@@ -133,19 +121,52 @@ Vue.component('trip-item', {
     data: function() {
         return {
             m_Item: window.defaultItem,
-            m_message: []
+            m_Messages: [],
+            m_NewMessage: ''
         }
     },
     watch: {
         item: function() {
-            this.m_Item = $.extend(window.defaultItem, this.item)
+            this.m_Item = $.extend(window.defaultItem, this.item);
             this.getMessages();
+            var self = this;
+            $('#itemDetailsTags').material_chip({
+                data: self.m_Item.tags,
+                autocompleteOptions: {
+                    data: {
+                        'Museum': null,
+                        'Outdoor': null,
+                        'Culture': null,
+                        'Nature': null,
+                        'Beach': null,
+                        'Sun': null,
+                        'Food': null,
+                        'Wine': null
+                    },
+                    limit: Infinity,
+                    minLength: 1
+                }
+            });
         }
     },
     methods: {
         getMessages: function() {
-            //this.m_Item.id
-            this.m_message = window.mockMessage[0].messages;
+            this.m_Messages = window.mockMessage[this.m_Item.id] ? window.mockMessage[this.m_Item.id].messages : [];
+        },
+        addMessage: function() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yy = today.getFullYear().toString().substring(2,4);
+            if(dd<10){
+                dd='0'+dd;
+            }
+            if(mm<10){
+                mm='0'+mm;
+            }
+            var today = dd+'/'+mm+'/'+yy;
+            this.m_Messages.push({message:this.m_NewMessage, date: today })
+            this.m_NewMessage = '';
         }
     }
 });
@@ -155,12 +176,14 @@ var defaultItem = {
     img: '',
     title: '',
     desc: '',
+    url:'',
     comments: 0,
     financials: false,
     likes: 0,
     liked: false,
     price: '',
     f_date: '',
+    multipleDays: true,
     t_date: '',
     time: '',
     tags: [],

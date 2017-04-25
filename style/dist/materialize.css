@@ -6803,8 +6803,8 @@ button.btn-floating {
 
 /* line 40, C:/Users/Usuario/Documents/TripQuest/style/materialize-src/components/_chips.scss */
 .chips.focus {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #ea541d;
+  box-shadow: 0 1px 0 0 #ea541d;
 }
 
 /* line 45, C:/Users/Usuario/Documents/TripQuest/style/materialize-src/components/_chips.scss */
@@ -6814,7 +6814,7 @@ button.btn-floating {
 
 /* line 49, C:/Users/Usuario/Documents/TripQuest/style/materialize-src/components/_chips.scss */
 .chips .chip.selected {
-  background-color: #26a69a;
+  background-color: #ea541d;
   color: #fff;
 }
 

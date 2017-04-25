@@ -8,8 +8,8 @@ Vue.component('trip-board', {
         <div id="Board">
         
             <div class="toolbar">
-                <div v-show="!modalNewItem" > <i class="material-icons" @click="modalNewItem = true">add_box</i> </div>
-                <div v-show="modalNewItem" class="addNewContainer" >
+                <div> <i class="material-icons" @click="modalNewItem = true">add_box</i> </div>
+                <div v-show="modalNewItem" class="addNewContainer z-depth-4" >
                     <div class="input-field">
                       <input id="newUrl" v-model="newUrl" type="text" class="validate">
                       <label for="newUrl">Url</label>
@@ -17,6 +17,7 @@ Vue.component('trip-board', {
                     <div class="btn-container"><a class="waves-effect waves-light btn" @click="addNewItem">Add</a></div>
                     <div class="btn-container"><a class="waves-effect waves-light grey lighten-2 btn" @click="modalNewItem = false">Cancel</a></div>
                 </div>
+                <div v-show="modalNewItem" class="comp-overlay" @click="modalNewItem = false"></div>
             </div>
             
 

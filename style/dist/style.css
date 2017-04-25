@@ -310,21 +310,43 @@ aside#mainMenu ul li.menu-item #profileNotifications {
 }
 
 /* line 9, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
-#Board .toolbar .addNewContainer {
-  display: flex;
+#Board .toolbar .comp-overlay {
+  position: absolute;
+  z-index: 600;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 11, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 18, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+#Board .toolbar .addNewContainer {
+  display: flex;
+  position: absolute;
+  z-index: 640;
+  background: white;
+  width: 100vw;
+  max-width: 860px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+/* line 31, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer .input-field {
   min-width: 500px;
 }
 
-/* line 14, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 34, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer .btn-container {
   margin: 1rem;
 }
 
-/* line 20, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 40, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item {
   height: 200px;
   width: 500px;
@@ -334,18 +356,18 @@ aside#mainMenu ul li.menu-item #profileNotifications {
   margin-bottom: 30px;
 }
 
-/* line 28, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 48, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons {
   width: 50px;
 }
 
-/* line 30, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 50, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 33, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 53, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li {
   list-style: none;
   width: 50px;
@@ -356,45 +378,45 @@ aside#mainMenu ul li.menu-item #profileNotifications {
   cursor: pointer;
 }
 
-/* line 41, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 61, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li:hover {
   background-color: #efefef;
 }
 
-/* line 44, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 64, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled {
   cursor: auto;
 }
 
-/* line 46, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 66, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled:hover {
   background-color: white;
 }
 
-/* line 47, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 67, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li.disabled a i {
   color: #999;
 }
 
-/* line 52, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 72, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-icons ul li a i {
   color: #333;
 }
 
-/* line 59, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 79, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-img {
   height: 100%;
   width: 175px;
 }
 
-/* line 62, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 82, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* line 68, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 88, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-details {
   flex-grow: 1;
   padding: 15px;
@@ -402,7 +424,7 @@ aside#mainMenu ul li.menu-item #profileNotifications {
   overflow: hidden;
 }
 
-/* line 73, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
+/* line 93, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-board.scss */
 #Board .trip-item .trip-item-details h3 {
   margin-top: 0;
   font-size: 2.5rem;
@@ -521,7 +543,7 @@ aside#mainMenu ul li.menu-item #profileNotifications {
 
 /* line 85, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message .text {
-  padding-right: 30px;
+  padding-right: 55px;
 }
 
 /* line 88, C:/Users/Usuario/Documents/TripQuest/style/src/components/_trip-item.scss */

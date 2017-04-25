@@ -32,12 +32,12 @@ $(document).ready(function(){
     }
 	});	
 	
-	$('.item').click(function() {
-		var id = $(this).attr('itemid');
-		$('#editModal').toggleClass('show');
-		$('.overlay').toggleClass('show');
-		//editItem(id);
-	});
+	// $('.item').click(function() {
+	// 	var id = $(this).attr('itemid');
+	// 	$('#editModal').toggleClass('show');
+	// 	$('.overlay').toggleClass('show');
+	// 	//editItem(id);
+	// });
 
 });
 
@@ -46,14 +46,14 @@ $(document).ready(function(){
 //	$('.overlay').removeClass('show');
 //}
 
-function setImgDimensions(imgel) {
-	_this = $(imgel);
-	if(_this.height() > _this.width()) {
-		_this.height(_this.width());
-	} else {
-		_this.width(_this.height());
-	}
-}
+// function setImgDimensions(imgel) {
+// 	_this = $(imgel);
+// 	if(_this.height() > _this.width()) {
+// 		_this.height(_this.width());
+// 	} else {
+// 		_this.width(_this.height());
+// 	}
+// }
 
 //function getNewItemFromUrl(url) {
 //  var urlEncoded = encodeURIComponent(url);
