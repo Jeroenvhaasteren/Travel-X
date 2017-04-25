@@ -130,7 +130,6 @@
             });
             EventChannel.$on('openDetailsItem', function(id) {
                 self.itemDetails = true;
-                console.log(self.board.items[id]);
                 self.itemDetailsForm = self.board.items[id];
             })
         }

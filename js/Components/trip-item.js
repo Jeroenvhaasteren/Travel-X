@@ -68,7 +68,7 @@ Vue.component('trip-item', {
                     <div style="flex: 1; padding-left: 15px;">
                         <div class="input-field">
                             <input type="checkbox" class="filled-in" id="Payed" v-model="m_Item.financials" />
-                            <label for="Payed">Payed</label>
+                            <label for="Payed" class="checkboxlbl">Payed</label>
                         </div>
                     </div>
                 </div>
