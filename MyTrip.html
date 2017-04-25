@@ -28,60 +28,13 @@
 <main>
     <section id="appsSpace">
         <trip-info></trip-info>
-        <trip-board></trip-board>
+        <trip-board :items="board.items"></trip-board>
         <trip-financials></trip-financials>
     </section>
 
-    <div class="overlay" id="overlay" onclick="$('.overlay-modal, .overlay').hide()"></div>
-    <section class="overlay-modal z-depth-2">
-            <div id="trip-item">
-                <div class="comments">
-                    Comments
-                </div>
-                <div class="details">
-                    <div class="title">
-                        <img src="rescources/houseGaudi.jpg" class="z-depth-1">
-                        <div style="width: 100%; padding: 0 10px">
-                            <div class="input-field">
-                                <input id="Title" type="text" value="Casa Batllo Barcelona">
-                                <label for="Title">Title</label>
-                            </div>
-                            <div class="input-field">
-                                <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;"> Web oficial del edificio modernista de Antoni Gaudí en Barcelona Casa Batlló. Información sobre Gaudí y el edificio, visitas, precios, ofertas y eventos."</textarea>
-                                <label for="Desc">Description</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="toolbar">
-                        <div class="tools" title="Likes">
-                            3 <i class="material-icons">favorite_border</i>
-                        </div>
-                        <div class="tools" title="Website">
-                            <i class="material-icons">link</i>
-                        </div>
-                        <div class="tools" title="Share">
-                            <i class="material-icons">share</i>
-                        </div>
-                        <div class="tools" title="Add payment">
-                            <i class="material-icons">attach_money</i>
-                        </div>
-                    </div>
-                    <div style="display: flex;">
-                        <div style="flex: 1;">
-                            <div class="input-field">
-                                <input id="Price" type="text">
-                                <label for="Price">Price</label>
-                            </div>
-                        </div>
-                        <div style="flex: 1;">
-                            <div class="input-field">
-                                <input type="checkbox" id="test6" checked="checked" />
-                                <label for="test6">Payed</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div v-show="itemDetails" class="overlay" id="overlay" @click="itemDetails = false"></div>
+    <section v-show="itemDetails" class="overlay-modal z-depth-2">
+        <trip-item :item="itemDetailsForm"></trip-item>
     </section>
 
 </main>
@@ -128,12 +81,64 @@
 <script src="js/Components/trip-financials.js"></script>
 
 <script>
+    /** General Vue Instance to share Events and data between components **/
+    window.EventChannel = new Vue();
+
     var root = new Vue({
         el: '#app',
         data: {
-            itemDetails: false
+            itemDetails: false,
+            board: {
+                items: [{
+                    id: '0',
+                    img: 'https://www.barcelona-tourist-guide.com/images/int/attractions/casa-batllo/L/CasaBatllo-4.jpg',
+                    title: 'Casa Batllo',
+                    desc: 'Web oficial del edificio modernista de Antoni Gaudí en Barcelona Casa Batlló. Información sobre Gaudí y el edificio, visitas, precios, ofertas y eventos.',
+                    comments: '0',
+                    financials: false,
+                    likes: 3,
+                    liked: true
+                }
+                ]
+            },
+            itemDetailsForm: {}
+        },
+        methods: {
+            addItem: function(url) {
+                var urlEncoded = encodeURIComponent(url);
+                var apiKey = '58aac6d3dd95e6b920d36457';
+                var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
+                var newId = this.board.items.length + 1;
+                var newItem = {
+                    id: newId,
+                    img: '',
+                    title: '',
+                    desc: '',
+                    comments: 0,
+                    financials: false,
+                    likes: 0,
+                    liked: false
+                };
+                $.getJSON(requestUrl, function( json ) {
+                    newItem.title = json.hybridGraph.title;
+                    newItem.desc = json.hybridGraph.description;
+                    newItem.img = json.hybridGraph.image;
+                });
+                this.board.items.push(newItem);
+            }
+        },
+        created: function () {
+            var self = this;
+            EventChannel.$on('addNewItem', function(url) {
+                self.addItem(url);
+            });
+            EventChannel.$on('openDetailsItem', function(id) {
+                self.itemDetails = true;
+                self.itemDetailsForm = self.board.items[id];
+            })
         }
-    })
+    });
+
 </script>
 
 </body>

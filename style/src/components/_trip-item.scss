@@ -35,10 +35,71 @@
     background-color: $secondaryColor;
     flex-grow: 1;
     height: 100%;
+    position: relative;
+    .type-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 610;
+      background-color: rgba(255,255,255, 0.6);
+      min-height: 60px;
+      max-height: 140px;
+      display: flex;
+      padding: 10px 20px;
+      border-top: 1px solid #ddd;
+      .input-container {
+        flex-grow: 1;
+        background-color: white;
+        border-radius: 10px;
+        padding: 3px 5px;
+        textarea {
+          max-height: 120px;
+          border: 0;
+          height: 100%;
+          outline: none;
+        }
+      }
+      .send-container {
+        margin-left: 20px;
+      }
+    }
+
+    .message-field {
+      padding: 10px 10% 140px 10%;
+
+      .message {
+        background-color: white;
+        padding: 3px 5px;
+        position: relative;
+        max-width: 70%;
+        margin-top: 30px;
+        &.left {
+          border-radius: 0 5px 5px 5px;
+        }
+        &.right {
+          border-radius: 5px 0px 5px 5px;
+          background-color: #FFDCC2;
+          margin-left: auto;
+        }
+        .text {
+          padding-right: 30px;
+        }
+        .Stamp {
+          position: absolute;
+          color: #999;
+          font-size: 12px;
+          right: 3px;
+          bottom: 3px;
+        }
+      }
+
+    }
   }
   .details {
     width: 40%;
     min-width: 400px;
+    overflow: auto;
     .title {
       display: flex;
       padding: 15px;
@@ -63,6 +124,12 @@
         &:hover {
           background-color: $secondaryColorDark;
         }
+      }
+    }
+    .MapsContainer {
+      width: 100%;
+      img {
+        width: 100%;
       }
     }
   }
