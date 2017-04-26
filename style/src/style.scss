@@ -37,6 +37,7 @@ $paperBorderRadius: 2px;
 @import "components/trip-board";
 @import "components/trip-item";
 @import "components/trip-financials";
+@import "components/search-bar";
 
 /*Pages*/
 @import "pages/index";
@@ -57,7 +58,6 @@ body {
 
 main {
 	margin-left: $widthMainMenu;
-	padding: 0 2*$paddingSize;
 }
 
 .input-field.inline input, .input-field label, .chips .input {

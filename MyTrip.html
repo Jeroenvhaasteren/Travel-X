@@ -23,11 +23,12 @@
 <div id="app">
 <side-nav></side-nav>
 
-<trip-header></trip-header>
+<trip-header :trip="currentTrip"></trip-header>
 <!-- Application window -->
 <main>
+
     <section id="appsSpace">
-        <trip-info></trip-info>
+        <trip-info :trip="currentTrip"></trip-info>
         <trip-board :items="board.items"></trip-board>
         <trip-financials></trip-financials>
     </section>
@@ -43,7 +44,7 @@
 <script>
     $(document).ready(function(){
         $('ul.tabs').tabs();
-        $('.chips-autocomplete').material_chip({
+        $('#TripChips').material_chip({
             data: [{
                 tag: 'Museum',
             }, {
@@ -71,6 +72,7 @@
 
 <!-- Vue Files and Components -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/Components/search-bar.js"></script>
 <script src="js/Components/side-nav.js"></script>
 <script src="js/Components/top-nav.js"></script>
 <script src="js/Components/trip-header.js"></script>
@@ -96,11 +98,19 @@
                     comments: '0',
                     financials: false,
                     likes: 3,
-                    liked: true
+                    liked: true,
+                    url: 'https://www.casabatllo.es/en/'
                 }
                 ]
             },
-            itemDetailsForm: {}
+            itemDetailsForm: {},
+            currentTrip: {
+                title: 'SurfTrip Morocco',
+                location: 'Morocco',
+                from: '',
+                till: '',
+                img: 'https://s-media-cache-ak0.pinimg.com/originals/bc/f8/bd/bcf8bd824de4a5cdebaabe7ca0a16d0f.jpg'
+            }
         },
         methods: {
             addItem: function(url) {
@@ -113,6 +123,10 @@
                     img: '',
                     title: '',
                     desc: '',
+                    comments: '0',
+                    financials: false,
+                    likes: 0,
+                    liked: false,
                     url: url
                 };
                 $.getJSON(requestUrl, function( json ) {

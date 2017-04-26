@@ -2,30 +2,30 @@
  * Created by Jeroen on 15/04/2017.
  */
 Vue.component('trip-info', {
+    prop: ['trip'],
     template: `
         <!-- trip-info -->
         <div id="TripInfo">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            </p>
+            <p>Start the planning of your trip hear. Invite your friends and start your trip!</p>
             <div class="row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="tripTitle" type="text" class="validate">
+                            <input id="tripTitle" type="text" v-model="form.title" class="validate">
                             <label for="tripTitle">Trip title</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="Location" type="text" class="validate">
+                            <input id="Location" type="text" v-model="form.location" class="validate">
                             <label for="Location">Location</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input type="date" id="formDate" class="datepicker">
+                            <input type="date" id="formDate" v-model="form.from" class="datepicker">
                             <label for="formDate">From</label>
                         </div>
                         <div class="input-field col s6">
-                            <input type="date" id="tillDate" class="datepicker">
+                            <input type="date" id="tillDate" v-model="form.till" class="datepicker">
                             <label for="tillDate">Till</label>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ Vue.component('trip-info', {
                                 <input type="file">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" v-model="form.img" type="text">
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ Vue.component('trip-info', {
             </div>
             <div class="row">
                 <div class="col s12 padding">
-                    <div class="chips chips-autocomplete"></div>
+                    <div id="TripChips" class="chips chips-autocomplete"></div>
                 </div>
             </div>
             <div class="row">
@@ -54,5 +54,10 @@ Vue.component('trip-info', {
                 </div>
             </div>
         </div>
-    `
+    `,
+    data: function() {
+        return {
+            form: {}
+        }
+    }
 });

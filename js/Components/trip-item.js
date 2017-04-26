@@ -49,7 +49,7 @@ Vue.component('trip-item', {
                         {{m_Item.likes}} <i class="material-icons" v-if="m_Item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i>
                     </div>
                     <div class="tools" title="Website">
-                        <a :href="m_Item.url"><i class="material-icons" style="color: #1d1d1b">link</i></a>
+                        <a :href="m_Item.url" target="_blank"><i class="material-icons" style="color: #1d1d1b">link</i></a>
                     </div>
                     <div class="tools" title="Share">
                         <i class="material-icons">share</i>

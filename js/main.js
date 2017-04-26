@@ -9,28 +9,28 @@ $(document).ready(function(){
 	
 //	$('.tripImageContainer img').height($('.tripImageContainer img').width());
 	
-	$('.chips').material_chip({
-		data: [{
-      tag: 'City',
-    }, {
-      tag: 'Sports',
-    }, {
-      tag: 'Shopping',
-    }],
-		placeholder: 'Enter a tag',
-    secondaryPlaceholder: '+Tag',
-		autocompleteData: {
-      'Outdoor': null,
-      'Active': null,
-      'Relax': null,
-			'Beach': null,
-			'Mountain': null,
-			'Culture': null,
-			'Food': null,
-			'Musea': null,
-			'New energy': null,
-    }
-	});	
+	// $('.chips').material_chip({
+	// 	data: [{
+     //  tag: 'City',
+    // }, {
+     //  tag: 'Sports',
+    // }, {
+     //  tag: 'Shopping',
+    // }],
+	// 	placeholder: 'Enter a tag',
+    // secondaryPlaceholder: '+Tag',
+	// 	autocompleteData: {
+     //  'Outdoor': null,
+     //  'Active': null,
+     //  'Relax': null,
+	// 		'Beach': null,
+	// 		'Mountain': null,
+	// 		'Culture': null,
+	// 		'Food': null,
+	// 		'Musea': null,
+	// 		'New energy': null,
+    // }
+	// });
 	
 	// $('.item').click(function() {
 	// 	var id = $(this).attr('itemid');

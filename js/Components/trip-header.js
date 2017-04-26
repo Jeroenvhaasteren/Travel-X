@@ -2,16 +2,17 @@
  * Created by Jeroen on 10/04/2017.
  */
 Vue.component('trip-header', {
+    props: ['trip'],
     template: `
         <!-- trip-header -->
         <section id="appheader">
             <div class="trip-image">
-                <img src="rescources/barcelona.jpg">
+                <img :src="trip.img">
             </div>
             <div class="trip-info">
                 <div class="trip-details">
-                    <h1>Culture trip Barcelona 2017</h1>
-                    <h5>Barcelona</h5>
+                    <h1>{{trip.title}}</h1>
+                    <h5>{{trip.location}}</h5>
                     <p><span class="capitalized">created by: </span>TripQuest team</p>
                 </div>
                 <div>
@@ -23,5 +24,15 @@ Vue.component('trip-header', {
                 </div>
             </div>
         </section>
-    `
+    `,
+    mounted: function() {
+        var backgroundUrl = "url('" + this.trip.img + "')";
+        $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+    },
+    watch: {
+        trip: function() {
+            var backgroundUrl = "url('" + this.trip.img + "')";
+            $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+        }
+    }
 });

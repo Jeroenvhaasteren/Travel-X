@@ -1,11 +1,10 @@
-$appHeaderHeight: 300px;
+$appHeaderHeight: 230px;
 
 
 #appheader {
   height: $appHeaderHeight;
   margin-left: $widthMainMenu;
   padding: 0 30px;
-  padding-top: 70px;
   display: flex;
 
   &:before {
