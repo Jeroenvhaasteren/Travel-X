@@ -44,7 +44,7 @@ Vue.component('trip-info', {
             </div>
             <div class="row">
                 <div class="col s12 padding" style="text-align: right">
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">save</i>Save</a>
+                    <a class="waves-effect waves-light btn" @click="saveTrip"><i class="material-icons left">save</i>Save</a>
                     <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>Delete</a>
                 </div>
             </div>            

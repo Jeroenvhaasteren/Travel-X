@@ -28,11 +28,10 @@ Vue.component('trip-header', {
     mounted: function() {
         var backgroundUrl = "url('" + this.trip.img + "')";
         $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
-    },
-    watch: {
-        trip: function() {
-            var backgroundUrl = "url('" + this.trip.img + "')";
+        var self = this;
+        EventChannel.$on('updateTrip', function(trip) {
+            var backgroundUrl = "url('" + self.trip.img + "')";
             $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
-        }
+        });
     }
 });

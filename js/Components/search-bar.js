@@ -42,11 +42,29 @@ Vue.component('search-bar', {
     },
     mounted: function() {
         var self = this;
-        window.$('#searchTags').material_chip({
-            placeholder: 'Enter a tag',
-            secondaryPlaceholder: '+Tag',
-            data: self.CurrentTags
+        $( document ).ready(function() {
+            window.$('#searchTags').material_chip({
+                placeholder: 'Enter a tag',
+                secondaryPlaceholder: '+Tag',
+                data: self.CurrentTags,
+                autocompleteData: {
+                    'Museum': null,
+                    'Outdoor': null,
+                    'Culture': null,
+                    'Nature': null,
+                    'Beach': null,
+                    'Sun': null,
+                    'Food': null,
+                    'Active': null,
+                    'Club': null,
+                    'Chill': null,
+                    'WaterSports': null,
+                    'Mountain': null,
+                    'Retrait': null
+                }
+            });
         });
+
         $('#searchTags').on('chip.add', function(e, chip){
             self.CurrentTags = $('#searchTags').material_chip('data');
         });
