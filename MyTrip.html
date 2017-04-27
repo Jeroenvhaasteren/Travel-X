@@ -44,29 +44,6 @@
 <script>
     $(document).ready(function(){
         $('ul.tabs').tabs();
-        $('#TripChips').material_chip({
-            data: [{
-                tag: 'Museum',
-            }, {
-                tag: 'Food',
-            }, {
-                tag: 'Outdoor',
-            }],
-            autocompleteOptions: {
-                data: {
-                    'Museum': null,
-                    'Outdoor': null,
-                    'Culture': null,
-                    'Nature': null,
-                    'Beach': null,
-                    'Sun': null,
-                    'Food': null,
-                    'Wine': null
-                },
-                limit: Infinity,
-                minLength: 1
-            }
-        });
     });
 </script>
 
@@ -146,6 +123,9 @@
                 self.itemDetails = true;
                 self.itemDetailsForm = self.board.items[id];
             })
+            EventChannel.$on('updateTrip', function(trip) {
+                self.currentTrip = trip;
+            });
         }
     });
 

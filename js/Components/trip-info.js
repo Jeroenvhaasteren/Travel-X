@@ -2,7 +2,7 @@
  * Created by Jeroen on 15/04/2017.
  */
 Vue.component('trip-info', {
-    prop: ['trip'],
+    props: ['trip'],
     template: `
         <!-- trip-info -->
         <div id="TripInfo">
@@ -30,14 +30,9 @@ Vue.component('trip-info', {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="file-field input-field col s6">
-                            <div class="btn">
-                                <span>Image</span>
-                                <input type="file">
-                            </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" v-model="form.img" type="text">
-                            </div>
+                        <div class="input-field col s6">
+                            <input type="text" id="Img" v-model="form.img" class="validate">
+                            <label for="Img">Img url</label>
                         </div>
                     </div>
                 </form>
@@ -52,12 +47,37 @@ Vue.component('trip-info', {
                     <a class="waves-effect waves-light btn"><i class="material-icons left">save</i>Save</a>
                     <a class="waves-effect waves-light btn"><i class="material-icons left">delete</i>Delete</a>
                 </div>
-            </div>
+            </div>            
         </div>
     `,
     data: function() {
         return {
-            form: {}
+            form: this.trip
+        }
+
+    },
+    created: function() {
+        $( document ).ready(function() {
+            $('#TripChips').material_chip({
+                secondaryPlaceholder: 'Type to enter tags',
+                placeholder: ' + Tag',
+                autocompleteData: {
+                    'Museum': null,
+                    'Outdoor': null,
+                    'Culture': null,
+                    'Nature': null,
+                    'Beach': null,
+                    'Sun': null,
+                    'Food': null,
+                    'Wine': null,
+                },
+                data: [{tag: 'Active'},{tag: 'Beach'},{tag: 'Chill'},{tag:'Car hire'}]
+            });
+        });
+    },
+    methods: {
+        saveTrip: function() {
+            window.EventChannel.$emit('updateTrip', this.form);
         }
     }
 });

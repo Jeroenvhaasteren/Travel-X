@@ -9,17 +9,21 @@ Vue.component('trip-item', {
             <div class="comments">
                 <div class="message-field">
                     
-                    <div :class="message.hasOwnProperty('sender') ? 'message left z-depth-1' : 'message right z-depth-1'" v-for="message in m_Messages">
-                        <div class="title" v-show="message.hasOwnProperty('sender')">
-                            {{message.sender}}
-                        </div>
-                        <div class="text">
-                            {{message.message}}
-                        </div>
-                        <div class="Stamp">
-                            {{message.date}}
+                    <div style="width: 100%;" v-for="message in m_Messages">
+                        <div :class="message.hasOwnProperty('sender') ? 'message left z-depth-1' : 'message right z-depth-1'">
+                            <div class="title" v-show="message.hasOwnProperty('sender')">
+                                {{message.sender}}
+                            </div>
+                            <div class="text">
+                                {{message.message}}
+                            </div>
+                            <div class="Stamp">
+                                {{message.date}}
+                            </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
                 <div class="type-container">
                     <div class="input-container">
