@@ -33,6 +33,7 @@ Vue.component('search-bar', {
                 secondaryPlaceholder: '+Tag',
                 data: this.CurrentTags
             });
+            window.EventChannel.$emit('filterBoard', this.CurrentTags);
         }
     },
     data: function() {
@@ -74,9 +75,12 @@ Vue.component('search-bar', {
 
         $('#searchTags').on('chip.add', function(e, chip){
             self.CurrentTags = $('#searchTags').material_chip('data');
+            window.EventChannel.$emit('filterBoard', self.CurrentTags);
+            console.log('send');
         });
         $('#searchTags').on('chip.delete', function(e, chip){
             self.CurrentTags = $('#searchTags').material_chip('data');
+            window.EventChannel.$emit('filterBoard', self.CurrentTags);
         });
     }
 });

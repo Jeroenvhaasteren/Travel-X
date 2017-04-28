@@ -7,7 +7,6 @@ Vue.component('trip-board', {
         <!-- trip-board -->
         <div id="Board">
             <search-bar v-on:addNew="modalNewItem = true" :searchbar="searchbar"></search-bar>
-        
             <div class="toolbar">
                 <div v-show="modalNewItem" class="addNewContainer z-depth-4" >
                     <div class="input-field">
@@ -45,6 +44,8 @@ Vue.component('trip-board', {
     data: function() {
         return {
             m_Items: this.items,
+            m_Unfilterd: {},
+            m_Filters: [{tag:'Summer'},{tag:'Housing'}],
             newUrl: '',
             modalNewItem: false
         }
@@ -76,6 +77,48 @@ Vue.component('trip-board', {
             this.newUrl = '';
             this.modalNewItem = false;
 
+        },
+        filterTrips: function() {
+            this.m_Items = this.items;
+
+            for (i = 0; i < this.m_Filters.length; i++) {
+                var filterProps = this.m_Filters[i];
+                var fnFilter = searchFilter();
+                this.m_Items = this.m_Items.filter(function(item) {
+                    var result;
+                        //Search in all Properties
+                        for (j = 0; j < item.tags.length; j++) {
+                            console.log('**************');
+                            console.log(filterProps.tag);
+                            console.log(item.tags[j].tag);
+
+                            result = fnFilter(item.tags[j].tag, filterProps.tag);
+                            if (result) break;
+                        }
+                    return  result;
+                });
+            }
+
         }
+    },
+    mounted: function() {
+        var self = this;
+        window.EventChannel.$on('filterBoard',function(filters) {
+            console.log('Yes');
+            self.m_Filters = filters;
+            self.filterTrips();
+        });
     }
 });
+
+function searchFilter(Operator) {
+    var fnFilter;
+    fnFilter = function(a,b) {
+        if(a.toString().toLowerCase().search(b.toString().toLowerCase()) != -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    return fnFilter;
+}
