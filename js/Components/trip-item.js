@@ -155,6 +155,7 @@ Vue.component('trip-item', {
     },
     methods: {
         getMessages: function() {
+            debugger;
             this.m_Messages = window.mockMessage[this.m_Item.id] ? window.mockMessage[this.m_Item.id].messages : [];
         },
         addMessage: function() {
@@ -199,5 +200,19 @@ var mockMessage = [
         {sender:'Pedro',message:'I think this is awesome we could look for more things like this',date:'01/04/17'},
         {sender:'Hilda',message:'Yes that looked so awesome i would love to do that',date:'02/04/17'},
         {message:'I found a website with a lot of other websites where we can get more information about this',date:'02/04/17'}
-        ]}
+        ]},
+    {messages:[
+        {sender:'Carolina',message:'I think sleeping in a hostel could be alot of fun. I have never done it but we could try it, right???',date:'01/04/17'},
+        {sender:'Roxanne',message:'I did it last year was fun yeah. Most people there will probably surf too. I only think it is quite expensive compared to a complete place',date:'02/04/17'},
+        {message:'Oke lets keep this one in mind',date:'02/04/17'}
+    ]},
+    {messages:[
+        {sender:'Pedro',message:'Guys i found this article about amazing spots to surf. We could walk or hire i bike i will look for biking rental',date:'01/04/17'},
+        {sender:'Pedro',message:'Do you guys have any problems with hiring a scooter. It is really cheap and it might be nice to get a bit further',date:'02/04/17'},
+        {message:'No i am fine with that, We should do that men',date:'02/04/17'},
+        {sender:'Roxanne',message:'Yeah gas is also really cheap according to the internet',date:'02/04/17'}
+    ]},
+    {messages:[
+        {sender:'Hilda',message:'A friend told me this bar is Super!!!!!!!!! We should check it out. ',date:'01/04/17'},
+    ]}
 ]

@@ -29,7 +29,7 @@
 
     <section id="appsSpace">
         <trip-info :trip="currentTrip"></trip-info>
-        <trip-board :items="board.items"></trip-board>
+        <trip-board :items="board.items" :searchbar="searchbar"></trip-board>
         <trip-financials></trip-financials>
     </section>
 
@@ -66,27 +66,67 @@
         el: '#app',
         data: {
             itemDetails: false,
+            searchbar: {
+              recommendedTags: [{tag:'Bar'},{tag:'SurfSpots'},{tag:'Beach'},{tag:'Summer'},{tag:'Hostels'},{tag:'Housing'},{tag:'Airbnb'},{tag:'Surf'}]
+            },
             board: {
                 items: [{
                     id: '0',
-                    img: 'https://www.barcelona-tourist-guide.com/images/int/attractions/casa-batllo/L/CasaBatllo-4.jpg',
-                    title: 'Casa Batllo',
-                    desc: 'Web oficial del edificio modernista de Antoni Gaudí en Barcelona Casa Batlló. Información sobre Gaudí y el edificio, visitas, precios, ofertas y eventos.',
+                    img:"https://a0.muscache.com/im/pictures/23730c40-7eb0-4fcd-8f7a-92954472dff8.jpg?aki_policy=x_large",
+                    title:"Playa Private Room - Guesthouse for Rent in Taghazout, Souss-Massa-Draa, Morocco",
+                    desc:" in Taghazout, Morocco. The Playa Surf Hause is a mixture of Moroccan and European styles, and it's located in the centre of Taghazout ...",
+                    comments: '0',
+                    financials: false,
+                    likes: 1,
+                    liked: true,
+                    tags: [{tag:'Housing'},{tag:'Airbnb'},{tag:'Beach'},{tag:'Summer'}],
+                    url:"https://www.airbnb.com/rooms/15298553?locale=en&location=Taghazout%2C+Souss+Massa+Dara%C3%A2%2C+Marokko&s=1-2TUeZH"
+                },
+                {
+                    id: '1',
+                    img:"https://a0.muscache.com/im/pictures/76cdde2f-7519-43e0-ba55-b243c6cc623a.jpg?aki_policy=x_large",
+                    title:"Surf & Travel Hostel - Room 2 - Bed & Breakfasts for Rent in Taghazout, Souss-Massa-Draâ, Morocco",
+                    desc:" in Taghazout, Morocco. A bright room with private balcony. Decorated in traditional Moroccan style.  Surf & Travel Hostel provides accommodation, breakfast, free Wifi, surf lessons, trips and equipment rental!  Surf & Travel Hostel is located in the centre of Taghazout;...",
+                    comments: '0',
+                    financials: false,
+                    likes: 0,
+                    liked: false,
+                    tags: [{tag:'Housing'},{tag:'Hostel'},{tag:'Beach'},{tag:'Summer'}],
+                    url:"https://www.airbnb.com/rooms/8244410?location=Taghazout%2C%20Morocco"
+                },
+                {
+                    id: '2',
+                    img:"https://surfberbere.com/wp-content/uploads/2016/03/anchor_point_perfect_lineup_surf_spot_morocco.jpg",
+                    title:"Surf Spots | Surf Berbere",
+                    desc:"Taghazout is blessed with some of the most perfect right hand breaks the world has to offer, and they break right on our doorstep. Our Taghazout surf camp building sits on Hash Point, which is an easy right-hander for surfers new to rocky breaks. ",
                     comments: '0',
                     financials: false,
                     likes: 3,
                     liked: true,
-                    url: 'https://www.casabatllo.es/en/'
+                    tags: [{tag:'Surf'},{tag:'Beach'}],
+                    url:"https://www.airbnb.com/rooms/8244410?location=Taghazout%2C%20Morocco"
+                },
+                {
+                    id: '3',
+                    img:"https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-1/p200x200/10868240_1526252204309258_7533564141885858913_n.png?oh=d5574253ce2eb601acd1ef15fd1a3ce1&oe=59880D29",
+                    title:"Dar Josephine",
+                    desc:"Dar Josephine, Taghazout. 43 curtidas. Le restaurant Dar Joséphine c'est une oasis pleine de sérénité où animaux et humains sont les bienvenus et où tous sont accueillis avec le sourire.",
+                    comments: '0',
+                    financials: false,
+                    likes: 4,
+                    liked: false,
+                    tags: [{tag:'Bar'},{tag:'Beach'},{tag:'Summer'}],
+                    url:"https://www.facebook.com/dar.josephine?ref=hl",
                 }
                 ]
             },
             itemDetailsForm: {},
             currentTrip: {
                 title: 'SurfTrip Morocco',
-                location: 'Morocco',
+                location: 'Morocco, Taghazout',
                 from: '',
                 till: '',
-                img: 'https://s-media-cache-ak0.pinimg.com/originals/bc/f8/bd/bcf8bd824de4a5cdebaabe7ca0a16d0f.jpg'
+                img: 'http://www.gowerlive.co.uk/sites/default/files/wormsHeadSurferPano_1.jpg'
             }
         },
         methods: {
@@ -128,6 +168,57 @@
             });
         }
     });
+
+
+    function ChangeTrip() {
+        root.currentTrip = {
+            from: "",
+            img: "https://s-media-cache-ak0.pinimg.com/originals/e6/2d/1c/e62d1c0dfe27934b38f27af697fd3d98.jpg",
+            location: "Spain, Ibiza",
+            till: "",
+            title: "Crazy Ibiza!!!"};
+
+        root.searchbar = {
+            recommendedTags: [{tag:'Bar'},{tag:'Club'},{tag:'Beach'},{tag:'Summer'},{tag:'Airbnb'},{tag:'Hotel'}]
+        };
+
+        root.board.items = [{
+                id: '0',
+                img:"https://www.beautifulpeopleibiza.com/en/wp-content/uploads/sites/5/2017/04/entradaDiscoteca.jpg",
+                title:"Beautiful People Ibiza boat party | Ibiza's leading boat party",
+                desc:"We have been doing boat parties in Ibiza for about 10 years. Our goal is simple: that you have the best day of your holidays.",
+                comments: '0',
+                financials: false,
+                likes: 1,
+                liked: true,
+                tags: [{tag:'Boat'},{tag:'Water'},{tag:'Drinks'},{tag:'Music'},{tag:'Summer'},{tag:'18+'}],
+                url:"https://www.beautifulpeopleibiza.com/en/"
+            },
+            {
+                id: '1',
+                img:"http://www.swat-entertainment.com/wp-content/uploads/2015/05/pacha-ibiza.jpg",
+                title:"PACHA Ibiza.",
+                desc:"Pacha Ibiza, Nightclub & Restaurant",
+                comments: '0',
+                financials: false,
+                likes: 0,
+                liked: false,
+                tags: [{tag:'Club'},{tag:'18+'},{tag:'Beach'},{tag:'Summer'}],
+                url:"http://www.pachaibiza.com/es/"
+            },
+            {
+                id: '2',
+                img:"https://t-ec.bstatic.com/images/hotel/max300/755/75522202.jpg",
+                title:"★★★★ Hotel Bossa Flow, Playa d'en Bossa, Spain",
+                desc:" US$248 Situated only 250 metres from Playa d’en Bossa beach and only 3 km from Ibiza town centre, this hotel resort is the perfect place to enjoy a tranquil...",
+                comments: '0',
+                financials: false,
+                likes: 3,
+                liked: true,
+                tags: [{tag:'Hotel'},{tag:'SwimmingPool'}],
+                url:"http://booking.com/00258dc133ad5"
+            }];
+    }
 
 </script>
 

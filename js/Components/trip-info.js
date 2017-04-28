@@ -56,6 +56,11 @@ Vue.component('trip-info', {
         }
 
     },
+    watch: {
+        trip: function() {
+            this.form = this.trip;
+        }
+    },
     created: function() {
         $( document ).ready(function() {
             $('#TripChips').material_chip({

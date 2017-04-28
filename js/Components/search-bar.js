@@ -3,6 +3,7 @@
  */
 
 Vue.component('search-bar', {
+    props:['searchbar'],
     template: `
     <!-- search-bar -->
     <section id="SearchBar">
@@ -36,11 +37,17 @@ Vue.component('search-bar', {
     },
     data: function() {
         return {
-            SuggestTags: [{tag:'Restaurants'},{tag:'Musea'},{tag:'Bars'},{tag:'Sightsigning'}],
+            SuggestTags: [],
             CurrentTags: []
         }
     },
+    watch: {
+      searchbar: function() {
+          this.SuggestTags = this.searchbar.recommendedTags;
+      }
+    },
     mounted: function() {
+        this.SuggestTags = this.searchbar.recommendedTags;
         var self = this;
         $( document ).ready(function() {
             window.$('#searchTags').material_chip({

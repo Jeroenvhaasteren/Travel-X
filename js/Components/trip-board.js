@@ -2,11 +2,11 @@
  * Created by Jeroen on 15/04/2017.
  */
 Vue.component('trip-board', {
-    props: ['items'],
+    props: ['items','searchbar'],
     template: `
         <!-- trip-board -->
         <div id="Board">
-            <search-bar v-on:addNew="modalNewItem = true"></search-bar>
+            <search-bar v-on:addNew="modalNewItem = true" :searchbar="searchbar"></search-bar>
         
             <div class="toolbar">
                 <div v-show="modalNewItem" class="addNewContainer z-depth-4" >
@@ -27,7 +27,7 @@ Vue.component('trip-board', {
                             <li><a><i class="material-icons">share</i></a></li>
                             <li :class=" item.financials ? null : 'disabled'" @click="openFinancials(item.id)"><a><i class="material-icons">euro_symbol</i></a></li>
                             <li :class=" item.comments < 1 ? 'disabled' : null" @click="openItem(item.id)"><a><i class="material-icons">comment</i></a></li>
-                            <li @click="toggleLiked(index)"><a><i class="material-icons" v-if="item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i></a></li>
+                            <li @click="toggleLiked(index)"><a><i class="material-icons" v-if="item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i><span class="icon-badge" v-if="item.likes > 0">{{item.likes}}</span></a></li>
                         </ul>
                     </div>
                     <div class="trip-item-img" @click="openItem(item.id)">
@@ -36,6 +36,7 @@ Vue.component('trip-board', {
                     <div class="trip-item-details" @click="openItem(item.id)">
                         <h3>{{item.title}}</h3>
                         <p>{{item.desc}}</p>
+                        <span v-for="tag in item.tags">{{tag.tag}}</span>
                     </div>
                 </article>
            </div>
@@ -48,6 +49,11 @@ Vue.component('trip-board', {
             modalNewItem: false
         }
     },
+    watch: {
+      items: function() {
+          this.m_Items = this.items;
+      }
+    },
     methods:{
         openItem: function(id) {
             window.EventChannel.$emit('openDetailsItem', id);
@@ -57,7 +63,13 @@ Vue.component('trip-board', {
         },
         toggleLiked: function(index) {
             console.log(index);
-            this.m_Items[index].liked ? this.m_Items[index].liked = false : this.m_Items[index].liked = true;
+            if(this.m_Items[index].liked) {
+                this.m_Items[index].liked = false;
+                this.m_Items[index].likes --;
+            } else {
+                this.m_Items[index].liked = true;
+                this.m_Items[index].likes ++;
+            }
         },
         addNewItem: function() {
             window.EventChannel.$emit('addNewItem', this.newUrl);
