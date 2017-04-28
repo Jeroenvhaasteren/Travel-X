@@ -117,7 +117,7 @@ Vue.component('trip-item', {
                     </div>
                 </div>
                 <div class="MapsContainer">
-                    <img src="rescources/GoogleMaps.png">
+                    <iframe style="width:100%; height:100%; border:0" frameborder="0" :src="googleMapsSrc" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -126,12 +126,15 @@ Vue.component('trip-item', {
         return {
             m_Item: window.defaultItem,
             m_Messages: [],
-            m_NewMessage: ''
+            m_NewMessage: '',
+            googleMapsSrc: ''
         }
     },
     watch: {
         item: function() {
+            var googleApiKey = 'AIzaSyBzGjh7XPanj91d2gx8CybVSNzJ5UuVfHA';
             this.m_Item = $.extend(window.defaultItem, this.item);
+            this.googleMapsSrc = 'https://www.google.com/maps/embed/v1/place?key=' + googleApiKey + '&q=place_id:' + this.m_Item.gPlaceID;
             this.getMessages();
             var self = this;
             $('#itemDetailsTags').material_chip({
@@ -155,7 +158,6 @@ Vue.component('trip-item', {
     },
     methods: {
         getMessages: function() {
-            debugger;
             this.m_Messages = window.mockMessage[this.m_Item.id] ? window.mockMessage[this.m_Item.id].messages : [];
         },
         addMessage: function() {

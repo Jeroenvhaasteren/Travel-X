@@ -144,13 +144,30 @@
                     financials: false,
                     likes: 0,
                     liked: false,
+                    tags: [],
                     url: url
                 };
                 $.getJSON(requestUrl, function( json ) {
                     newItem.title = json.hybridGraph.title;
                     newItem.desc = json.hybridGraph.description;
                     newItem.img = json.hybridGraph.image;
+
+                    var urlGoogleLocationSearch = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=';
+                    var googleKey = '&key=AIzaSyBzGjh7XPanj91d2gx8CybVSNzJ5UuVfHA';
+                    var queryLocation = newItem.title.replace(' ','+');
+                    var googleAPIUrl = urlGoogleLocationSearch + queryLocation + googleKey;
+                    $.getJSON(googleAPIUrl, function( json ) {
+                        newItem.location = json.results[0].formatted_address;
+                        newItem.gPlaceID = json.results[0].place_id;
+                        for(i in json.results[0].types) {
+                            var itemTag =  replaceAll(json.results[0].types[i], '_', ' ')
+                            newItem.tags.push({tag: itemTag});
+                        }
+                    });
                 });
+
+
+
                 this.board.items.push(newItem);
             }
         },
@@ -220,6 +237,14 @@
             }];
     }
 
+
+    function escapeRegExp(str) {
+        return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    }
+
+    function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
 </script>
 
 </body>
