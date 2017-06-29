@@ -8,6 +8,12 @@ aside#mainMenu {
   display: flex;
   flex-direction: column;
   background-color: $secondaryColor;
+
+  .menu-header {
+    height: 60px;
+    background-color: #d37e1c;
+  }
+
   .menu-item-container {
     flex: 1;
   }
@@ -20,40 +26,16 @@ aside#mainMenu {
   ul {
     display:flex;
     flex-direction: column;
+    margin: 0;
     li.menu-item {
       position: relative;
       width: $widthMainMenu;
       padding: $paddingSize;
       text-align: center;
       cursor: pointer;
-      img {
-        height: $widthMainMenu - 2*$paddingSize;
-        width: $widthMainMenu - 2*$paddingSize;
-        border-radius: 50%;
-        background-color: white;
-      }
+      color: #666666;
       &.hover:hover {
         background-color: $secondaryColorDark;
-      }
-
-      .smallIcon {
-        position: absolute;
-        bottom: 10px;
-        padding: 5px;
-        height: 34px;
-        width: 34px;
-        overflow: hidden;
-        border-radius: 50%;
-        background-color: $secondaryColorLight;
-        &:hover {
-          background-color: $secondaryColorDark
-        }
-      }
-      #profileSettings {
-        left: 10px;
-      }
-      #profileNotifications {
-        right: 10px;
       }
     }
   }

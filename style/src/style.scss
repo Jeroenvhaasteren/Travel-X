@@ -14,7 +14,7 @@ $fithColor: #8c4646;
 $fithColorDark: darken($fithColor, 20%);
 $fithColorLight: lighten($fithColor, 20%);
 
-$widthMainMenu: 100px;
+$widthMainMenu: 215px;
 $paddingSize: 15px;
 $heightTools: 24px;
 $paperBorderRadius: 2px;
@@ -48,7 +48,7 @@ $paperBorderRadius: 2px;
 //@import "tripBoard";
 
 body {
-	background-color: $secondaryColor;
+	background-color: white;
 	color: #1d1d1b;
 	overflow: hidden;
 	margin: 0;
