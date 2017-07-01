@@ -9,6 +9,7 @@
     <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
     <link href="style/dist/materialize.css" rel="stylesheet" >
     <link href="style/dist/style.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
 
 
     <!-- Compiled and minified JavaScript -->
@@ -21,24 +22,21 @@
 </head>
 <body>
 <div id="app">
-<side-nav></side-nav>
-
-<trip-header :trip="currentTrip"></trip-header>
-<!-- Application window -->
-<main>
-
-    <section id="appsSpace">
-        <trip-info :trip="currentTrip"></trip-info>
-        <trip-board :items="board.items" :searchbar="searchbar"></trip-board>
-        <trip-financials></trip-financials>
-    </section>
-
-    <div v-show="itemDetails" class="overlay" id="overlay" @click="itemDetails = false"></div>
-    <section v-show="itemDetails" class="overlay-modal z-depth-2">
-        <trip-item :item="itemDetailsForm"></trip-item>
-    </section>
-
-</main>
+    <side-nav></side-nav>
+    <div class="appspace">
+        <trip-header :trip="currentTrip"></trip-header>
+        <main>
+            <section id="appsSpace">
+                <trip-info :trip="currentTrip"></trip-info>
+                <trip-board :items="board.items" :searchbar="searchbar"></trip-board>
+                <trip-financials></trip-financials>
+            </section>
+            <div v-show="itemDetails" class="overlay" id="overlay" @click="itemDetails = false"></div>
+            <section v-show="itemDetails" class="overlay-modal z-depth-2">
+                <trip-item :item="itemDetailsForm"></trip-item>
+            </section>
+        </main>
+    </div>
 </div>
 
 <script>

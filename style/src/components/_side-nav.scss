@@ -1,13 +1,13 @@
 aside#mainMenu {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
   height: 100vh;
-  width: $widthMainMenu;
+  min-width: $widthMainMenu;
   display: flex;
   flex-direction: column;
   background-color: $secondaryColor;
+
+  &.fold {
+    min-width: $widthMainMenuFold;
+  }
 
   .menu-header {
     height: 60px;

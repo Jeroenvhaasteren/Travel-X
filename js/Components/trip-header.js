@@ -11,9 +11,7 @@ Vue.component('trip-header', {
             </div>
             <div class="trip-info">
                 <div class="trip-details">
-                    <h1>{{trip.title}}</h1>
-                    <h5>{{trip.location}}</h5>
-                    <p><span class="capitalized">created by: </span>TripQuest team</p>
+                    <h1>{{trip.title}}<span class="sub-title"> / {{trip.location}}</span></h1>
                 </div>
                 <div>
                     <ul class="tabs">

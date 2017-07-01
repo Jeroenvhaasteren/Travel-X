@@ -1,9 +1,8 @@
-$appHeaderHeight: 230px;
+$appHeaderHeight: 130px;
 
 
 #appheader {
   height: $appHeaderHeight;
-  margin-left: $widthMainMenu;
   padding: 0 30px;
   display: flex;
 
@@ -33,8 +32,8 @@ $appHeaderHeight: 230px;
   .trip-image {
     padding: 15px;
     img {
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       border: 1px solid #ddd;
     }
@@ -46,8 +45,12 @@ $appHeaderHeight: 230px;
     .trip-details {
       flex-grow: 1;
       h1 {
-        font-size: 3.2rem;
+        font-size: 2.2rem;
         margin: 1.1rem 0 0.68rem 0;
+        .sub-title {
+          font-size: 1.5rem;
+          color: #666;
+        }
       }
       .capitalized {
         text-transform: capitalize;

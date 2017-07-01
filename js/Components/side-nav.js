@@ -9,14 +9,14 @@ Vue.component('side-nav', {
             <div class="menu-header">
                 <ul>
                     <li class="menu-item">
-                        Menu
+                       <span class="menu-title">Menu</span>
                     </li>
                 </ul>
             </div>
             <div class="menu-item-container">
                 <ul>
                     <li class="menu-item hover">
-                        My trips
+                        <span class="menu-title">My trips</span>
                     </li>
                     <li class="menu-item hover">
                         Barcelona 2017

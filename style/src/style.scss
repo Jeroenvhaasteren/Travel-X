@@ -15,6 +15,7 @@ $fithColorDark: darken($fithColor, 20%);
 $fithColorLight: lighten($fithColor, 20%);
 
 $widthMainMenu: 215px;
+$widthMainMenuFold: 80px;
 $paddingSize: 15px;
 $heightTools: 24px;
 $paperBorderRadius: 2px;
@@ -56,8 +57,15 @@ body {
 	font-family: nowayregular;
 }
 
-main {
-	margin-left: $widthMainMenu;
+#app {
+	display: flex;
+	.appspace {
+		flex: 1;
+	}
+}
+
+#appsSpace {
+	background-color: white;
 }
 
 .input-field.inline input, .input-field label, .chips .input {
