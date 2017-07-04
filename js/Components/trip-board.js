@@ -27,7 +27,6 @@ Vue.component('trip-board', {
                     <div class="trip-item-details" @click="openItem(item.id)">
                         <h3>{{item.title}}</h3>
                         <p>{{item.desc}}</p>
-                        <span v-for="tag in item.tags">{{tag.tag}}</span>
                     </div>
                 </article>
                 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
+    <link href="style/dist/materialize.css" rel="stylesheet" >
+    <link href="style/dist/style.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script src="js/main.js"></script>
+
+    <style>
+
+        .trip-item {
+            height: 400px;
+            width: 250px;
+            background-color: white;
+            margin: 30px;
+            cursor: pointer;
+        }
+
+        .trip-item .title {
+            margin-bottom: 0;
+        }
+
+        .trip-item .location {
+            color: #666;
+            margin-top: 0;
+        }
+
+        #SearchBar {
+            background: #ddd;
+        }
+
+        #SearchBar .bar .search-container #searchTags {
+            background-color: transparent;
+        }
+
+        #SearchBar .bar .tools {
+            padding: 16px 20px 14px 0px;
+        }
+
+        #SearchBar .bar .search-container {
+            padding: 7px 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <side-nav uid="1"></side-nav>
+    <div class="appspace">
+        <section id="SearchBar">
+            <div class="bar"><div class="search-container">
+                <div id="searchTags" class="chips chips-placeholder" data-index="0" data-initialized="true">
+                    <input class="input" placeholder="+Tag">
+                </div>
+            </div>
+                <div class="tools"><i title="Add an item" class="material-icons">add</i></div>
+            </div>
+        </section>
+        <trip-card></trip-card>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
+</script>
+
+<!-- Vue Files and Components -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/Components/side-nav.js"></script>
+<script src="js/Components/top-nav.js"></script>
+
+<script>
+    /** General Vue Instance to share Events and data between components **/
+    window.EventChannel = new Vue();
+
+    Vue.component('trip-card', {
+        data: function() {
+          return {
+              trip: {
+                  _id: "0",
+                  imageURL: "http://www.gowerlive.co.uk/sites/default/files/wormsHeadSurferPano_1.jpg",
+                  location: "Barcelona",
+                  title: "Discover Barcelona",
+                  startDate: "11-09-2019",
+                  endDate: "11-09-2029",
+                  tags: ['culture', 'musea', 'family']
+              }
+          }
+        },
+        template:`
+            <article class="trip-item z-depth-1" @click="openTrip">
+                <div class="trip-item-img" >
+                    <img :src="trip.imageURL">
+                </div>
+                <div class="trip-item-details">
+                    <h3 class="title">{{trip.title}}</h3>
+                    <p class="location">{{trip.location}}</p>
+                    <p class="date">{{trip.startDate}} - {{trip.endDate}}</p>
+                    <span class="tags" v-for="tag in trip.tags">{{tag}}</span>
+                </div>
+            </article>
+        `,
+        methods: {
+            openTrip: function() {
+                console.log(this.trip._id);
+            }
+        }
+    });
+
+    var root = new Vue({
+        el: '#app',
+        data: {
+            trips:[]
+        }
+    });
+
+
+    function ChangeTrip() {
+        root.currentTrip = {
+            from: "",
+            img: "https://s-media-cache-ak0.pinimg.com/originals/e6/2d/1c/e62d1c0dfe27934b38f27af697fd3d98.jpg",
+            location: "Spain, Ibiza",
+            till: "",
+            title: "Crazy Ibiza!!!"};
+
+        root.searchbar = {
+            recommendedTags: [{tag:'Bar'},{tag:'Club'},{tag:'Beach'},{tag:'Summer'},{tag:'Airbnb'},{tag:'Hotel'}]
+        };
+
+        root.board.items = [{
+                id: '0',
+                img:"https://www.beautifulpeopleibiza.com/en/wp-content/uploads/sites/5/2017/04/entradaDiscoteca.jpg",
+                title:"Beautiful People Ibiza boat party | Ibiza's leading boat party",
+                desc:"We have been doing boat parties in Ibiza for about 10 years. Our goal is simple: that you have the best day of your holidays.",
+                comments: '0',
+                financials: false,
+                likes: 1,
+                liked: true,
+                tags: [{tag:'Boat'},{tag:'Water'},{tag:'Drinks'},{tag:'Music'},{tag:'Summer'},{tag:'18+'}],
+                url:"https://www.beautifulpeopleibiza.com/en/"
+            },
+            {
+                id: '1',
+                img:"http://www.swat-entertainment.com/wp-content/uploads/2015/05/pacha-ibiza.jpg",
+                title:"PACHA Ibiza.",
+                desc:"Pacha Ibiza, Nightclub & Restaurant",
+                comments: '0',
+                financials: false,
+                likes: 0,
+                liked: false,
+                tags: [{tag:'Club'},{tag:'18+'},{tag:'Beach'},{tag:'Summer'}],
+                url:"http://www.pachaibiza.com/es/"
+            },
+            {
+                id: '2',
+                img:"https://t-ec.bstatic.com/images/hotel/max300/755/75522202.jpg",
+                title:"★★★★ Hotel Bossa Flow, Playa d'en Bossa, Spain",
+                desc:" US$248 Situated only 250 metres from Playa d’en Bossa beach and only 3 km from Ibiza town centre, this hotel resort is the perfect place to enjoy a tranquil...",
+                comments: '0',
+                financials: false,
+                likes: 3,
+                liked: true,
+                tags: [{tag:'Hotel'},{tag:'SwimmingPool'}],
+                url:"http://booking.com/00258dc133ad5"
+            }];
+    }
+
+    function escapeRegExp(str) {
+        return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    }
+
+    function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+</script>
+
+</body>
+</html>

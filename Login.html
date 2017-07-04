@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
+    <link href="style/dist/materialize.css" rel="stylesheet" >
+    <link href="style/dist/style.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script src="js/main.js"></script>
+
+    <style>
+        .row .col {
+            float: left;
+            box-sizing: border-box;
+            padding: 0 .75rem;
+            min-height: 1px;
+        }
+
+        #app {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: url("https://static.pexels.com/photos/196464/pexels-photo-196464.jpeg") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .appspace {
+            max-width: 700px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        #logo {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            width: 250px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="app">
+
+    <img id="logo" src="rescources/trip_quest_logo.png">
+
+    <div class="appspace">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input v-model="user.username" id="email" type="email" class="validate">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input v-model="user.firstname" id="first_name" type="text" class="validate">
+                        <label for="first_name" class="active">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input v-model="user.lastname" id="last_name" type="text">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input v-model="user.password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input v-model="passwordValidation" id="passwordVal" type="password" class="validate">
+                        <label for="password">Password validation</label>
+                    </div>
+                </div>
+            </form>
+            <div style="text-align: right; padding: 0 30px;">
+                <a class="waves-effect waves-light btn-flat">I have an account</a>
+                <a class="waves-effect waves-light btn">Create user</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
+</script>
+
+<!-- Vue Files and Components -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<script>
+    /** General Vue Instance to share Events and data between components **/
+    window.EventChannel = new Vue();
+
+    var root = new Vue({
+        el: "#app",
+        data: {
+            user: {
+                username:"",
+                firstname:"",
+                lastname:"",
+                password:""
+            },
+            passwordValidation: ""
+        }
+    });
+
+</script>
+
+</body>
+</html>

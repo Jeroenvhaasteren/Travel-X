@@ -15,6 +15,9 @@ aside#mainMenu {
     .menu-title {
       color: white;
     }
+    li {
+      padding: $paddingSize;
+    }
   }
 
   .menu-item-container {
@@ -33,12 +36,19 @@ aside#mainMenu {
     li.menu-item {
       position: relative;
       width: $widthMainMenu;
-      padding: $paddingSize;
       text-align: center;
       cursor: pointer;
       color: #666666;
       &.hover:hover {
         background-color: $secondaryColorDark;
+      }
+      a {
+        color: inherit;
+        padding: $paddingSize;
+        display: block;
+        &:hover {
+          color: inherit;
+        }
       }
     }
   }
