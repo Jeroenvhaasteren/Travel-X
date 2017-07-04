@@ -21,14 +21,6 @@ Vue.component('trip-board', {
             
             <div class="board">
                 <article class="trip-item z-depth-1" v-for="(item, index) in m_Items">
-                    <div class="trip-item-icons">
-                        <ul>
-                            <li><a><i class="material-icons">share</i></a></li>
-                            <li :class=" item.financials ? null : 'disabled'" @click="openFinancials(item.id)"><a><i class="material-icons">euro_symbol</i></a></li>
-                            <li :class=" item.comments < 1 ? 'disabled' : null" @click="openItem(item.id)"><a><i class="material-icons">comment</i></a></li>
-                            <li @click="toggleLiked(index)"><a><i class="material-icons" v-if="item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i><span class="icon-badge" v-if="item.likes > 0">{{item.likes}}</span></a></li>
-                        </ul>
-                    </div>
                     <div class="trip-item-img" @click="openItem(item.id)">
                         <img :src="item.img">
                     </div>
@@ -38,6 +30,7 @@ Vue.component('trip-board', {
                         <span v-for="tag in item.tags">{{tag.tag}}</span>
                     </div>
                 </article>
+                
            </div>
         </div>
     `,
@@ -110,6 +103,25 @@ Vue.component('trip-board', {
         });
     }
 });
+
+// <article class="trip-item z-depth-1" v-for="(item, index) in m_Items">
+//     <div class="trip-item-icons">
+//     <ul>
+//     <li><a><i class="material-icons">share</i></a></li>
+//     <li :class=" item.financials ? null : 'disabled'" @click="openFinancials(item.id)"><a><i class="material-icons">euro_symbol</i></a></li>
+//     <li :class=" item.comments < 1 ? 'disabled' : null" @click="openItem(item.id)"><a><i class="material-icons">comment</i></a></li>
+//     <li @click="toggleLiked(index)"><a><i class="material-icons" v-if="item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i><span class="icon-badge" v-if="item.likes > 0">{{item.likes}}</span></a></li>
+// </ul>
+// </div>
+// <div class="trip-item-img" @click="openItem(item.id)">
+//     <img :src="item.img">
+//     </div>
+//     <div class="trip-item-details" @click="openItem(item.id)">
+//     <h3>{{item.title}}</h3>
+// <p>{{item.desc}}</p>
+// <span v-for="tag in item.tags">{{tag.tag}}</span>
+// </div>
+// </article>
 
 function searchFilter(Operator) {
     var fnFilter;

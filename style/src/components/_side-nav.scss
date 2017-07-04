@@ -12,6 +12,9 @@ aside#mainMenu {
   .menu-header {
     height: 60px;
     background-color: #d37e1c;
+    .menu-title {
+      color: white;
+    }
   }
 
   .menu-item-container {
