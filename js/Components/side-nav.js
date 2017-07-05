@@ -40,7 +40,7 @@ Vue.component('side-nav', {
                         <a>My Profile</a>
                     </li>
                     <li class="menu-item hover">
-                        <a>Log out</a>
+                        <a href="Login.html">Log out</a>
                     </li>
                 </ul>
             </div>

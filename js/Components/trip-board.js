@@ -13,8 +13,15 @@ Vue.component('trip-board', {
                       <input id="newUrl" v-model="newUrl" type="text" class="validate">
                       <label for="newUrl">Url</label>
                     </div>
-                    <div class="btn-container"><a class="waves-effect waves-light btn" @click="addNewItem">Add</a></div>
-                    <div class="btn-container"><a class="waves-effect waves-light grey lighten-2 btn" @click="modalNewItem = false">Cancel</a></div>
+                    <div class="input-field"  style="min-width: auto; max-width: 300px;">
+                      <input id="newPrice" type="text" class="validate">
+                      <label for="newPrice">Price</label>
+                    </div>
+                    <div class="btn-container" style="text-align: right">
+                        <a class="waves-effect waves-light btn-flat" @click="modalNewItem = false">Cancel</a>
+                        <a class="waves-effect waves-light btn" @click="addNewItem">Manual</a>
+                        <a class="waves-effect waves-light btn" @click="addNewItem">Add with url</a>
+                    </div>
                 </div>
                 <div v-show="modalNewItem" class="comp-overlay" @click="modalNewItem = false"></div>
             </div>

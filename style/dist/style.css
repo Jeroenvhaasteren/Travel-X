@@ -315,7 +315,6 @@ aside#mainMenu ul li.menu-item a:hover {
 
 /* line 14, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer {
-  display: flex;
   position: absolute;
   z-index: 640;
   background: white;

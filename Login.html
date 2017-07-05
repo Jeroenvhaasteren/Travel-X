@@ -60,7 +60,8 @@
 
     <img id="logo" src="rescources/trip_quest_logo.png">
 
-    <div class="appspace">
+    <div class="appspace" style="display: none;">
+        <h5 style="margin-left: 15px;">Registration</h5>
         <div class="row">
             <form class="col s12">
                 <div class="row">
@@ -94,9 +95,34 @@
                 <a class="waves-effect waves-light btn-flat">I have an account</a>
                 <a class="waves-effect waves-light btn">Create user</a>
             </div>
-
         </div>
     </div>
+
+    <div class="appspace" style="display: block; max-width: 500px;">
+        <h5 style="margin-left: 15px;">Login</h5>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input v-model="user.username" id="Lemail" type="email" class="validate">
+                        <label for="Lemail" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input v-model="user.password" id="Lpassword" type="password" class="validate">
+                        <label for="Lpassword">Password</label>
+                    </div>
+                </div>
+            </form>
+            <div style="text-align: right; padding: 0 30px;">
+                <a class="waves-effect waves-light btn-flat">I don't have an account</a>
+                <a class="waves-effect waves-light btn" href="MyTrips.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    
 </div>
 
 <script>
