@@ -58,8 +58,9 @@ Vue.component('trip-item', {
                     <div class="tools" title="Share">
                         <i class="material-icons">share</i>
                     </div>
-                    <div class="tools" title="Add payment">
-                        <i class="material-icons">attach_money</i>
+                    <div class="tools" title="Visible">
+                        <i class="material-icons">visibility</i>
+                        <i class="material-icons" style="display: none;">visibility_off</i>
                     </div>
                 </div>
                 <div style="display: flex;">
