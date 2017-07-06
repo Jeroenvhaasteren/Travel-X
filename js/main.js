@@ -26,7 +26,7 @@ function  getActiveTrip() {
     return tripId;
 }
 
-var tripQuestEndPoints = {
+var tripQuestEndPoints1 = {
     post: {
         newRegistration: "http://localhost:6600/projectx/functions/create/user",
         loginUser: "http://localhost:6600/projectx/functions/login",
@@ -45,7 +45,7 @@ var tripQuestEndPoints = {
     }
 };
 
-var tripQuestEndPoints1 = {
+var tripQuestEndPoints = {
     post: {
         newRegistration: "http://34.227.7.188:6600/projectx/functions/create/user",
         loginUser: "http://34.227.7.188:6600/projectx/functions/login",
