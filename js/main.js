@@ -26,6 +26,10 @@ function  getSessionToken() {
     return trip;
 }
 
+var endPoints = {
+    newRegistration: "http://localhost:6600/projectx/functions/create/user",
+    loginUser: "http://localhost:6600/projectx/functions/login"
+}
 
 
 

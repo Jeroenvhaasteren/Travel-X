@@ -18,6 +18,7 @@
 
     <!-- Custom javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
 
     <style>
         .row .col {
@@ -56,7 +57,7 @@
 
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
 
     <img id="logo" src="rescources/trip_quest_logo.png">
 
@@ -72,28 +73,29 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input v-model="newUser.firstname" id="first_name" type="text" class="validate">
+                        <input v-model="newUser.name" id="first_name" type="text" class="validate">
                         <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input v-model="newUser.lastname" id="last_name" type="text">
+                        <input v-model="newUser.lastName" id="last_name" type="text">
                         <label for="last_name">Last Name</label>
                     </div>
                 </div>
+                <div class="row" v-show="error" style="color: red;">The passwords do not match</div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input v-model="newUser.password" id="password" type="password" class="validate">
+                        <input v-model="newUser.password" id="password" type="password" class="validate" @change="validate">
                         <label for="password">Password</label>
                     </div>
                     <div class="input-field col s6">
-                        <input v-model="passwordValidation" id="passwordVal" type="password" class="validate">
+                        <input v-model="passwordValidation" id="passwordVal" type="password" class="validate" @change="validate">
                         <label for="password">Password validation</label>
                     </div>
                 </div>
             </form>
             <div style="text-align: right; padding: 0 30px;">
                 <a class="waves-effect waves-light btn-flat" @click="login = !login">I have an account</a>
-                <a class="waves-effect waves-light btn" @click="newRegistration()">Create user</a>
+                <a class="waves-effect waves-light btn" @click="newRegistration()" :disabled="error">Create user</a>
             </div>
         </div>
     </div>
@@ -141,34 +143,65 @@
     var root = new Vue({
         el: "#app",
         data: {
+            error: false,
             login: true,
             newUser: {
-                username:"",
-                firstname:"",
-                lastname:"",
-                password:""
+                "username":"",
+                "name":"",
+                "lastName":"",
+                "password":""
             },
             passwordValidation: "",
             loginUser: {
-                username: "",
-                password: ""
+                "username": "",
+                "password": ""
             },
             sessionID: "1234"
         },
         methods: {
             loginBtn: function() {
-                console.log("login user");
-                console.log(this.loginUser);
-                this.goToApp();
+                console.log("try login user");
+                var self = this;
+                $.ajax({
+                    url: endPoints.loginUser,
+                    type:"POST",
+                    data: JSON.stringify(self.loginUser),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log("User login successFull");
+                        self.sessionToken = data.success.id;
+                        self.goToApp();
+                    }
+                });
             },
             newRegistration: function() {
-                console.log("new registration");
-                console.log(this.newUser);
-                this.goToApp();
+                console.log("try new registration");
+                var self = this;
+                $.ajax({
+                    url: endPoints.newRegistration,
+                    type:"POST",
+                    data: JSON.stringify(self.newUser),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log('New user created');
+                        self.sessionID = data.success.id;
+                        self.goToApp();
+                    }
+                });
             },
             goToApp: function() {
                 setSessionToken(this.sessionID);
                 window.location = "myTrips.html";
+            },
+            validate: function() {
+                if(this.newUser.password !== this.passwordValidation && this.passwordValidation.length > 0) {
+                    this.error = true;
+                }
+                else {
+                    this.error = false;
+                }
             }
         }
     });
