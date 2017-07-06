@@ -156,22 +156,24 @@
                 "username": "",
                 "password": ""
             },
-            sessionID: "1234"
+            sessionID: ""
         },
         methods: {
             loginBtn: function() {
                 console.log("try login user");
                 var self = this;
                 $.ajax({
-                    url: endPoints.loginUser,
+                    url: tripQuestEndPoints.post.loginUser,
                     type:"POST",
                     data: JSON.stringify(self.loginUser),
                     contentType:"application/json; charset=utf-8",
                     dataType:"json",
                     success: function(data){
-                        console.log("User login successFull");
-                        self.sessionToken = data.success.id;
-                        self.goToApp();
+                        console.log(data);
+                        self.sessionID = data.success.id;
+                        if(self.sessionID.length > 0) {
+                            self.goToApp();
+                        }
                     }
                 });
             },
@@ -179,15 +181,17 @@
                 console.log("try new registration");
                 var self = this;
                 $.ajax({
-                    url: endPoints.newRegistration,
+                    url: tripQuestEndPoints.post.newRegistration,
                     type:"POST",
                     data: JSON.stringify(self.newUser),
                     contentType:"application/json; charset=utf-8",
                     dataType:"json",
                     success: function(data){
-                        console.log('New user created');
+                        console.log(data);
                         self.sessionID = data.success.id;
-                        self.goToApp();
+                        if(self.sessionID.length > 0) {
+                            self.goToApp();
+                        }
                     }
                 });
             },

@@ -7,7 +7,7 @@ Vue.component('trip-header', {
         <!-- trip-header -->
         <section id="appheader">
             <div class="trip-image">
-                <img :src="trip.img">
+                <img :src="trip.imageURL">
             </div>
             <div class="trip-info">
                 <div class="trip-details">
@@ -24,12 +24,25 @@ Vue.component('trip-header', {
         </section>
     `,
     mounted: function() {
-        var backgroundUrl = "url('" + this.trip.img + "')";
-        $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+        if(this.trip.imageURL.length > 0) {
+            var backgroundUrl = "url('" + this.trip.imageURL + "')";
+            $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+        }
         var self = this;
         EventChannel.$on('updateTrip', function(trip) {
-            var backgroundUrl = "url('" + self.trip.img + "')";
-            $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+            if(this.trip.imageURL.length > 0) {
+                console.log("update Images");
+                var backgroundUrl = "url('" + self.trip.imageURL + "')";
+                $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+            }
         });
+    },
+    watch: {
+        trip: function() {
+            if(this.trip.imageURL.length > 0) {
+                var backgroundUrl = "url('" + this.trip.imageURL + "')";
+                $('<style>#appheader:before{background-image:' + backgroundUrl + '}</style>').appendTo('head');
+            }
+        }
     }
 });

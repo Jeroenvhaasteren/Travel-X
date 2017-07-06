@@ -21,17 +21,17 @@ Vue.component('trip-info', {
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input type="date" id="formDate" v-model="form.from" class="datepicker">
+                            <input type="date" id="formDate" class="datepicker">
                             <label for="formDate">From</label>
                         </div>
                         <div class="input-field col s6">
-                            <input type="date" id="tillDate" v-model="form.till" class="datepicker">
+                            <input type="date" id="tillDate" class="datepicker">
                             <label for="tillDate">Till</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input type="text" id="Img" v-model="form.img" class="validate">
+                            <input type="text" id="Img" v-model="form.imageURL" class="validate">
                             <label for="Img">Img url</label>
                         </div>
                     </div>
@@ -59,10 +59,18 @@ Vue.component('trip-info', {
     watch: {
         trip: function() {
             this.form = this.trip;
+            var self = this;
+            $( document ).ready(function() {
+                $("#formDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
+                $("#tillDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
+            });
         }
     },
     created: function() {
+        var self = this;
         $( document ).ready(function() {
+            $("#formDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
+            $("#tillDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
             $('#TripChips').material_chip({
                 secondaryPlaceholder: 'Type to enter tags',
                 placeholder: ' + Tag',
@@ -76,7 +84,7 @@ Vue.component('trip-info', {
                     'Food': null,
                     'Wine': null,
                 },
-                data: [{tag: 'Active'},{tag: 'Beach'},{tag: 'Chill'},{tag:'Car hire'}]
+                data: []
             });
         });
     },

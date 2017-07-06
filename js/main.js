@@ -18,18 +18,25 @@ function  getSessionToken() {
 }
 
 function setActiveTrip(trip) {
-    sessionStorage.setItem('activeTrip', trip);
+    sessionStorage.setItem('activeTripId', trip.id);
 }
 
-function  getSessionToken() {
-    var trip = sessionStorage.getItem('activeTrip');
-    return trip;
+function  getActiveTrip() {
+    var tripId = sessionStorage.getItem('activeTripId');
+    return tripId;
 }
 
-var endPoints = {
-    newRegistration: "http://localhost:6600/projectx/functions/create/user",
-    loginUser: "http://localhost:6600/projectx/functions/login"
-}
+var tripQuestEndPoints = {
+    post: {
+        newRegistration: "http://localhost:6600/projectx/functions/create/user",
+        loginUser: "http://localhost:6600/projectx/functions/login"
+    },
+    get: {
+        trips: "http://localhost:6600/projectx/functions/get/trips/",
+        trip: "http://localhost:6600/projectx/functions/get/trip/",
+        items: "http://localhost:6600/projectx/functions/get/items/"
+    }
+};
 
 
 

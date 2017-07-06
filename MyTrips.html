@@ -15,11 +15,18 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 
     <!-- Custom javascript -->
     <script src="js/main.js"></script>
 
     <style>
+
+        .board {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+        }
 
         .trip-item {
             height: 400px;
@@ -70,7 +77,9 @@
                 <div class="tools"><i title="Add an item" class="material-icons">add</i></div>
             </div>
         </section>
-        <trip-card v-for="trip in trips" :tripinfo="trip"></trip-card>
+        <div class="board">
+            <trip-card v-for="onetrip in trips" :tripinfo="onetrip"></trip-card>
+        </div>
     </div>
 </div>
 
@@ -90,27 +99,34 @@
     window.EventChannel = new Vue();
 
     Vue.component('trip-card', {
-        prop: ['tripinfo'],
+        props: ['tripinfo'],
         data: function() {
           return {
+              startDate: "",
+              endDate:""
           }
         },
         template:`
             <article class="trip-item z-depth-1" @click="openTrip">
                 <div class="trip-item-img" >
-                    <img :src="trip.imageURL">
+                    <img :src="tripinfo.imageURL">
                 </div>
                 <div class="trip-item-details">
-                    <h3 class="title">{{trip.title}}</h3>
-                    <p class="location">{{trip.location}}</p>
-                    <p class="date">{{trip.startDate}} - {{trip.endDate}}</p>
-                    <span class="tags" v-for="tag in trip.tags">{{tag}}</span>
+                    <h3 class="title">{{tripinfo.title}}</h3>
+                    <p class="location">{{tripinfo.location}}</p>
+                    <p class="date">{{startDate}}</p>
+                    <p class="date">{{endDate}}</p>
                 </div>
             </article>
         `,
+        created: function() {
+            this.startDate = window.moment(this.tripinfo.startDate).format("dddd, MMMM Do YYYY");
+            this.endDate = window.moment(this.tripinfo.endDate).format("dddd, MMMM Do YYYY");
+        },
         methods: {
             openTrip: function() {
-                console.log(this.trip._id);
+                console.log(this.tripinfo);
+                EventChannel.$emit('openTrip',this.tripinfo);
             }
         }
     });
@@ -118,19 +134,27 @@
     var root = new Vue({
         el: '#app',
         data: {
-            trips:[{
-                _id: "0",
-                imageURL: "http://www.gowerlive.co.uk/sites/default/files/wormsHeadSurferPano_1.jpg",
-                location: "Barcelona",
-                title: "Discover Barcelona",
-                startDate: "11-09-2019",
-                endDate: "11-09-2029",
-                tags: ['culture', 'musea', 'family']
-            }],
+            trips:[],
             sessionToken: ""
         },
         mounted: function() {
             this.sessionToken = getSessionToken();
+            this.getTrips();
+            EventChannel.$on('openTrip', function(trip) {
+                console.log(trip);
+                setActiveTrip(trip);
+                window.location = "myTrip.html";
+            });
+        },
+        methods: {
+          getTrips: function() {
+              var self = this;
+              var url = tripQuestEndPoints.get.trips + this.sessionToken;
+              $.get(url, function(data) {
+                  console.log(data);
+                  self.trips = data.success.objects;
+              });
+          }
         }
     });
 
