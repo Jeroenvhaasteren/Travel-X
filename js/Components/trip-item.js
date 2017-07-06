@@ -48,7 +48,7 @@ Vue.component('trip-item', {
                         </div>
                     </div>
                 </div>
-                <div class="toolbar">
+                <!--<div class="toolbar">
                     <div class="tools" title="Likes">
                         {{m_Item.likes}} <i class="material-icons" v-if="m_Item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i>
                     </div>
@@ -61,6 +61,18 @@ Vue.component('trip-item', {
                     <div class="tools" title="Visible">
                         <i class="material-icons">visibility</i>
                         <i class="material-icons" style="display: none;">visibility_off</i>
+                    </div>
+                </div>-->
+                <div style="display: flex; margin: 15px 0;">
+                    <div style="flex: 1; padding-left: 15px;">
+                        <div class="switch">
+                            <label class='active'>
+                                Hidden
+                                <input type="checkbox" v-model="m_Item.visible">
+                                <span class="lever"></span>
+                                Visible
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div style="display: flex;">
@@ -92,18 +104,6 @@ Vue.component('trip-item', {
                     </div>
                 </div>
                 <div style="display: flex;">
-                    <div style="flex: 1; padding-left: 15px;">
-                        <div class="switch">
-                            <label class='active'>
-                                Single day
-                                <input type="checkbox" v-model="m_Item.multipleDays">
-                                <span class="lever"></span>
-                                Multiple days
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex;">
                     <div style="flex: 1; padding-left: 15px; padding-top: 10px;">
                         Tags:
                         <div id="itemDetailsTags" class="chips chips-autocomplete"></div>
@@ -118,7 +118,8 @@ Vue.component('trip-item', {
                     </div>
                 </div>
                 <div class="MapsContainer">
-                    <iframe style="width:100%; height:100%; border:0" frameborder="0" :src="googleMapsSrc" allowfullscreen></iframe>
+                    <a class="waves-effect waves-light btn-flat" @click="cancel">Cancel</a>
+                    <a class="waves-effect waves-light btn" @click="saveItem">Save</a>
                 </div>
             </div>
         </div>
@@ -175,6 +176,12 @@ Vue.component('trip-item', {
             var today = dd+'/'+mm+'/'+yy;
             this.m_Messages.push({message:this.m_NewMessage, date: today })
             this.m_NewMessage = '';
+        },
+        cancel: function() {
+            EventChannel.$emit('closeDetails');
+        },
+        saveItem: function() {
+            EventChannel.$emit('saveItem', this.m_Item);
         }
     }
 });

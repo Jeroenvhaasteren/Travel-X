@@ -169,9 +169,6 @@
                         }
                     });
                 });
-
-
-
                 this.board.items.push(newItem);
             }
         },
@@ -186,6 +183,13 @@
             })
             EventChannel.$on('updateTrip', function(trip) {
                 self.currentTrip = trip;
+            });
+            EventChannel.$on('closeDetails', function() {
+                console.log('close');
+                self.itemDetails = false;
+            });
+            EventChannel.$on('saveItem', function(trip) {
+                console.log(trip);
             });
         }
     });

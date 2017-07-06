@@ -70,7 +70,7 @@
                 <div class="tools"><i title="Add an item" class="material-icons">add</i></div>
             </div>
         </section>
-        <trip-card></trip-card>
+        <trip-card v-for="trip in trips" :tripinfo="trip"></trip-card>
     </div>
 </div>
 
@@ -90,17 +90,9 @@
     window.EventChannel = new Vue();
 
     Vue.component('trip-card', {
+        prop: ['tripinfo'],
         data: function() {
           return {
-              trip: {
-                  _id: "0",
-                  imageURL: "http://www.gowerlive.co.uk/sites/default/files/wormsHeadSurferPano_1.jpg",
-                  location: "Barcelona",
-                  title: "Discover Barcelona",
-                  startDate: "11-09-2019",
-                  endDate: "11-09-2029",
-                  tags: ['culture', 'musea', 'family']
-              }
           }
         },
         template:`
@@ -126,7 +118,19 @@
     var root = new Vue({
         el: '#app',
         data: {
-            trips:[]
+            trips:[{
+                _id: "0",
+                imageURL: "http://www.gowerlive.co.uk/sites/default/files/wormsHeadSurferPano_1.jpg",
+                location: "Barcelona",
+                title: "Discover Barcelona",
+                startDate: "11-09-2019",
+                endDate: "11-09-2029",
+                tags: ['culture', 'musea', 'family']
+            }],
+            sessionToken: ""
+        },
+        mounted: function() {
+            this.sessionToken = getSessionToken();
         }
     });
 

@@ -578,11 +578,8 @@ aside#mainMenu ul li.menu-item a:hover {
 /* line 139, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
 #trip-item .details .MapsContainer {
   width: 100%;
-}
-
-/* line 141, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
-#trip-item .details .MapsContainer img {
-  width: 100%;
+  padding: 15px;
+  text-align: right;
 }
 
 /* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
