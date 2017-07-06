@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>TripQuest</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="style/dist/style.css" rel="stylesheet" >
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="rescources/Noway-Regular-webfont/stylesheet.css" rel="stylesheet" >
+    <link href="style/dist/materialize.css" rel="stylesheet" >
+    <link href="style/dist/style.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="js/Components/top-nav.js"></script>
+
+    <style>
+        .row .col {
+            float: left;
+            box-sizing: border-box;
+            padding: 0 .75rem;
+            min-height: 1px;
+        }
+
+        #app {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: url("https://static.pexels.com/photos/196464/pexels-photo-196464.jpeg") center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .appspace {
+            max-width: 700px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        #logo {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            width: 250px;
+        }
+
+    </style>
 
 </head>
 <body>
-<div id="HomePage">
-	<top-nav-bar></top-nav-bar>
+<div id="app" v-cloak>
 
-	<header class="main-header">
-		<div class="background-container">
+    <img id="logo" src="rescources/trip_quest_logo.png">
 
-		</div>
-		<div class="content-container">
-			<div class="text-container">
-				<h1>
-					Start your trip now!
-				</h1>
-				<h6>
-					Using Tripquest you can plan your trip in a fun way with your family or friends
-				</h6>
-				<a class="btn primary">Start now!</a>
-			</div>
-		</div>
-	</header>
+    <div class="appspace"  style="max-width: 500px;">
+        <h5 style="margin-left: 15px;">Start</h5>
+        <div class="row">
+            <div style="text-align: right; padding: 0 30px;">
+                <a class="waves-effect waves-light btn" href="Login.html">go to App</a>
+            </div>
+        </div>
+    </div>
 
-	<section class="call-to-action">
-		<div class="col">
-			<h3>Where do you want to go?</h3>
-		</div>
-		<div class="col">
-			<input type="text" placeholder="Type a location or area">
-			<a class="btn">Start!</a>
-		</div>
-	</section>
-
+    
 </div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=733245323520980";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </body>
-
-<script>
-	/* VUE instance Script */
-    var app = new Vue({
-        el: '#HomePage',
-    })
-
-
-</script>
-
-
 </html>

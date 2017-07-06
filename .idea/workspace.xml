@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a531cd4-0db2-484d-906d-f241d597a0a5" name="Default" comment="Add Manual Category name Modal">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTrip.html" afterPath="$PROJECT_DIR$/MyTrip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTrips.html" afterPath="$PROJECT_DIR$/MyTrips.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Components/trip-info.js" afterPath="$PROJECT_DIR$/js/Components/trip-info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Components/trip-item.js" afterPath="$PROJECT_DIR$/js/Components/trip-item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyTrips.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyTrips.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTrips.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
@@ -51,6 +47,18 @@
                 <marker date="1499371450000" expanded="true" signature="3137:3584" ph="..." />
                 <marker date="1499371450000" expanded="true" signature="3181:3256" ph="..." />
                 <marker date="1499371450000" expanded="true" signature="3304:3561" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,7 +203,6 @@
         <option value="$PROJECT_DIR$/js/Components/help-login.js" />
         <option value="$PROJECT_DIR$/style/src/components/_help-login.scss" />
         <option value="$PROJECT_DIR$/style/src/pages/_index.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style/src/components/_top-nav.scss" />
         <option value="$PROJECT_DIR$/js/Components/top-nav.js" />
         <option value="$PROJECT_DIR$/style/src/components/trip-header.scss" />
@@ -224,6 +231,7 @@
         <option value="$PROJECT_DIR$/js/Components/trip-info.js" />
         <option value="$PROJECT_DIR$/js/Components/trip-item.js" />
         <option value="$PROJECT_DIR$/MyTrips.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -368,16 +376,16 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuario\Documents\GitHub\TripQuest" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="C:\Users\Usuario\Documents\Travel X\rescources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Documents\GitHub\TripQuest\fonts" />
       <recent name="C:\Users\Usuario\Documents\GitHub\TripQuest" />
       <recent name="C:\Users\Usuario\Documents\TripQuest\js\Components" />
       <recent name="$PROJECT_DIR$/rescources" />
+      <recent name="C:\Users\Usuario\Documents\Travel X\rescources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\Usuario\Documents\GitHub\TripQuest" />
       <recent name="C:\Users\Usuario\Documents\Travel X\rescources" />
     </key>
   </component>
@@ -498,12 +506,12 @@
       <workItem from="1499169542491" duration="12890000" />
       <workItem from="1499287171953" duration="6753000" />
       <workItem from="1499347180688" duration="953000" />
-      <workItem from="1499348336210" duration="20777000" />
+      <workItem from="1499348336210" duration="20986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162375000" />
+    <option name="totallyTimeSpent" value="162584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -700,13 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -995,6 +996,16 @@
             <marker date="1499371450000" expanded="true" signature="3137:3584" ph="..." />
             <marker date="1499371450000" expanded="true" signature="3181:3256" ph="..." />
             <marker date="1499371450000" expanded="true" signature="3304:3561" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
