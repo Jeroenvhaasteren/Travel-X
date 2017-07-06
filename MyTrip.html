@@ -194,6 +194,18 @@
                 });
             });
             EventChannel.$on('updateTrip', function(trip) {
+                var self = this;
+                $.ajax({
+                    url: tripQuestEndPoints.post.editTrip,
+                    type:"POST",
+                    data: JSON.stringify(trip),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log("Trip updated");
+                        console.log(data);
+                    }
+                });
                 self.currentTrip = trip;
             });
             EventChannel.$on('closeDetails', function() {

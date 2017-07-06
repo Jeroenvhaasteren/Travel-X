@@ -74,7 +74,7 @@
                     <input class="input" placeholder="Search">
                 </div>
             </div>
-                <div class="tools"><i title="Add an item" class="material-icons">add</i></div>
+                <div class="tools"><i title="Add an item" class="material-icons" @click="addNewTrip">add</i></div>
             </div>
         </section>
         <div class="board">
@@ -147,16 +147,48 @@
             });
         },
         methods: {
-          getTrips: function() {
+            getTrips: function() {
               var self = this;
               var url = tripQuestEndPoints.get.trips + this.sessionToken;
               $.get(url, function(data) {
                   console.log(data);
                   self.trips = data.success.objects;
               });
-          }
+            },
+            addNewTrip: function() {
+                var newTrip = defaultTrip;
+                newTrip.userId = this.sessionToken;
+                $.ajax({
+                    url: tripQuestEndPoints.post.newTrip,
+                    type:"POST",
+                    data: JSON.stringify(newTrip),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log("New trip created");
+                        console.log(data);
+                        var trip = {
+                            id: data.success.id
+                        };
+                        setActiveTrip(trip);
+                        window.location = "myTrip.html";
+                    }
+                });
+            }
         }
     });
+
+
+    var defaultTrip = {
+        "location": "",
+        "title": "My new trip",
+        "imageURL": "https://static.pexels.com/photos/196464/pexels-photo-196464.jpeg",
+        "tags": [],
+        "startDate": 0,
+        "endDate": 0,
+        "userId": "",
+        "clients":["client1@gmail.com", "roxanne@gmail.com"]
+    }
 
 
     function ChangeTrip() {

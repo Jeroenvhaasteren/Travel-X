@@ -21,12 +21,12 @@ Vue.component('trip-info', {
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input type="date" id="formDate" class="datepicker">
-                            <label for="formDate">From</label>
+                            <input type="date" id="StartDate" class="datepicker">
+                            <label for="StartDate">From</label>
                         </div>
                         <div class="input-field col s6">
-                            <input type="date" id="tillDate" class="datepicker">
-                            <label for="tillDate">Till</label>
+                            <input type="date" id="EndDate" class="datepicker">
+                            <label for="EndDate">Till</label>
                         </div>
                     </div>
                     <div class="row">
@@ -61,16 +61,16 @@ Vue.component('trip-info', {
             this.form = this.trip;
             var self = this;
             $( document ).ready(function() {
-                $("#formDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
-                $("#tillDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
+                $("#StartDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
+                $("#EndDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
             });
         }
     },
     created: function() {
         var self = this;
         $( document ).ready(function() {
-            $("#formDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
-            $("#tillDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
+            $("#StartDate").val(moment(self.form.startDate).format('D MMMM, YYYY'));
+            $("#EndDate").val(moment(self.form.endDate).format('D MMMM, YYYY'));
             $('#TripChips').material_chip({
                 secondaryPlaceholder: 'Type to enter tags',
                 placeholder: ' + Tag',
@@ -90,7 +90,10 @@ Vue.component('trip-info', {
     },
     methods: {
         saveTrip: function() {
-            window.EventChannel.$emit('updateTrip', this.form);
+            var trip = this.form
+            trip.startDate = moment($("#StartDate").val(), 'D MMMM, YYYY').unix() * 1000;
+            trip.endDate = moment($("#EndDate").val(), 'D MMMM, YYYY').unix() * 1000;
+            window.EventChannel.$emit('updateTrip', trip);
         }
     }
 });

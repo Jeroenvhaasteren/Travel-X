@@ -10,15 +10,15 @@ Vue.component('trip-item', {
                 <div class="message-field">
                     
                     <div style="width: 100%;" v-for="message in m_Messages">
-                        <div :class="message.hasOwnProperty('sender') ? 'message left z-depth-1' : 'message right z-depth-1'">
-                            <div class="title" v-show="message.hasOwnProperty('sender')">
-                                {{message.sender}}
+                        <div :class="message.userId != sessionId ? 'message left z-depth-1' : 'message right z-depth-1'">
+                            <div class="title" v-show="message.userId != sessionId">
+                                {{message.name}}
                             </div>
                             <div class="text">
                                 {{message.message}}
                             </div>
                             <div class="Stamp">
-                                {{message.date}}
+                                {{formatTime(message.time)}}
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,11 @@ Vue.component('trip-item', {
             m_Item: {},
             m_Messages: [],
             m_NewMessage: '',
+            sessionId: ''
         }
+    },
+    mounted: function() {
+        this.sessionId = getSessionToken();
     },
     watch: {
         item: function() {
@@ -161,6 +165,9 @@ Vue.component('trip-item', {
         }
     },
     methods: {
+        formatTime: function(time) {
+            return moment(time).format('HH:mm MM-DD-YYYY');
+        },
         getMessages: function() {
             var self = this;
             var url = tripQuestEndPoints.get.messages + this.m_Item.id;

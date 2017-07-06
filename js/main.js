@@ -26,13 +26,15 @@ function  getActiveTrip() {
     return tripId;
 }
 
-var tripQuestEndPoints1 = {
+var tripQuestEndPoints = {
     post: {
         newRegistration: "http://localhost:6600/projectx/functions/create/user",
         loginUser: "http://localhost:6600/projectx/functions/login",
         newItem: "http://localhost:6600/projectx/functions/create/item",
         editItem: "http://localhost:6600/projectx/functions/edit/item",
-        messages: "http://localhost:6600/projectx/functions/create/comment"
+        messages: "http://localhost:6600/projectx/functions/create/comment",
+        newTrip: "http://localhost:6600/projectx/functions/create/trip",
+        editTrip: "http://localhost:6600/projectx/functions/edit/trip"
     },
     get: {
         trips: "http://localhost:6600/projectx/functions/get/trips/",
@@ -43,13 +45,15 @@ var tripQuestEndPoints1 = {
     }
 };
 
-var tripQuestEndPoints = {
+var tripQuestEndPoints1 = {
     post: {
         newRegistration: "http://34.227.7.188:6600/projectx/functions/create/user",
         loginUser: "http://34.227.7.188:6600/projectx/functions/login",
         newItem: "http://34.227.7.188:6600/projectx/functions/create/item",
         editItem: "http://34.227.7.188:6600/projectx/functions/edit/item",
-        messages: "http://34.227.7.188:6600/projectx/functions/create/comment"
+        messages: "http://34.227.7.188:6600/projectx/functions/create/comment",
+        newTrip: "http://34.227.7.188:6600/projectx/functions/create/trip",
+        editTrip: "http://34.227.7.188:6600/projectx/functions/edit/trip"
 
     },
     get: {
