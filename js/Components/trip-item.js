@@ -162,21 +162,31 @@ Vue.component('trip-item', {
     },
     methods: {
         getMessages: function() {
-
+            var self = this;
+            var url = tripQuestEndPoints.get.messages + this.m_Item.id;
+            $.get(url, function(data) {
+                console.log(data);
+                self.m_Messages = data.success.objects;
+            });
         },
         addMessage: function() {
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth()+1; //January is 0!
-            var yy = today.getFullYear().toString().substring(2,4);
-            if(dd<10){
-                dd='0'+dd;
-            }
-            if(mm<10){
-                mm='0'+mm;
-            }
-            var today = dd+'/'+mm+'/'+yy;
-            this.m_Messages.push({message:this.m_NewMessage, date: today });
+            var newMessage = {
+                "userId": getSessionToken(),
+                "itemId": this.m_Item.id,
+                "message": this.m_NewMessage
+            };
+            var self = this;
+            $.ajax({
+                url: tripQuestEndPoints.post.messages,
+                type:"POST",
+                data: JSON.stringify(newMessage),
+                contentType:"application/json; charset=utf-8",
+                dataType:"json",
+                success: function(data){
+                    console.log(data);
+                    self.getMessages();
+                }
+            });
             this.m_NewMessage = '';
         },
         cancel: function() {
