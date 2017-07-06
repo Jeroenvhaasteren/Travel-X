@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a531cd4-0db2-484d-906d-f241d597a0a5" name="Default" comment="Add Manual Category name Modal">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTrip.html" afterPath="$PROJECT_DIR$/MyTrip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Components/trip-item.js" afterPath="$PROJECT_DIR$/js/Components/trip-item.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyTrip.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyTrip.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyTrip.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="141">
@@ -83,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+            <state relative-caret-position="165">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,9 +217,9 @@
         <option value="$PROJECT_DIR$/style/src/components/_trip-board.scss" />
         <option value="$PROJECT_DIR$/js/Components/trip-board.js" />
         <option value="$PROJECT_DIR$/js/Components/trip-info.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/Components/trip-item.js" />
         <option value="$PROJECT_DIR$/MyTrip.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -496,12 +494,12 @@
       <workItem from="1499169542491" duration="12890000" />
       <workItem from="1499287171953" duration="6753000" />
       <workItem from="1499347180688" duration="953000" />
-      <workItem from="1499348336210" duration="17674000" />
+      <workItem from="1499348336210" duration="17713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159272000" />
+    <option name="totallyTimeSpent" value="159311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -918,6 +916,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2190">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTrip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="194" column="15" lean-forward="true" selection-start-line="194" selection-start-column="15" selection-end-line="194" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Components/trip-info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -941,24 +959,6 @@
             <marker date="1499366135000" expanded="false" signature="2078:2095" ph="..." />
             <marker date="1499366135000" expanded="true" signature="2096:2357" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Components/trip-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2190">
-          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,13 +987,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTrip.html">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="194" column="15" lean-forward="true" selection-start-line="194" selection-start-column="15" selection-end-line="194" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
