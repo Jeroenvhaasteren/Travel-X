@@ -1,6 +1,6 @@
 /* Functions */
 /*Components*/
-/* line 5, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 5, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBarContainer {
   position: absolute;
   top: 0;
@@ -8,7 +8,7 @@
   z-index: 100;
 }
 
-/* line 12, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar {
   height: 70px;
   background: rgba(0, 0, 0, 0.6);
@@ -21,53 +21,53 @@
   z-index: 150;
 }
 
-/* line 22, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .left-container {
   padding: 5px 15px;
 }
 
-/* line 24, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 24, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .left-container img {
   height: 100%;
 }
 
-/* line 28, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 28, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .middle-container {
   flex-grow: 1;
 }
 
-/* line 31, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 31, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .right-container {
   padding: 0 15px;
 }
 
-/* line 33, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 33, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-/* line 37, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 37, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li {
   list-style: none;
   padding: 0 10px;
   cursor: pointer;
 }
 
-/* line 41, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 41, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 44, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 44, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavBar .right-container ul li a {
   line-height: 70px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 54, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 54, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavDropDown {
   position: absolute;
   top: 0;
@@ -77,14 +77,14 @@
   background-color: white;
 }
 
-/* line 61, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 61, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont {
   margin-top: 70px;
   padding: 15px;
   position: relative;
 }
 
-/* line 65, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 65, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont .close-containter {
   position: absolute;
   top: 15px;
@@ -96,46 +96,46 @@
   border-radius: 50%;
 }
 
-/* line 74, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 74, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #TopNavDropDown .cont .close-containter:hover {
   background-color: #ddd;
 }
 
-/* line 81, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 81, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #LogInComp {
   display: flex;
 }
 
-/* line 83, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 83, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #LogInComp .info {
   flex: 0;
   display: none;
 }
 
 @media (min-width: 1080px) {
-  /* line 83, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+  /* line 83, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
   #LogInComp .info {
     flex: 1;
     display: block;
   }
 }
 
-/* line 91, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 91, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 #LogInComp .form {
   flex: 1;
 }
 
-/* line 96, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 96, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
 
-/* line 99, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_top-nav.scss */
+/* line 99, /Users/Jeroen/Documents/Travel-X/style/src/components/_top-nav.scss */
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
-/* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu {
   height: 100vh;
   min-width: 215px;
@@ -144,45 +144,45 @@ aside#mainMenu {
   background-color: #ededed;
 }
 
-/* line 8, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 8, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu.fold {
   min-width: 80px;
 }
 
-/* line 12, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu .menu-header {
   height: 60px;
   background-color: #d37e1c;
 }
 
-/* line 15, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 15, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu .menu-header .menu-title {
   color: white;
 }
 
-/* line 18, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 18, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu .menu-header li {
   padding: 15px;
 }
 
-/* line 23, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 23, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu .menu-item-container {
   flex: 1;
 }
 
-/* line 27, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu .profile-container {
   border-top: 1px solid #d4d4d4;
 }
 
-/* line 32, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 32, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu ul {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-/* line 36, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 36, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu ul li.menu-item {
   position: relative;
   width: 215px;
@@ -191,31 +191,31 @@ aside#mainMenu ul li.menu-item {
   color: #666666;
 }
 
-/* line 42, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 42, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu ul li.menu-item.hover:hover {
   background-color: #bababa;
 }
 
-/* line 45, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 45, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu ul li.menu-item a {
   color: inherit;
   padding: 15px;
   display: block;
 }
 
-/* line 49, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_side-nav.scss */
+/* line 49, /Users/Jeroen/Documents/Travel-X/style/src/components/_side-nav.scss */
 aside#mainMenu ul li.menu-item a:hover {
   color: inherit;
 }
 
-/* line 4, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 4, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader {
   height: 130px;
   padding: 0 30px;
   display: flex;
 }
 
-/* line 9, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 9, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader:before {
   content: "";
   position: fixed;
@@ -239,12 +239,12 @@ aside#mainMenu ul li.menu-item a:hover {
   overflow: hidden;
 }
 
-/* line 32, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 32, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-image {
   padding: 15px;
 }
 
-/* line 34, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 34, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-image img {
   width: 100px;
   height: 100px;
@@ -252,57 +252,57 @@ aside#mainMenu ul li.menu-item a:hover {
   border: 1px solid #ddd;
 }
 
-/* line 42, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 42, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info {
   display: flex;
   flex-direction: column;
 }
 
-/* line 45, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 45, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details {
   flex-grow: 1;
 }
 
-/* line 47, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 47, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details h1 {
   font-size: 2.2rem;
   margin: 1.1rem 0 0.68rem 0;
 }
 
-/* line 50, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 50, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details h1 .sub-title {
   font-size: 1.5rem;
   color: #666;
 }
 
-/* line 55, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 55, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info .trip-details .capitalized {
   text-transform: capitalize;
 }
 
-/* line 59, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-header.scss */
+/* line 59, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-header.scss */
 #appheader .trip-info .tabs .tab {
   cursor: pointer;
 }
 
-/* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-info.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-info.scss */
 #TripInfo {
   padding: 0 30px;
   padding-top: 15px;
 }
 
-/* line 4, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-info.scss */
+/* line 4, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-info.scss */
 #TripInfo .row .col.s6, #TripInfo .row .col.s12.padding {
   padding: 0 15px;
 }
 
-/* line 2, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 2, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .toolbar {
   display: flex;
   width: 100%;
 }
 
-/* line 5, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 5, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .toolbar .comp-overlay {
   position: absolute;
   z-index: 600;
@@ -313,7 +313,7 @@ aside#mainMenu ul li.menu-item a:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 14, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 14, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer {
   position: absolute;
   z-index: 640;
@@ -328,17 +328,17 @@ aside#mainMenu ul li.menu-item a:hover {
   padding: 30px;
 }
 
-/* line 27, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer .input-field {
   min-width: 500px;
 }
 
-/* line 30, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 30, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .toolbar .addNewContainer .btn-container {
   margin: 1rem;
 }
 
-/* line 36, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 36, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 #Board .board {
   padding: 0 30px;
   padding-top: 30px;
@@ -346,7 +346,7 @@ aside#mainMenu ul li.menu-item a:hover {
   flex-wrap: wrap;
 }
 
-/* line 44, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 44, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item {
   height: 500px;
   width: 250px;
@@ -355,27 +355,27 @@ aside#mainMenu ul li.menu-item a:hover {
   margin-bottom: 30px;
 }
 
-/* line 53, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 53, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-img {
   height: 250px;
   width: 100%;
 }
 
-/* line 56, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 56, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* line 62, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 62, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-details {
   flex-grow: 1;
   padding: 15px;
   overflow: hidden;
 }
 
-/* line 66, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 66, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-details h3 {
   margin-top: 0;
   font-size: 1.5rem;
@@ -384,13 +384,13 @@ aside#mainMenu ul li.menu-item a:hover {
   text-overflow: ellipsis;
 }
 
-/* line 73, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 73, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-details p {
   max-height: 110px;
   overflow: hidden;
 }
 
-/* line 78, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-board.scss */
+/* line 78, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-board.scss */
 .trip-item .trip-item-details .tags {
   background: #ddd;
   padding: 3px 5px;
@@ -398,7 +398,7 @@ aside#mainMenu ul li.menu-item a:hover {
   border-radius: 11px;
 }
 
-/* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 .overlay {
   height: 100%;
   width: 100%;
@@ -411,7 +411,7 @@ aside#mainMenu ul li.menu-item a:hover {
   left: 0;
 }
 
-/* line 12, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 .overlay-modal {
   width: 90%;
   max-width: 1250px;
@@ -429,20 +429,20 @@ aside#mainMenu ul li.menu-item a:hover {
   overflow: hidden;
 }
 
-/* line 30, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 30, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item {
   display: flex;
   height: 100%;
   width: 100%;
 }
 
-/* line 35, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 35, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .input-field label:not(.label-icon):not(.checkboxlbl) {
   font-size: 0.8rem;
   transform: translateY(-140%);
 }
 
-/* line 40, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 40, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments {
   background-color: #ededed;
   flex-grow: 1;
@@ -450,7 +450,7 @@ aside#mainMenu ul li.menu-item a:hover {
   position: relative;
 }
 
-/* line 45, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 45, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .type-container {
   position: absolute;
   bottom: 0;
@@ -465,7 +465,7 @@ aside#mainMenu ul li.menu-item a:hover {
   border-top: 1px solid #ddd;
 }
 
-/* line 57, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 57, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .type-container .input-container {
   flex-grow: 1;
   background-color: white;
@@ -473,7 +473,7 @@ aside#mainMenu ul li.menu-item a:hover {
   padding: 3px 5px;
 }
 
-/* line 62, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 62, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .type-container .input-container textarea {
   max-height: 120px;
   border: 0;
@@ -481,19 +481,19 @@ aside#mainMenu ul li.menu-item a:hover {
   outline: none;
 }
 
-/* line 69, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 69, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .type-container .send-container {
   margin-left: 20px;
 }
 
-/* line 74, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 74, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field {
   padding: 10px 10% 140px 10%;
   width: 100%;
   height: 100%;
 }
 
-/* line 79, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 79, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message {
   background-color: white;
   padding: 3px 5px;
@@ -502,13 +502,13 @@ aside#mainMenu ul li.menu-item a:hover {
   margin-top: 30px;
 }
 
-/* line 85, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 85, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message.left {
   border-radius: 0 5px 5px 5px;
   float: none !important;
 }
 
-/* line 89, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 89, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message.right {
   border-radius: 5px 0px 5px 5px;
   background-color: #FFDCC2;
@@ -516,12 +516,12 @@ aside#mainMenu ul li.menu-item a:hover {
   float: none !important;
 }
 
-/* line 95, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 95, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message .text {
   padding-right: 55px;
 }
 
-/* line 98, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 98, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .comments .message-field .message .Stamp {
   position: absolute;
   color: #999;
@@ -530,59 +530,59 @@ aside#mainMenu ul li.menu-item a:hover {
   bottom: 3px;
 }
 
-/* line 109, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 109, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details {
   width: 40%;
   min-width: 400px;
   overflow: auto;
 }
 
-/* line 113, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 113, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .title {
   display: flex;
   padding: 15px;
   padding-bottom: 0;
 }
 
-/* line 117, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 117, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .title img {
   width: 150px;
   height: 200px;
   object-fit: cover;
 }
 
-/* line 123, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 123, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .toolbar {
   background-color: #ededed;
   display: flex;
 }
 
-/* line 126, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 126, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .toolbar .tools {
   flex-grow: 1;
   text-align: center;
   cursor: pointer;
 }
 
-/* line 130, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 130, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .toolbar .tools i {
   height: 40px;
   line-height: 40px;
 }
 
-/* line 134, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 134, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .toolbar .tools:hover {
   background-color: #bababa;
 }
 
-/* line 139, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-item.scss */
+/* line 139, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-item.scss */
 #trip-item .details .MapsContainer {
   width: 100%;
   padding: 15px;
   text-align: right;
 }
 
-/* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials {
   margin: 0 30px;
   background-color: white;
@@ -591,7 +591,7 @@ aside#mainMenu ul li.menu-item a:hover {
   position: relative;
 }
 
-/* line 7, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 7, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials .tools {
   position: absolute;
   z-index: 10;
@@ -599,49 +599,49 @@ aside#mainMenu ul li.menu-item a:hover {
   right: 15px;
 }
 
-/* line 12, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 12, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials .tools ul {
   display: flex;
 }
 
-/* line 14, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 14, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials .tools ul li {
   list-style: none;
   margin-left: 10px;
 }
 
-/* line 17, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 17, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials .tools ul li a {
   cursor: pointer;
   color: #666;
 }
 
-/* line 20, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 20, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials .tools ul li a :hover {
   color: #333;
 }
 
-/* line 29, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 29, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials table tr.balance {
   border-bottom: 1px solid #efefef;
 }
 
-/* line 31, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 31, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials table tr.balance .positive {
   color: green;
 }
 
-/* line 34, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_trip-financials.scss */
+/* line 34, /Users/Jeroen/Documents/Travel-X/style/src/components/_trip-financials.scss */
 #Financials table tr.balance .negative {
   color: red;
 }
 
-/* line 1, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 1, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar {
   width: 100%;
 }
 
-/* line 3, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 3, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar {
   width: 100%;
   display: flex;
@@ -649,13 +649,13 @@ aside#mainMenu ul li.menu-item a:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 8, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 8, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .search-container {
   padding: 10px 20px;
   flex: 1;
 }
 
-/* line 11, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 11, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .search-container #searchTags {
   width: 100%;
   background-color: white;
@@ -664,28 +664,28 @@ aside#mainMenu ul li.menu-item a:hover {
   padding: 0 5px;
 }
 
-/* line 17, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 17, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .search-container #searchTags .chips .input {
   width: 250px !important;
 }
 
-/* line 22, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .tools {
   padding: 19px 20px 19px 0px;
 }
 
-/* line 24, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 24, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .tools i {
   color: #666;
   cursor: pointer;
 }
 
-/* line 27, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 27, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .bar .tools i:hover {
   color: #333;
 }
 
-/* line 34, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 34, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .sub-toolbar {
   display: flex;
   padding: 10px 20px;
@@ -693,7 +693,7 @@ aside#mainMenu ul li.menu-item a:hover {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 39, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 39, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .sub-toolbar .tag {
   cursor: pointer;
   background-color: #efefef;
@@ -712,7 +712,7 @@ aside#mainMenu ul li.menu-item a:hover {
   margin-right: 5px;
 }
 
-/* line 55, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/components/_search-bar.scss */
+/* line 55, /Users/Jeroen/Documents/Travel-X/style/src/components/_search-bar.scss */
 #SearchBar .sub-toolbar .tag:hover {
   background-color: #ea541d;
   color: #fff;
@@ -720,7 +720,7 @@ aside#mainMenu ul li.menu-item a:hover {
 
 /*Pages*/
 /*Variables*/
-/* line 8, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 8, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header {
   height: 75vh;
   width: 100%;
@@ -728,7 +728,7 @@ aside#mainMenu ul li.menu-item a:hover {
   position: relative;
 }
 
-/* line 13, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 13, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .background-container {
   position: absolute;
   top: 0;
@@ -739,7 +739,7 @@ aside#mainMenu ul li.menu-item a:hover {
   height: 100%;
 }
 
-/* line 22, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 22, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .content-container {
   position: absolute;
   top: 0;
@@ -752,7 +752,7 @@ aside#mainMenu ul li.menu-item a:hover {
   justify-content: center;
 }
 
-/* line 32, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 32, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .main-header .content-container .text-container {
   width: 100%;
   max-width: 1080px;
@@ -760,20 +760,25 @@ aside#mainMenu ul li.menu-item a:hover {
   text-align: center;
 }
 
-/* line 41, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 41, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .call-to-action {
   width: 100%;
   padding: 30px;
   display: flex;
 }
 
-/* line 45, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/pages/_index.scss */
+/* line 45, /Users/Jeroen/Documents/Travel-X/style/src/pages/_index.scss */
 #HomePage .call-to-action .col {
   text-align: center;
   flex: 1;
 }
 
-/* line 51, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 51, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
+[v-cloak] {
+  display: none;
+}
+
+/* line 53, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 body {
   background-color: white;
   color: #1d1d1b;
@@ -783,64 +788,64 @@ body {
   font-family: nowayregular;
 }
 
-/* line 60, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 62, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 #app {
   display: flex;
 }
 
-/* line 62, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 64, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 #app .appspace {
   flex: 1;
 }
 
-/* line 67, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 69, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 #appsSpace {
   background-color: white;
 }
 
-/* line 71, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 73, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .input-field.inline input, .input-field label, .chips .input {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.87);
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 77, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 79, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 thead {
   border-bottom-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 81, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 83, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .row .col {
   padding: 0;
 }
 
-/* line 85, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 87, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex {
   display: flex;
 }
 
-/* line 87, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 89, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .rowflex .col-50 {
   flex: 1;
 }
 
-/* line 93, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 95, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs {
   background-color: transparent;
 }
 
-/* line 97, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 99, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a {
   color: #ea541d;
 }
 
-/* line 101, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 103, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .indicator {
   background-color: #93320e;
 }
 
-/* line 105, C:/Users/Usuario/Documents/GitHub/TripQuest/style/src/style.scss */
+/* line 107, /Users/Jeroen/Documents/Travel-X/style/src/style.scss */
 .tabs .tab a:hover, .tabs .tab a.active {
   color: #93320e;
 }

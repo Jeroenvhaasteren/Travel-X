@@ -24,9 +24,6 @@ Vue.component('side-nav', {
                         <a href="mytrips.html">My trips</a>
                     </li>
                     <li class="menu-item hover">
-                       <a href="mytrip.html">Barcelona 2017</a>
-                    </li>
-                    <li class="menu-item hover">
                         <a href="#">Favorites</a>
                     </li>
                     <li class="menu-item hover">

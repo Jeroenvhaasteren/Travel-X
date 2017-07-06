@@ -36,14 +36,14 @@ Vue.component('trip-item', {
             </div>
             <div class="details">
                 <div class="title">
-                    <img :src="m_Item.img" class="z-depth-1">
+                    <img :src="m_Item.imageURL" class="z-depth-1">
                     <div style="width: 100%; padding: 0 10px">
                         <div class="input-field">
                             <input id="Title" type="text" v-model="m_Item.title">
                             <label for="Title" class='active'>Title</label>
                         </div>
                         <div class="input-field">
-                            <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;" v-model="m_Item.desc"></textarea>
+                            <textarea id="Desc" class="materialize-textarea" style="font-size: 12px; max-height: 68px;" v-model="m_Item.description"></textarea>
                             <label for="Desc" class='active'>Description</label>
                         </div>
                     </div>
@@ -126,17 +126,14 @@ Vue.component('trip-item', {
     `,
     data: function() {
         return {
-            m_Item: window.defaultItem,
+            m_Item: {},
             m_Messages: [],
             m_NewMessage: '',
-            googleMapsSrc: ''
         }
     },
     watch: {
         item: function() {
-            var googleApiKey = 'AIzaSyBzGjh7XPanj91d2gx8CybVSNzJ5UuVfHA';
-            this.m_Item = $.extend(window.defaultItem, this.item);
-            this.googleMapsSrc = 'https://www.google.com/maps/embed/v1/place?key=' + googleApiKey + '&q=place_id:' + this.m_Item.gPlaceID;
+            this.m_Item = this.item;
             this.getMessages();
             var self = this;
             $('#itemDetailsTags').material_chip({
@@ -156,11 +153,16 @@ Vue.component('trip-item', {
                     minLength: 1
                 }
             });
+            console.log(this.m_Item.startDate);
+            $( document ).ready(function() {
+                $("#StartDate").val(moment(self.m_Item.startDate).format('D MMMM, YYYY'));
+                $("#EndDate").val(moment(self.m_Item.endDate).format('D MMMM, YYYY'));
+            });
         }
     },
     methods: {
         getMessages: function() {
-            this.m_Messages = window.mockMessage[this.m_Item.id] ? window.mockMessage[this.m_Item.id].messages : [];
+
         },
         addMessage: function() {
             var today = new Date();
@@ -174,55 +176,16 @@ Vue.component('trip-item', {
                 mm='0'+mm;
             }
             var today = dd+'/'+mm+'/'+yy;
-            this.m_Messages.push({message:this.m_NewMessage, date: today })
+            this.m_Messages.push({message:this.m_NewMessage, date: today });
             this.m_NewMessage = '';
         },
         cancel: function() {
             EventChannel.$emit('closeDetails');
         },
         saveItem: function() {
+            this.m_Item.startDate = moment($("#StartDate").val(), 'D MMMM, YYYY').unix() * 1000;
+            this.m_Item.endDate = moment($("#EndDate").val(), 'D MMMM, YYYY').unix() * 1000;
             EventChannel.$emit('saveItem', this.m_Item);
         }
     }
 });
-
-var defaultItem = {
-    id: 0,
-    img: '',
-    title: '',
-    desc: '',
-    url:'',
-    comments: 0,
-    financials: false,
-    likes: 0,
-    liked: false,
-    price: '',
-    f_date: '',
-    multipleDays: true,
-    t_date: '',
-    time: '',
-    tags: [],
-    location: ''
-}
-
-var mockMessage = [
-    {messages:[
-        {sender:'Pedro',message:'I think this is awesome we could look for more things like this',date:'01/04/17'},
-        {sender:'Hilda',message:'Yes that looked so awesome i would love to do that',date:'02/04/17'},
-        {message:'I found a website with a lot of other websites where we can get more information about this',date:'02/04/17'}
-        ]},
-    {messages:[
-        {sender:'Carolina',message:'I think sleeping in a hostel could be alot of fun. I have never done it but we could try it, right???',date:'01/04/17'},
-        {sender:'Roxanne',message:'I did it last year was fun yeah. Most people there will probably surf too. I only think it is quite expensive compared to a complete place',date:'02/04/17'},
-        {message:'Oke lets keep this one in mind',date:'02/04/17'}
-    ]},
-    {messages:[
-        {sender:'Pedro',message:'Guys i found this article about amazing spots to surf. We could walk or hire i bike i will look for biking rental',date:'01/04/17'},
-        {sender:'Pedro',message:'Do you guys have any problems with hiring a scooter. It is really cheap and it might be nice to get a bit further',date:'02/04/17'},
-        {message:'No i am fine with that, We should do that men',date:'02/04/17'},
-        {sender:'Roxanne',message:'Yeah gas is also really cheap according to the internet',date:'02/04/17'}
-    ]},
-    {messages:[
-        {sender:'Hilda',message:'A friend told me this bar is Super!!!!!!!!! We should check it out. ',date:'01/04/17'},
-    ]}
-]

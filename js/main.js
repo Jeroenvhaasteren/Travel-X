@@ -29,12 +29,30 @@ function  getActiveTrip() {
 var tripQuestEndPoints = {
     post: {
         newRegistration: "http://localhost:6600/projectx/functions/create/user",
-        loginUser: "http://localhost:6600/projectx/functions/login"
+        loginUser: "http://localhost:6600/projectx/functions/login",
+        newItem: "http://localhost:6600/projectx/functions/create/item",
+        editItem: "http://localhost:6600/projectx/functions/edit/item"
     },
     get: {
         trips: "http://localhost:6600/projectx/functions/get/trips/",
         trip: "http://localhost:6600/projectx/functions/get/trip/",
-        items: "http://localhost:6600/projectx/functions/get/items/"
+        items: "http://localhost:6600/projectx/functions/get/items/",
+        item: "http://localhost:6600/projectx/functions/get/item/"
+    }
+};
+
+var tripQuestEndPoints1 = {
+    post: {
+        newRegistration: "http://34.227.7.188:6600/projectx/functions/create/user",
+        loginUser: "http://34.227.7.188:6600/projectx/functions/login",
+        newItem: "http://34.227.7.188:6600/projectx/functions/create/item",
+        editItem: "http://34.227.7.188:6600/projectx/functions/edit/item"
+    },
+    get: {
+        trips: "http://34.227.7.188:6600/projectx/functions/get/trips/",
+        trip: "http://34.227.7.188:6600/projectx/functions/get/trip/",
+        items: "http://34.227.7.188:6600/projectx/functions/get/items/",
+        item: "http://34.227.7.188:6600/projectx/functions/get/item/"
     }
 };
 

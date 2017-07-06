@@ -14,7 +14,7 @@ Vue.component('trip-board', {
                       <label for="newUrl">Url</label>
                     </div>
                     <div class="input-field"  style="min-width: auto; max-width: 300px;">
-                      <input id="newPrice" type="text" class="validate">
+                      <input id="newPrice" v-model="newPrice" type="text" class="validate">
                       <label for="newPrice">Price</label>
                     </div>
                     <div class="btn-container" style="text-align: right">
@@ -29,14 +29,14 @@ Vue.component('trip-board', {
             <div class="board">
                 <article class="trip-item z-depth-1" v-for="(item, index) in m_Items">
                     <div class="trip-item-img" @click="openItem(item.id)">
-                        <img :src="item.img">
+                        <img :src="item.imageURL">
                     </div>
                     <div class="trip-item-details" @click="openItem(item.id)">
                         <h3>{{item.title}}</h3>
-                        <p>{{item.desc}}</p>
+                        <p style="flex: 1; max-height: 90px;">{{item.description}}</p>
+                        <p style="text-align: right;">€ {{item.price}},-</p>
                     </div>
                 </article>
-                
            </div>
         </div>
     `,
@@ -44,8 +44,9 @@ Vue.component('trip-board', {
         return {
             m_Items: this.items,
             m_Unfilterd: {},
-            m_Filters: [{tag:'Summer'},{tag:'Housing'}],
+            m_Filters: [],
             newUrl: '',
+            newPrice: '',
             modalNewItem: false
         }
     },
@@ -58,9 +59,6 @@ Vue.component('trip-board', {
         openItem: function(id) {
             window.EventChannel.$emit('openDetailsItem', id);
         },
-        openFinancials: function(id) {
-            window.EventChannel.$emit('openFinancialsItem', id);
-        },
         toggleLiked: function(index) {
             console.log(index);
             if(this.m_Items[index].liked) {
@@ -72,8 +70,13 @@ Vue.component('trip-board', {
             }
         },
         addNewItem: function() {
-            window.EventChannel.$emit('addNewItem', this.newUrl);
+            var package = {
+                url: this.newUrl,
+                price: this.newPrice
+            }
+            window.EventChannel.$emit('addNewItem', package);
             this.newUrl = '';
+            this.newPrice = '';
             this.modalNewItem = false;
 
         },
@@ -103,31 +106,11 @@ Vue.component('trip-board', {
     mounted: function() {
         var self = this;
         window.EventChannel.$on('filterBoard',function(filters) {
-            console.log('Yes');
             self.m_Filters = filters;
             self.filterTrips();
         });
     }
 });
-
-// <article class="trip-item z-depth-1" v-for="(item, index) in m_Items">
-//     <div class="trip-item-icons">
-//     <ul>
-//     <li><a><i class="material-icons">share</i></a></li>
-//     <li :class=" item.financials ? null : 'disabled'" @click="openFinancials(item.id)"><a><i class="material-icons">euro_symbol</i></a></li>
-//     <li :class=" item.comments < 1 ? 'disabled' : null" @click="openItem(item.id)"><a><i class="material-icons">comment</i></a></li>
-//     <li @click="toggleLiked(index)"><a><i class="material-icons" v-if="item.liked">favorite</i><i class="material-icons" v-else>favorite_border</i><span class="icon-badge" v-if="item.likes > 0">{{item.likes}}</span></a></li>
-// </ul>
-// </div>
-// <div class="trip-item-img" @click="openItem(item.id)">
-//     <img :src="item.img">
-//     </div>
-//     <div class="trip-item-details" @click="openItem(item.id)">
-//     <h3>{{item.title}}</h3>
-// <p>{{item.desc}}</p>
-// <span v-for="tag in item.tags">{{tag.tag}}</span>
-// </div>
-// </article>
 
 function searchFilter(Operator) {
     var fnFilter;

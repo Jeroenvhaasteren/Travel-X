@@ -21,11 +21,22 @@
     <!-- Custom javascript -->
     <script src="js/main.js"></script>
 
+    <style>
+        .trip-item .trip-item-details {
+            flex-grow: 1;
+            padding: 15px;
+            overflow: hidden;
+             display: flex;
+             flex-direction: column;
+             height: 250px;
+        }
+    </style>
+
 </head>
 <body>
 <div id="app">
     <side-nav uid="1"></side-nav>
-    <div class="appspace">
+    <div class="appspace" style="height: 100vh; overflow: auto;">
         <trip-header :trip="currentTrip"></trip-header>
         <main>
             <section id="appsSpace">
@@ -72,19 +83,7 @@
               recommendedTags: [{tag:'Bar'},{tag:'SurfSpots'},{tag:'Beach'},{tag:'Summer'},{tag:'Hostels'},{tag:'Housing'},{tag:'Airbnb'},{tag:'Surf'}]
             },
             board: {
-                items: [{
-                    id: '0',
-                    img:"https://a0.muscache.com/im/pictures/23730c40-7eb0-4fcd-8f7a-92954472dff8.jpg?aki_policy=x_large",
-                    title:"Playa Private Room - Guesthouse for Rent in Taghazout, Souss-Massa-Draa, Morocco",
-                    desc:" in Taghazout, Morocco. The Playa Surf Hause is a mixture of Moroccan and European styles, and it's located in the centre of Taghazout ...",
-                    comments: '0',
-                    financials: false,
-                    likes: 1,
-                    liked: true,
-                    tags: [{tag:'Housing'},{tag:'Airbnb'},{tag:'Beach'},{tag:'Summer'}],
-                    url:"https://www.airbnb.com/rooms/15298553?locale=en&location=Taghazout%2C+Souss+Massa+Dara%C3%A2%2C+Marokko&s=1-2TUeZH"
-                }
-                ]
+                items: []
             },
             itemDetailsForm: {},
             currentTrip: {
@@ -96,59 +95,104 @@
             }
         },
         methods: {
-            addItem: function(url) {
+            addItem: function(package) {
+                console.log(package);
+                var url = package.url;
+                var price = package.price;
                 var urlEncoded = encodeURIComponent(url);
                 var apiKey = '58aac6d3dd95e6b920d36457';
                 var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded + '?app_id=' + apiKey;
-                var newId = this.board.items.length;
                 var newItem = {
-                    id: newId,
-                    img: '',
-                    title: '',
-                    desc: '',
-                    comments: '0',
-                    financials: false,
-                    likes: 0,
-                    liked: false,
-                    tags: [],
-                    url: url
+                    "title": "",
+                    "tripId": this.tripToken,
+                    "userId": this.sessionToken,
+                    "imageURL": "",
+                    "description": "",
+                    "tags": [],
+                    "startDate": 0,
+                    "endDate": 0,
+                    "price": parseInt(price),
+                    "multipleDays": false,
+                    "time": 0,
+                    "Visible": true
                 };
+                var self = this;
                 $.getJSON(requestUrl, function( json ) {
+                    console.log(json);
                     newItem.title = json.hybridGraph.title;
-                    newItem.desc = json.hybridGraph.description;
-                    newItem.img = json.hybridGraph.image;
+                    newItem.description = json.hybridGraph.description;
+                    newItem.imageURL = json.hybridGraph.image;
 
-                    var urlGoogleLocationSearch = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=';
-                    var googleKey = '&key=AIzaSyBzGjh7XPanj91d2gx8CybVSNzJ5UuVfHA';
-                    var queryLocation = newItem.title.replace(' ','+');
-                    var googleAPIUrl = urlGoogleLocationSearch + queryLocation + googleKey;
-                    $.getJSON(googleAPIUrl, function( json ) {
-                        console.log(json);
-                        if(json.results.length < 1) {
-                            newItem.location = '';
-                            newItem.gPlaceID = 'ChIJfcRUX2C3xUcRhUtelay7KVI';
-                            return;
-                        }
-                        newItem.location = json.results[0].formatted_address;
-                        newItem.gPlaceID = json.results[0].place_id;
-                        for(i in json.results[0].types) {
-                            var itemTag =  replaceAll(json.results[0].types[i], '_', ' ')
-                            newItem.tags.push({tag: itemTag});
-                        }
-                    });
+//                    var urlGoogleLocationSearch = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=';
+//                    var googleKey = '&key=AIzaSyBzGjh7XPanj91d2gx8CybVSNzJ5UuVfHA';
+//                    var queryLocation = newItem.title.replace(' ','+');
+//                    var googleAPIUrl = urlGoogleLocationSearch + queryLocation + googleKey;
+
+                    self.uploadItem(newItem);
+
+//                    $.ajax({
+//                        url: googleAPIUrl,
+//                        type: "GET",
+//                        dataType: 'json',
+//                        contentType:"application/json; charset=utf-8",
+//                        cache: false,
+//                        success: function(response){
+//                            console.log(response);
+//                            if(response.results.length < 1) {
+//                                newItem.location = '';
+//                                newItem.gPlaceID = 'ChIJfcRUX2C3xUcRhUtelay7KVI';
+//                                return;
+//                            }
+//                            newItem.location = response.results[0].formatted_address;
+//                            newItem.gPlaceID = response.results[0].place_id;
+//                            for(i in response.results[0].types) {
+//                                var itemTag =  replaceAll(response.results[0].types[i], '_', ' ')
+//                                newItem.tags.push({tag: itemTag});
+//                            }
+//                            self.uploadItem(newItem);
+//                        }
+//                    });
                 });
-                this.board.items.push(newItem);
+            },
+            uploadItem: function(newItem) {
+                console.log(newItem);
+                var self = this;
+                $.ajax({
+                    url: tripQuestEndPoints.post.newItem,
+                    type:"POST",
+                    data: JSON.stringify(newItem),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log(data);
+                        self.board.items.push(newItem);
+                    }
+                });
+
+            },
+            getItems: function() {
+                var self = this;
+                var url2 = tripQuestEndPoints.get.items + this.tripToken;
+                console.log(url2);
+                $.post(url2, function(data) {
+                    console.log(data);
+                    self.board.items = data.success.objects;
+                });
             }
         },
         created: function () {
             var self = this;
-            EventChannel.$on('addNewItem', function(url) {
-                self.addItem(url);
+            EventChannel.$on('addNewItem', function(package) {
+                self.addItem(package);
             });
             EventChannel.$on('openDetailsItem', function(id) {
-                self.itemDetails = true;
-                self.itemDetailsForm = self.board.items[id];
-            })
+                var url = tripQuestEndPoints.get.item + id;
+                $.get(url, function(data) {
+                    console.log(data);
+                    self.itemDetailsForm = data.success.object;
+                    self.itemDetails = true;
+                });
+            });
             EventChannel.$on('updateTrip', function(trip) {
                 self.currentTrip = trip;
             });
@@ -158,6 +202,20 @@
             });
             EventChannel.$on('saveItem', function(trip) {
                 console.log(trip);
+                trip.tripId = self.tripToken;
+                trip.price = parseInt(trip.price);
+                $.ajax({
+                    url: tripQuestEndPoints.post.editItem,
+                    type:"POST",
+                    data: JSON.stringify(trip),
+                    contentType:"application/json; charset=utf-8",
+                    dataType:"json",
+                    success: function(data){
+                        console.log("updated");
+                        console.log(data);
+                        self.getItems();
+                    }
+                });
             });
         },
         mounted: function() {
@@ -169,11 +227,7 @@
                 console.log(data);
                 self.currentTrip = data.success.object;
             });
-            var url2 = tripQuestEndPoints.get.items + this.tripToken;
-            $.post(url2, function(data) {
-                console.log(data);
-                self.board.items = data.success.objects;
-            });
+            this.getItems();
         }
     });
 
